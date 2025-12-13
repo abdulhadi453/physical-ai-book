@@ -1,0 +1,117 @@
+# User Progress Tracking API Contract
+
+## Overview
+API for tracking and managing user progress through the Physical AI book.
+
+## Base URL
+`/api/user`
+
+## Endpoints
+
+### GET /progress/{userId}
+Retrieve a user's progress through the book.
+
+**Parameters:**
+- `userId`: User identifier
+
+**Response (200 OK):**
+```json
+{
+  "userId": "user-123",
+  "lessonsCompleted": ["lesson-1-1", "lesson-1-2"],
+  "chaptersCompleted": ["chapter-1"],
+  "exerciseScores": {
+    "lesson-1-1": 85,
+    "lesson-1-2": 92
+  },
+  "lastAccessed": "2025-12-11T10:30:00Z",
+  "learningPath": ["lesson-1-1", "lesson-1-2", "lesson-1-3", "lesson-2-1"]
+}
+```
+
+### POST /progress/{userId}
+Update a user's progress.
+
+**Parameters:**
+- `userId`: User identifier
+
+**Request Body:**
+```json
+{
+  "lessonsCompleted": ["lesson-1-3"],
+  "chaptersCompleted": ["chapter-1"],
+  "exerciseScores": {
+    "lesson-1-3": 78
+  }
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "userId": "user-123",
+  "status": "progress_updated",
+  "lastUpdated": "2025-12-11T11:15:00Z"
+}
+```
+
+### PUT /progress/{userId}/lesson/{lessonId}
+Update progress for a specific lesson.
+
+**Parameters:**
+- `userId`: User identifier
+- `lessonId`: Lesson identifier
+
+**Request Body:**
+```json
+{
+  "completed": true,
+  "exerciseScore": 88,
+  "timeSpent": 1800  // in seconds
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "userId": "user-123",
+  "lessonId": "lesson-1-3",
+  "status": "lesson_progress_updated",
+  "completed": true,
+  "exerciseScore": 88
+}
+```
+
+### GET /recommendations/{userId}
+Get personalized learning recommendations for a user.
+
+**Parameters:**
+- `userId`: User identifier
+
+**Response (200 OK):**
+```json
+{
+  "userId": "user-123",
+  "recommendedLessons": [
+    {
+      "id": "lesson-1-3",
+      "title": "Advanced Physical AI Concepts",
+      "reason": "Next in sequence after completed lessons",
+      "estimatedTime": 45
+    },
+    {
+      "id": "lesson-2-1",
+      "title": "Robotics Fundamentals",
+      "reason": "Based on your interest in hands-on exercises",
+      "estimatedTime": 60
+    }
+  ],
+  "reviewSuggestions": [
+    {
+      "id": "lesson-1-1",
+      "title": "What is Physical AI?",
+      "reason": "You completed this lesson 2 weeks ago, time for review"
+    }
+  ]
+}
+```

@@ -1,0 +1,206 @@
+# Community Features API Contract
+
+## Overview
+API for managing community contributions and feedback for the Physical AI book.
+
+## Base URL
+`/api/community`
+
+## Endpoints
+
+### POST /contribution
+Submit a new content contribution.
+
+**Request Body:**
+```json
+{
+  "contributorId": "contributor-456",
+  "type": "lesson",  // or "correction", "example", "translation"
+  "content": {
+    "title": "New Lesson on Sensor Fusion",
+    "content": {
+      "learningObjectives": ["Understand sensor fusion concepts", "Implement basic fusion algorithm"],
+      "prerequisites": ["lesson-2-1"],
+      "theoreticalConcepts": "Sensor fusion combines data from multiple sensors...",
+      "realWorldContext": "Used in autonomous vehicles and robotics...",
+      "handsOnExercise": {
+        "instructions": "Implement a Kalman filter for sensor fusion...",
+        "expectedOutcome": "A working sensor fusion algorithm...",
+        "toolsRequired": ["Python", "Sample sensor data"],
+        "troubleshootingTips": ["Check data alignment", "Verify sensor calibration"]
+      },
+      "exerciseSolutions": {
+        "solutionSteps": ["Step 1: Collect sensor data", "Step 2: Implement fusion algorithm"],
+        "commonMistakes": ["Incorrect coordinate systems", "Timing issues"],
+        "alternativeApproaches": ["Particle filters", "Complementary filters"],
+        "discussionPoints": ["Accuracy vs. computational cost", "Sensor reliability"]
+      },
+      "summary": "Sensor fusion improves accuracy by combining multiple sensors...",
+      "furtherReading": [
+        {
+          "title": "Sensor Fusion Techniques",
+          "url": "https://example.com/sensor-fusion",
+          "type": "article",
+          "description": "Detailed overview of fusion algorithms",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    "difficulty": "intermediate",
+    "estimatedTime": 60,
+    "prerequisites": ["lesson-2-1"],
+    "relatedLessons": []
+  },
+  "description": "New lesson on sensor fusion for robotics applications",
+  "reason": "Community requested content on this topic"
+}
+```
+
+**Response (201 Created):**
+```json
+{
+  "contributionId": "contrib-789",
+  "status": "submitted",
+  "submittedAt": "2025-12-11T12:00:00Z",
+  "reviewStatus": "pending"
+}
+```
+
+### GET /contributions
+List pending contributions.
+
+**Query Parameters:**
+- `status`: Filter by status (pending, approved, rejected, all) - default: pending
+- `type`: Filter by contribution type (lesson, correction, example, translation) - optional
+- `limit`: Number of results to return - default: 20
+- `offset`: Number of results to skip - default: 0
+
+**Response (200 OK):**
+```json
+{
+  "contributions": [
+    {
+      "contributionId": "contrib-789",
+      "contributorId": "contributor-456",
+      "type": "lesson",
+      "title": "New Lesson on Sensor Fusion",
+      "description": "New lesson on sensor fusion for robotics applications",
+      "status": "pending",
+      "submittedAt": "2025-12-11T12:00:00Z",
+      "reviewStatus": "pending",
+      "reviewerComments": []
+    }
+  ],
+  "total": 1,
+  "limit": 20,
+  "offset": 0
+}
+```
+
+### PUT /contribution/{id}/approve
+Approve a contribution.
+
+**Parameters:**
+- `id`: Contribution identifier
+
+**Request Body:**
+```json
+{
+  "reviewerId": "reviewer-101",
+  "comments": "Great content, minor edits needed before approval",
+  "requestedChanges": ["Fix typo in section 3", "Add more examples to exercise"]
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "contributionId": "contrib-789",
+  "status": "approved",
+  "approvedAt": "2025-12-11T14:30:00Z",
+  "approvedBy": "reviewer-101"
+}
+```
+
+### PUT /contribution/{id}/reject
+Reject a contribution.
+
+**Parameters:**
+- `id`: Contribution identifier
+
+**Request Body:**
+```json
+{
+  "reviewerId": "reviewer-101",
+  "reason": "Content is too advanced for the target audience",
+  "comments": "This content would be better suited for an advanced chapter"
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "contributionId": "contrib-789",
+  "status": "rejected",
+  "rejectedAt": "2025-12-11T14:45:00Z",
+  "rejectedBy": "reviewer-101",
+  "reason": "Content is too advanced for the target audience"
+}
+```
+
+### POST /feedback
+Submit feedback on content.
+
+**Request Body:**
+```json
+{
+  "userId": "user-123",
+  "targetType": "lesson",  // or "chapter", "book"
+  "targetId": "lesson-1-1",
+  "type": "correction",  // or "suggestion", "praise", "difficulty", "other"
+  "message": "There's a typo in the third paragraph of the theoretical concepts section",
+  "severity": "medium"  // low, medium, high
+}
+```
+
+**Response (201 Created):**
+```json
+{
+  "feedbackId": "feedback-112",
+  "status": "received",
+  "receivedAt": "2025-12-11T15:00:00Z"
+}
+```
+
+### GET /feedback
+List feedback items.
+
+**Query Parameters:**
+- `status`: Filter by status (received, reviewed, resolved) - default: received
+- `type`: Filter by feedback type (correction, suggestion, praise, difficulty, other) - optional
+- `targetType`: Filter by target type (lesson, chapter, book) - optional
+- `limit`: Number of results to return - default: 20
+- `offset`: Number of results to skip - default: 0
+
+**Response (200 OK):**
+```json
+{
+  "feedback": [
+    {
+      "feedbackId": "feedback-112",
+      "userId": "user-123",
+      "targetType": "lesson",
+      "targetId": "lesson-1-1",
+      "type": "correction",
+      "message": "There's a typo in the third paragraph of the theoretical concepts section",
+      "severity": "medium",
+      "status": "received",
+      "receivedAt": "2025-12-11T15:00:00Z",
+      "resolvedAt": null
+    }
+  ],
+  "total": 1,
+  "limit": 20,
+  "offset": 0
+}
+```

@@ -1,0 +1,31 @@
+For constitution
+
+create a constitution for a book about "Physical AI" with these requirements:
+- Target audiance: beginners to intermediate
+- Tech stack: Docusaurus for documentation
+- Focus on hands-on learning
+
+Provide the constitution with: Vision,core Principles, Success Criteria, Constraints, Stakeholders and brand voice.
+
+
+
+For Specify
+
+Based on the constitution, create a detailed Specification for the Physical AI book. Include:
+1. Book structure with 1 chapter and 3 lessons each (titles and description)
+2. Content guidelines and lesson format
+3. Docusaurus-specific requirements for organization
+
+
+
+For Development Plan
+
+Create a Development Plan for this book in Docusaurus. Include:
+1. Docusaurus setup steps and configuration
+2. Content development phases
+3. File structure for chapters and lessons
+
+
+Break down the plan into specific executable tasks as a chechklist. Include:
+1. Docusaurus setup tasks
+2. Chapter Development task (for 1 chapter with 3 lessons)

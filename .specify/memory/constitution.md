@@ -1,55 +1,65 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: N/A -> 1.0.0 (initial creation/major update)
+- Modified principles: All principles updated with descriptions.
+- Added sections: "Vision", "Success Criteria", "Constraints", "Stakeholders", "Brand Voice".
+- Removed sections: None.
+- Templates requiring updates:
+  ✅ .specify/templates/plan-template.md
+  ✅ .specify/templates/spec-template.md
+  ✅ .specify/templates/tasks-template.md
+  ✅ .specify/templates/commands/*.md
+- Follow-up TODOs: None.
+-->
+# Physical AI Book Constitution
+
+## Vision
+To empower beginners and intermediate learners with hands-on knowledge and practical skills in Physical AI, making complex concepts accessible and engaging through interactive documentation.
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Hands-on Learning First
+Prioritize practical exercises and real-world projects. Every concept introduced must be accompanied by an actionable example or experiment that readers can replicate.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clarity and Accessibility
+Explain complex Physical AI concepts in a clear, beginner-friendly manner, avoiding jargon where possible or thoroughly explaining it when necessary. The content must be accessible to a broad audience, from beginners to intermediate learners.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Modular Progression
+Structure content for gradual learning, building from fundamental to advanced topics. Each module should be self-contained but contribute to a cohesive understanding of Physical AI.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Community and Collaboration
+Encourage contributions from the community (feedback, examples, corrections) and foster a supportive learning environment. The Docusaurus platform should facilitate easy collaboration.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Practical Application
+Focus on tangible applications and real-world relevance of Physical AI. Demonstrate how theoretical concepts translate into practical systems and solutions.
 
-### [PRINCIPLE_6_NAME]
+## Success Criteria
+- High user engagement and retention on the Docusaurus platform.
+- Positive feedback and testimonials from the target audience (beginners to intermediate).
+- Measurable increase in users' understanding and ability to apply Physical AI concepts (e.g., through project completion rates).
+- Active community contributions to the documentation, including new examples, corrections, and translations.
 
+## Constraints
+- **Target Audience**: Content must cater to beginners to intermediate learners.
+- **Technology Stack**: Documentation strictly uses Docusaurus.
+- **Learning Focus**: Primary emphasis is on hands-on learning and practical application.
+- **Scope**: Primarily covers introductory to intermediate Physical AI concepts; advanced research topics are out of scope.
+- **Resource Limitations**: Development and content creation adhere to available team resources and timelines.
 
-[PRINCIPLE__DESCRIPTION]
+## Stakeholders
+- **Learners**: The primary audience (beginners to intermediate) seeking to understand and apply Physical AI.
+- **Content Creators/Authors**: Individuals responsible for developing and maintaining the book's content.
+- **Contributors**: Community members who provide feedback, corrections, new content, and examples.
+- **Project Maintainers**: Individuals overseeing the Docusaurus platform, infrastructure, and overall project health.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Brand Voice
+- **Empowering**: Inspiring confidence and capability in learners to tackle Physical AI challenges.
+- **Approachable**: Friendly, clear, and non-intimidating, making complex topics less daunting.
+- **Practical**: Focused on actionable insights, real-world relevance, and hands-on experience.
+- **Supportive**: Encouraging and guiding users through learning challenges with empathy.
+- **Curious**: Fostering exploration, critical thinking, and a desire to learn more about Physical AI.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution supersedes all other project practices. Amendments require documentation, team consensus, and a clear migration plan. All content contributions and platform changes must verify compliance with these principles.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-09 | **Last Amended**: 2025-12-09

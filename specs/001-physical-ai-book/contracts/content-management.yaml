@@ -1,0 +1,201 @@
+# Content Management API Contract
+
+## Overview
+API for managing Physical AI book content, including chapters, lessons, and related resources.
+
+## Base URL
+`/api/content`
+
+## Endpoints
+
+### GET /book
+Retrieve the complete book structure and metadata.
+
+**Response (200 OK):**
+```json
+{
+  "name": "Physical AI Book",
+  "description": "A comprehensive guide to Physical AI concepts and applications",
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "title": "Introduction to Physical AI",
+      "description": "Fundamental concepts of Physical AI",
+      "lessons": [
+        {
+          "id": "lesson-1-1",
+          "title": "What is Physical AI?",
+          "difficulty": "beginner",
+          "estimatedTime": 30
+        }
+      ],
+      "prerequisites": [],
+      "learningObjectives": ["Understand basic Physical AI concepts"]
+    }
+  ],
+  "metadata": {
+    "created": "2025-12-01",
+    "lastUpdated": "2025-12-11",
+    "version": "1.0.0"
+  }
+}
+```
+
+### GET /chapter/{id}
+Retrieve a specific chapter with its lessons.
+
+**Parameters:**
+- `id`: Chapter identifier
+
+**Response (200 OK):**
+```json
+{
+  "id": "chapter-1",
+  "title": "Introduction to Physical AI",
+  "description": "Fundamental concepts of Physical AI",
+  "lessons": [
+    {
+      "id": "lesson-1-1",
+      "title": "What is Physical AI?",
+      "difficulty": "beginner",
+      "estimatedTime": 30,
+      "prerequisites": [],
+      "relatedLessons": ["lesson-1-2"]
+    }
+  ],
+  "prerequisites": [],
+  "learningObjectives": ["Understand basic Physical AI concepts"]
+}
+```
+
+### GET /lesson/{id}
+Retrieve a specific lesson with its complete structure.
+
+**Parameters:**
+- `id`: Lesson identifier
+
+**Response (200 OK):**
+```json
+{
+  "id": "lesson-1-1",
+  "title": "What is Physical AI?",
+  "content": {
+    "learningObjectives": [
+      "Define Physical AI",
+      "Identify key components"
+    ],
+    "prerequisites": [],
+    "theoreticalConcepts": "Physical AI combines physical systems with artificial intelligence...",
+    "realWorldContext": "Physical AI is used in robotics, automation, and more...",
+    "handsOnExercise": {
+      "instructions": "Build a simple sensor system...",
+      "expectedOutcome": "A working prototype...",
+      "toolsRequired": ["Raspberry Pi", "Sensors"],
+      "troubleshootingTips": ["Check connections", "Verify power supply"]
+    },
+    "exerciseSolutions": {
+      "solutionSteps": ["Step 1: Connect sensors", "Step 2: Upload code"],
+      "commonMistakes": ["Incorrect wiring", "Wrong code"],
+      "alternativeApproaches": ["Use different sensors", "Alternative code"],
+      "discussionPoints": ["Efficiency considerations", "Possible improvements"]
+    },
+    "summary": "Physical AI combines physical systems with AI algorithms...",
+    "furtherReading": [
+      {
+        "title": "Introduction to Robotics",
+        "url": "https://example.com/robotics",
+        "type": "book",
+        "description": "Comprehensive guide to robotics",
+        "difficulty": "intermediate"
+      }
+    ]
+  },
+  "difficulty": "beginner",
+  "estimatedTime": 30,
+  "prerequisites": [],
+  "relatedLessons": ["lesson-1-2"]
+}
+```
+
+### POST /lesson
+Create a new lesson (for contributors).
+
+**Request Body:**
+```json
+{
+  "title": "New Lesson Title",
+  "content": {
+    "learningObjectives": ["Objective 1", "Objective 2"],
+    "prerequisites": ["lesson-1-1"],
+    "theoreticalConcepts": "Concept explanation...",
+    "realWorldContext": "Practical application...",
+    "handsOnExercise": {
+      "instructions": "Exercise instructions...",
+      "expectedOutcome": "Expected results...",
+      "toolsRequired": ["Tool 1", "Tool 2"],
+      "troubleshootingTips": ["Tip 1", "Tip 2"]
+    },
+    "exerciseSolutions": {
+      "solutionSteps": ["Step 1", "Step 2"],
+      "commonMistakes": ["Mistake 1", "Mistake 2"],
+      "alternativeApproaches": ["Approach 1", "Approach 2"],
+      "discussionPoints": ["Point 1", "Point 2"]
+    },
+    "summary": "Lesson summary...",
+    "furtherReading": [
+      {
+        "title": "Resource Title",
+        "url": "https://example.com",
+        "type": "article",
+        "description": "Resource description",
+        "difficulty": "beginner"
+      }
+    ]
+  },
+  "difficulty": "beginner",
+  "estimatedTime": 45,
+  "prerequisites": ["lesson-1-1"],
+  "relatedLessons": []
+}
+```
+
+**Response (201 Created):**
+```json
+{
+  "id": "lesson-2-1",
+  "title": "New Lesson Title",
+  "status": "pending_review"
+}
+```
+
+### PUT /lesson/{id}
+Update an existing lesson.
+
+**Parameters:**
+- `id`: Lesson identifier
+
+**Request Body:**
+Same as POST /lesson
+
+**Response (200 OK):**
+```json
+{
+  "id": "lesson-2-1",
+  "title": "Updated Lesson Title",
+  "status": "updated"
+}
+```
+
+### DELETE /lesson/{id}
+Remove a lesson (admin only).
+
+**Parameters:**
+- `id`: Lesson identifier
+
+**Response (200 OK):**
+```json
+{
+  "id": "lesson-2-1",
+  "status": "deleted"
+}
+```

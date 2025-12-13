@@ -1,0 +1,37 @@
+.exerciseBox {
+  border: 2px solid #4285f4;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f8f9ff;
+  margin: 20px 0;
+}
+
+.exerciseHeader {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.exerciseTitle {
+  margin: 0;
+  color: #20232a;
+  font-size: 1.25rem;
+}
+
+.exerciseBody h4 {
+  color: #4285f4;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.exerciseSection {
+  margin-bottom: 15px;
+}
+
+.exerciseSection ul {
+  margin-bottom: 0;
+}
+
+.exerciseSection li {
+  margin-bottom: 5px;
+}

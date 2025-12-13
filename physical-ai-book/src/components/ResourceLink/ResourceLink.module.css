@@ -1,0 +1,43 @@
+.resourceLink {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  margin: 10px 0;
+}
+
+.resourceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.resourceTitle {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.resourceTitle a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.resourceTitle a:hover {
+  text-decoration: underline;
+}
+
+.difficultyBadge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.resourceDescription {
+  font-size: 0.9rem;
+  color: #5f6368;
+  margin: 0;
+}

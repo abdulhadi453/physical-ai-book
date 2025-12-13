@@ -1,0 +1,37 @@
+.summarySection {
+  border: 2px solid #9aa0a6;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f1f3f4;
+  margin: 20px 0;
+}
+
+.summaryHeader {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.summaryTitle {
+  margin: 0;
+  color: #20232a;
+  font-size: 1.25rem;
+}
+
+.summaryBody h4 {
+  color: #5f6368;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.summarySection {
+  margin-bottom: 15px;
+}
+
+.summarySection ul {
+  margin-bottom: 0;
+}
+
+.summarySection li {
+  margin-bottom: 5px;
+}
