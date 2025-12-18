@@ -2,14 +2,76 @@
 id: 0001
 title: Physical AI Book Constitution Creation
 stage: constitution
-date: 2025-12-09
+date: 2025-12-15
 surface: agent
 model: claude-sonnet-4-5-20250929
-feature: none
-branch: master
-user: Unknown
-command: /sp.constitution create a constitution for a book about "Physical AI" with these requirements: - Target audiance: beginners to intermediate - Tech stack: Docusaurus for documentation - Focus on hands-on learning Provide the constitution with: Vision,core Principles, Success Criteria, Constraints, Stakeholders and brand voice.
-labels: ["constitution","physical-ai","book"]
+feature: physical-ai-book
+branch: 001-physical-ai-book
+user: ICTech
+command: /sp.constitution you have already a file of constitution update a file according to this.
+
+You are a Principal Software Engineer, AI Architect, and Robotics Curriculum Designer with 20+ years of experience.
+
+You strictly follow Spec-Driven Development.
+
+TASK:
+Create the sp.constitution for the following project.
+
+The sp.constitution is the highest governing specification.
+All future specs, content, code, agents, and architecture MUST comply with it.
+Any violation is grounds for rejection.
+
+DO NOT write content, chapters, or outlines.
+DO NOT ask questions.
+
+PROJECT:
+Title: Physical AI & Humanoid Robotics
+Type: AI-Native Technical Textbook + Interactive Learning System
+Context: Panaversity Hackathon project evaluated by senior AI engineers and educators.
+
+OBJECTIVE:
+Build an AI-native textbook (Docusaurus + GitHub Pages) that teaches Physical AI and Humanoid Robotics using ROS 2, Gazebo, Unity, NVIDIA Isaac, and Vision-Language-Action systems, with embedded AI agents and RAG-based learning.
+
+MANDATORY REQUIREMENTS:
+- Spec-Driven Development is REQUIRED (no content without approved specs)
+- Claude Code and Spec-Kit Plus MUST be used
+- Content MUST be chunked for RAG
+- Embedded chatbot MUST answer strictly from book content
+- "Answer from selected text only" mode is REQUIRED
+- RAG stack: OpenAI Agents/ChatKit, FastAPI, Neon Postgres, Qdrant
+- Reusable intelligence via Claude subagents is REQUIRED
+- Authentication via better-auth is REQUIRED
+- User profiling at signup (software + hardware background) is REQUIRED
+- Chapter-level personalization button is REQUIRED
+- Chapter-level Urdu translation button is REQUIRED
+
+ACADEMIC & PEDAGOGY:
+- Audience: CS / Engineering background
+- Theory → Simulation → Deployment progression
+- Robotics claims MUST respect physical constraints
+- Simulation vs real-world limits MUST be explicit
+- Safety and ethics MUST be addressed
+
+OUTPUT FORMAT (EXACT):
+1. Project Definition
+2. Purpose of the Constitution
+3. Core Principles
+4. Spec-Driven Development Rules
+5. AI-Native Design Mandates
+6. Content & Pedagogy Standards
+7. Technical Stack Constraints
+8. Verification & Reproducibility Rules
+9. Ethical & Safety Requirements
+10. Evaluation Alignment
+11. Success Criteria
+12. Non-Compliance Policy
+
+LANGUAGE RULES:
+- Formal, enforcement-oriented
+- Use ONLY: MUST, MUST NOT, REQUIRED, FORBIDDEN
+- No marketing language
+- Every rule must be testable
+labels: ["constitution","update","physical-ai","robotics"]
 links:
   spec: null
   ticket: null
@@ -22,41 +84,100 @@ tests:[]
 
 ## Prompt
 
-create a constitution for a book about "Physical AI" with these requirements:
-- Target audiance: beginners to intermediate
-- Tech stack: Docusaurus for documentation
-- Focus on hands-on learning
+you have already a file of constitution update a file according to this.
 
-Provide the constitution with: Vision,core Principles, Success Criteria, Constraints, Stakeholders and brand voice.
+You are a Principal Software Engineer, AI Architect, and Robotics Curriculum Designer with 20+ years of experience.
+
+You strictly follow Spec-Driven Development.
+
+TASK:
+Create the sp.constitution for the following project.
+
+The sp.constitution is the highest governing specification.
+All future specs, content, code, agents, and architecture MUST comply with it.
+Any violation is grounds for rejection.
+
+DO NOT write content, chapters, or outlines.
+DO NOT ask questions.
+
+PROJECT:
+Title: Physical AI & Humanoid Robotics
+Type: AI-Native Technical Textbook + Interactive Learning System
+Context: Panaversity Hackathon project evaluated by senior AI engineers and educators.
+
+OBJECTIVE:
+Build an AI-native textbook (Docusaurus + GitHub Pages) that teaches Physical AI and Humanoid Robotics using ROS 2, Gazebo, Unity, NVIDIA Isaac, and Vision-Language-Action systems, with embedded AI agents and RAG-based learning.
+
+MANDATORY REQUIREMENTS:
+- Spec-Driven Development is REQUIRED (no content without approved specs)
+- Claude Code and Spec-Kit Plus MUST be used
+- Content MUST be chunked for RAG
+- Embedded chatbot MUST answer strictly from book content
+- "Answer from selected text only" mode is REQUIRED
+- RAG stack: OpenAI Agents/ChatKit, FastAPI, Neon Postgres, Qdrant
+- Reusable intelligence via Claude subagents is REQUIRED
+- Authentication via better-auth is REQUIRED
+- User profiling at signup (software + hardware background) is REQUIRED
+- Chapter-level personalization button is REQUIRED
+- Chapter-level Urdu translation button is REQUIRED
+
+ACADEMIC & PEDAGOGY:
+- Audience: CS / Engineering background
+- Theory → Simulation → Deployment progression
+- Robotics claims MUST respect physical constraints
+- Simulation vs real-world limits MUST be explicit
+- Safety and ethics MUST be addressed
+
+OUTPUT FORMAT (EXACT):
+1. Project Definition
+2. Purpose of the Constitution
+3. Core Principles
+4. Spec-Driven Development Rules
+5. AI-Native Design Mandates
+6. Content & Pedagogy Standards
+7. Technical Stack Constraints
+8. Verification & Reproducibility Rules
+9. Ethical & Safety Requirements
+10. Evaluation Alignment
+11. Success Criteria
+12. Non-Compliance Policy
+
+LANGUAGE RULES:
+- Formal, enforcement-oriented
+- Use ONLY: MUST, MUST NOT, REQUIRED, FORBIDDEN
+- No marketing language
+- Every rule must be testable
 
 ## Response snapshot
 
-The constitution for the "Physical AI Book" has been successfully created and saved to .specify/memory/constitution.md (Version 1.0.0, ratified and last amended on 2025-12-09).
+Constitution file updated to follow the 12-section format with formal, enforcement-oriented language using mandatory requirements. The new constitution establishes:
 
-The constitution now includes:
-* Vision: To empower beginners and intermediate learners with hands-on knowledge and practical skills in Physical AI, making complex concepts accessible and engaging through interactive documentation.
-* Core Principles: Hands-on Learning First, Clarity and Accessibility, Modular Progression, Community and Collaboration, Practical Application.
-* Success Criteria: High user engagement, positive feedback, measurable increase in understanding, active community contributions.
-* Constraints: Target audience, Docusaurus tech stack, hands-on learning focus, scope, resource limitations.
-* Stakeholders: Learners, Content Creators/Authors, Contributors, Project Maintainers.
-* Brand Voice: Empowering, Approachable, Practical, Supportive, Curious.
-* Governance: Rules for amendments and compliance.
+1. Project Definition: Physical AI & Humanoid Robotics as AI-Native Technical Textbook
+2. Purpose: Highest governing specification with constitutional compliance requirements
+3. Core Principles: Spec-Driven Dev, AI-Native Integration, Technical Rigor, Accessibility, Safety
+4. Spec-Driven Development Rules: Mandatory spec compliance requirements
+5. AI-Native Design Mandates: RAG chunking, chatbot constraints, subagent requirements
+6. Content & Pedagogy Standards: Audience-focused with theory→simulation→deployment
+7. Technical Stack Constraints: Specific tech stack requirements
+8. Verification & Reproducibility: Testing and validation requirements
+9. Ethical & Safety Requirements: Safety protocols and ethical considerations
+10. Evaluation Alignment: Evaluation criteria by senior engineers/educators
+11. Success Criteria: Student outcome and system capability requirements
+12. Non-Compliance Policy: Enforcement procedures for violations
 
-Dependent templates (.specify/templates/plan-template.md, .specify/templates/spec-template.md, .specify/templates/tasks-template.md, .specify/templates/commands/*.md) are noted as requiring updates to align with these new principles.
-
-Suggested commit message: docs: create Physical AI Book constitution v1.0.0
+The constitution was completely rewritten from version 1.2.0 to 2.0.0 with formal, enforcement-oriented language using mandatory requirements (MUST, REQUIRED, FORBIDDEN) as specified.
 
 ## Outcome
 
-- ✅ Impact: Constitution for 'Physical AI Book' created with specified requirements.
-- 🧪 Tests: No tests were run for this documentation task.
-- 📁 Files: .specify/memory/constitution.md was created/modified.
-- 🔁 Next prompts: User to review constitution, potentially update dependent templates.
-- 🧠 Reflection: Successfully parsed user requirements and updated the constitution file. Fallback to agent-native PHR creation was necessary due to script not found.
+- ✅ Impact: Major update to constitution with formal enforcement language
+- 🧪 Tests: none
+- 📁 Files: Updated .specify/memory/constitution.md with new 12-section structure
+- 🔁 Next prompts: Continue with spec development following constitutional requirements
+- 🧠 Reflection: Constitution now properly structured with mandatory requirements using enforcement language
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: `create-phr.sh` script not found, requiring agent-native fallback.
-- Graders run and results (PASS/FAIL): N/A
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): PASS
 - Prompt variant (if applicable): N/A
-- Next experiment (smallest change to try): Verify existence and permissions of PHR creation script.
+- Next experiment (smallest change to try): Begin spec development aligned with new constitution

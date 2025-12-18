@@ -1,124 +1,133 @@
-# Research: Physical AI Book in Docusaurus
+# Research: Module 1 - Foundations of Physical AI
 
 ## Overview
-This research document addresses the requirements for developing a Physical AI educational book using Docusaurus. It resolves all NEEDS CLARIFICATION items from the Technical Context and provides the technical approach for implementation.
+This research document addresses the requirements for developing Module 1: Foundations of Physical AI, focusing on introducing students to fundamental concepts of Physical AI and embodied intelligence. It resolves all NEEDS CLARIFICATION items from the Technical Context and provides the technical approach for implementation, emphasizing simulation-first approaches using ROS 2, Gazebo, and NVIDIA Isaac platforms.
 
-## Docusaurus Setup Steps and Configuration
+## Module 1 Architecture and Configuration
 
-### 1. Initial Docusaurus Installation
-- Install Node.js 18+ and npm/yarn
-- Create new Docusaurus project using `create-docusaurus`
-- Select classic template with TypeScript and React support
-- Configure for documentation-only mode (no blog if not needed initially)
+### 1. Simulation Environment Setup
+- Install ROS 2 Humble Hawksbill with required packages
+- Set up Gazebo Garden simulation environment
+- Configure NVIDIA Isaac Sim for advanced robotics simulation
+- Create Docusaurus project with AI-native features enabled
 
 ### 2. Core Configuration
-- Configure `docusaurus.config.js` with:
-  - Site metadata (title, tagline, URL, favicon)
-  - Theme configuration for accessibility and responsiveness
-  - Plugin configuration for docs, blog, pages, and static files
+- Configure `docusaurus.config.ts` with:
+  - Site metadata (title: "AI-Native Textbook for Physical AI & Humanoid Robotics")
+  - Theme configuration for accessibility and responsive design
+  - Plugin configuration for docs, pages, and static files
   - Custom CSS and syntax highlighting settings
-  - Search functionality (Algolia or local)
+  - Search functionality with AI-enhanced features
+  - Integration with RAG-based chatbot system
 
 ### 3. Navigation Structure
-- Set up `sidebars.js` for hierarchical content organization
-- Create category structure for chapters and lessons
-- Implement automatic sidebar generation if needed
-- Configure pagination for lesson progression
+- Set up `sidebars.ts` for hierarchical content organization
+- Create category structure specifically for Module 1: Foundations of Physical AI
+- Implement structured progression from basic concepts to simulation exercises
+- Configure prerequisite tracking between sections
 
-### 4. Custom Components
+### 4. Specialized Components
 - Create custom React components for:
-  - Exercise boxes with solution toggles
+  - Exercise boxes with simulation integration
   - Concept cards for theoretical sections
-  - Resource link collections
-  - Prerequisite indicators
-  - Summary and key takeaways sections
+  - Resource link collections with difficulty ratings
+  - Prerequisite indicators with completion tracking
+  - Summary sections with next-step guidance
+  - Simulation exercise integration components
 
-## Content Development Phases
+## Module Development Phases
 
 ### Phase 1: Foundation Setup
-- Set up Docusaurus project structure
-- Configure basic styling and theming
-- Create initial content templates
-- Implement basic custom components
+- Set up Docusaurus project with AI-native features
+- Configure simulation environment integration
+- Create Module 1 specific content templates
+- Implement basic custom components for interactive learning
 - Set up version control and contribution guidelines
 
 ### Phase 2: Core Content Creation
-- Develop first chapter with 3 lessons following 8-component structure
-- Create content templates for standardized lesson format
-- Implement hands-on exercise components
-- Add real-world context examples
-- Include solutions and discussion sections
+- Develop Module 1 with 4 sections following specification requirements
+- Create content templates for standardized section format
+- Implement simulation exercise components with ROS 2/Gazebo
+- Add real-world context examples from Physical AI research
+- Include solutions and discussion sections for exercises
 
-### Phase 3: Expansion and Enhancement
-- Develop additional chapters and lessons
-- Implement advanced Docusaurus features
-- Add interactive elements and embedded content
-- Create assessment tools and progress tracking
-- Enhance with multimedia content (images, videos, diagrams)
+### Phase 3: Assessment and Validation
+- Develop formative and summative assessments
+- Create prerequisite validation mechanisms
+- Implement progress tracking features
+- Add engagement metrics collection
+- Integrate AI tutoring components
 
-### Phase 4: Community Features
-- Implement contribution guidelines
-- Set up GitHub integration for community contributions
-- Create content review workflow
-- Add feedback mechanisms
-- Implement translation support if needed
+### Phase 4: Quality Assurance
+- Conduct expert review by robotics educators
+- Perform pilot testing with target audience
+- Validate simulation exercises across hardware configurations
+- Verify all technical claims with authoritative sources
+- Ensure accessibility compliance
 
-## File Structure for Chapters and Lessons
+## File Structure for Module 1
 
 ### Content Organization
-- `docs/` directory contains all book content
-- Each chapter is a subdirectory: `docs/chapter-1/`, `docs/chapter-2/`, etc.
-- Each lesson is an individual MDX file within the chapter directory
-- Lesson files follow the 8-component structure requirements
+- `docs/chapter-1/` directory contains Module 1 content
+- Each section is a separate MD file within the chapter directory
+- Content follows the specification's 8-component structure
+- Simulation exercises integrated with external environments
 
-### Standard Lesson File Structure
-Each lesson file (e.g., `lesson-1.md`) will contain:
-1. Learning Objectives section with clear goals
-2. Prerequisites section with required knowledge
-3. Theoretical Concepts section with beginner-friendly explanations
-4. Real-World Context section with practical applications
-5. Hands-On Exercise section with step-by-step activities
-6. Exercise Solutions and Discussion section with detailed answers
+### Standard Section File Structure
+Each section file (e.g., `lesson-1.md`) will contain:
+1. Learning Objectives section with measurable goals
+2. Prerequisites section with knowledge validation
+3. Theoretical Concepts section with Physical AI focus
+4. Real-World Context section with robotics applications
+5. Hands-On Exercise section with simulation integration
+6. Exercise Solutions and Discussion section with detailed explanations
 7. Summary and Key Takeaways section for retention
-8. Further Reading and Resources section for continued learning
+8. Further Reading section with authoritative sources
 
 ### Asset Organization
-- `static/img/` for all images and diagrams
-- `static/files/` for downloadable resources (code samples, data files)
-- `src/components/` for custom React components
+- `static/img/` for all images, diagrams, and simulation screenshots
+- `static/files/` for downloadable resources (configuration files, code samples)
+- `src/components/` for custom React components for interactive learning
 - `src/css/` for custom styles and theme overrides
 
 ## Technology Decisions
 
-### Docusaurus Version
-- Using Docusaurus 3.x for latest features and performance
-- Includes React 18 support and improved plugin architecture
-- Better TypeScript integration and developer experience
+### Simulation Stack
+- ROS 2 Humble Hawksbill for robotics framework
+- Gazebo Garden for physics simulation
+- NVIDIA Isaac Sim for advanced robotics simulation
+- Docusaurus 3.9.2 for documentation platform
+
+### AI Integration
+- OpenAI Agents for intelligent tutoring
+- RAG-based chatbot for personalized learning
+- Vector database for content retrieval
+- FastAPI backend for AI services
 
 ### Testing Approach
 - Jest for unit testing of custom components
-- Cypress for end-to-end testing of user flows
-- Accessibility testing with automated tools
-- Content validation through CI/CD pipeline
+- Pytest for Python simulation components
+- Manual assessment validation for educational content
+- Simulation compatibility testing across hardware configurations
 
 ### Performance Considerations
-- Optimize for <2s page load times through:
-  - Code splitting and lazy loading
-  - Image optimization and compression
-  - Bundle size optimization
-  - Caching strategies
-- SEO optimization through proper metadata and structure
+- Optimize for <3s page load times with:
+  - Efficient content delivery
+  - Asset optimization and compression
+  - Caching strategies for frequently accessed content
+- Ensure simulation exercises run smoothly on standard student hardware
+- Implement progressive loading for interactive components
 
-## Community Contribution Support
+## Simulation-First Learning Approach
 
-### GitHub Integration
-- Direct editing links for each page
-- Fork and pull request workflow
-- Issue templates for feedback and suggestions
-- Contribution guidelines in documentation
+### Exercise Design Principles
+- 70% of learning time dedicated to hands-on simulation
+- Each theoretical concept paired with practical simulation exercise
+- Progressive difficulty from basic perception-action loops to complex behaviors
+- Immediate feedback through simulation results
 
-### Content Review Process
-- Automated checks for content quality
-- Peer review system for contributions
-- Maintainer approval workflow
-- Versioning and change tracking
+### Content Integration
+- Theoretical concepts contextualized through simulation examples
+- Mathematical foundations applied to robotics problems
+- Real-world applications demonstrated through simulation scenarios
+- Assessment integrated with simulation completion metrics
