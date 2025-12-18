@@ -30,7 +30,7 @@ const PrerequisiteIndicator: React.FC<PrerequisiteIndicatorProps> = ({
           <div className={styles.progressBar}>
             <div
               className={styles.progressFill}
-              style={{ width: `${(completedCount / prerequisites.length) * 100}%` }}
+              style={{ width: `${prerequisites.length > 0 ? (completedCount / prerequisites.length) * 100 : 0}%` }}
             ></div>
           </div>
           <div className={styles.progressText}>
