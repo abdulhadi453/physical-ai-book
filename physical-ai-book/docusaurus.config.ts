@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Physical AI Book',
-  tagline: 'Making Physical AI accessible to everyone through hands-on learning',
+  title: 'AI-Native Textbook for Physical AI & Humanoid Robotics',
+  tagline: 'Advanced robotics education through AI-enhanced learning experiences',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://physical-ai-book.example.com',
+  url: 'https://physical-ai-book.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/hackathon-book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'physical-ai-book', // Usually your GitHub org/user name.
-  projectName: 'physical-ai-book', // Usually your repo name.
+  projectName: 'hackathon-book', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -32,7 +32,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'ur'], // English and Urdu for translation support
   },
 
   presets: [
@@ -77,7 +77,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Physical AI Book',
+      title: 'Physical AI & Humanoid Robotics',
       logo: {
         alt: 'Physical AI Book Logo',
         src: 'img/logo.svg',
@@ -91,7 +91,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/physical-ai-book/physical-ai-book',
+          href: 'https://github.com/physical-ai-book/hackathon-book',
           label: 'GitHub',
           position: 'right',
         },
@@ -114,7 +114,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Discussions',
-              href: 'https://github.com/physical-ai-book/physical-ai-book/discussions',
+              href: 'https://github.com/physical-ai-book/hackathon-book/discussions',
             },
             {
               label: 'Contributing',
@@ -131,12 +131,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/physical-ai-book/physical-ai-book',
+              href: 'https://github.com/physical-ai-book/hackathon-book',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Physical AI Book. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

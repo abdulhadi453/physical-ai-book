@@ -1,6 +1,6 @@
 {
-  "name": "physical-ai-book",
-  "version": "0.0.0",
+  "name": "ai-native-textbook-physical-ai-humanoid-robotics",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -43,5 +43,20 @@
   },
   "engines": {
     "node": ">=20.0"
-  }
+  },
+  "description": "AI-Native Textbook for Teaching Physical AI & Humanoid Robotics - A competitive hackathon project focused on creating AI-enhanced educational materials for robotics simulation, embodied intelligence, and humanoid systems.",
+  "keywords": [
+    "physical-ai",
+    "humanoid-robotics",
+    "ros2",
+    "gazebo",
+    "nvidia-isaac",
+    "vision-language-action",
+    "embodied-ai",
+    "robotics-education",
+    "ai-textbook",
+    "docusaurus"
+  ],
+  "author": "Physical AI Book Team",
+  "license": "MIT"
 }

@@ -1,170 +1,73 @@
 ---
 sidebar_position: 3
-title: 'Lesson 2: Sensors and Perception'
+title: 'Module 1: rclpy for AI Agent Integration'
+description: Using rclpy to bridge AI agents with robot controllers
+tags: [ros2, rclpy, python, ai-integration, nodes]
 ---
 
-import PrerequisiteIndicator from '@site/src/components/PrerequisiteIndicator/PrerequisiteIndicator';
-import ConceptCard from '@site/src/components/ConceptCard/ConceptCard';
-import ExerciseBox from '@site/src/components/ExerciseBox/ExerciseBox';
-import SummarySection from '@site/src/components/SummarySection/SummarySection';
-import ResourceLink from '@site/src/components/ResourceLink/ResourceLink';
-
-# Lesson 2: Sensors and Perception
+# rclpy for AI Agent Integration
 
 ## Learning Objectives
-
-By the end of this lesson, you will be able to:
-- Identify different types of sensors used in Physical AI systems
-- Explain how sensor data is processed and interpreted
-- Understand the challenges of sensor fusion and uncertainty
-- Design a simple sensor-based perception system
+- Students will be able to implement rclpy nodes that bridge AI agents to robot controllers
+- Students will understand how to create Python-based ROS 2 nodes for AI integration
+- Students will demonstrate the ability to connect AI decision-making to robot control
 
 ## Prerequisites
+- Understanding of ROS 2 communication primitives from lesson 1
+- Basic Python knowledge
+- Familiarity with AI concepts
 
-Before starting this lesson, you should:
-- Complete Lesson 1: Foundations of Physical AI
-- Understand basic concepts of signal processing
-- Have familiarity with probability and statistics
+## Content (500 words max)
 
-<PrerequisiteIndicator
-  prerequisites={['Lesson 1: Foundations of Physical AI', 'Basic signal processing', 'Probability concepts']}
-  completed={['Lesson 1: Foundations of Physical AI']}
-/>
+rclpy is the Python client library for ROS 2 that enables Python-based nodes to interact with the ROS 2 ecosystem. This library is particularly important for AI agent integration because Python is the dominant language for AI and machine learning development.
 
-## Theoretical Concepts
+The core components of rclpy include:
 
-Sensors are the eyes and ears of Physical AI systems, enabling them to perceive and understand their environment. The quality and type of sensors directly impact what an AI system can accomplish in the physical world.
+**Node Creation**: Every ROS 2 Python program starts with creating a node using `rclpy.create_node()`. This node serves as the communication entity within the ROS 2 graph.
 
-### Types of Sensors
+**Publishers and Subscribers**: rclpy provides interfaces to create publishers that send messages to topics and subscribers that receive messages from topics. This enables AI agents to both receive sensor data and send control commands.
 
-1. **Proprioceptive Sensors**: Measure the system's own state (position, velocity, acceleration)
-2. **Exteroceptive Sensors**: Measure the external environment (cameras, LIDAR, sonar)
-3. **Interoceptive Sensors**: Measure internal conditions (temperature, battery level)
+**Services and Actions**: rclpy allows creating service clients and servers, as well as action clients and servers, providing all communication patterns needed for AI-robot interaction.
 
-### Sensor Characteristics
+**Parameter System**: rclpy includes parameter management that allows AI agents to configure robot behavior dynamically.
 
-- **Accuracy**: How close measurements are to the true value
-- **Precision**: How consistent repeated measurements are
-- **Resolution**: The smallest detectable change
-- **Range**: The operational limits of the sensor
-- **Bandwidth**: How frequently the sensor can take measurements
+Here's a basic pattern for AI agent integration:
+1. Create a node that subscribes to sensor data topics
+2. Process the data using AI algorithms
+3. Publish commands to actuator topics
+4. Use services for discrete AI operations
+5. Use actions for complex AI-driven behaviors
 
-<ConceptCard
-  title="Sensor Fusion"
-  description="Sensor fusion is the process of combining data from multiple sensors to create a more accurate and reliable understanding of the environment than any single sensor could provide."
-  keyPoints={[
-    "Multiple sensors can compensate for each other's limitations",
-    "Statistical methods like Kalman filters are commonly used",
-    "Timing synchronization between sensors is critical"
-  ]}
-  examples={[
-    "Self-driving cars combine camera, LIDAR, and radar data",
-    "Smartphones use accelerometers, gyroscopes, and magnetometers together"
-  ]}
-/>
+The integration allows AI agents to leverage ROS 2's distributed architecture while maintaining the flexibility of Python-based AI development. This approach enables sophisticated AI algorithms to control robots without requiring the AI code to be written in other languages like C++.
 
-## Real World Context
+## AI Agent Interaction Points
+- **Explanation**: AI agents can provide additional code examples for specific use cases
+- **Debugging**: AI agents can help troubleshoot rclpy node implementation issues
+- **Examples**: AI agents can provide real-world implementations from humanoid robotics
 
-Sensor technology is advancing rapidly, enabling new applications in Physical AI:
+## Urdu Translation Markers
+- **Technical Term**: rclpy - آر-سی-ال-پائی
+- **Key Concept**: Node - نوڈ
+- **Technical Term**: Publisher - پبلشر
+- **Technical Term**: Subscriber - سبسکرائبر
 
-- **Computer Vision**: Modern cameras with AI chips can process visual data in real-time
-- **LIDAR**: Light Detection and Ranging is revolutionizing robotics and autonomous vehicles
-- **Tactile Sensors**: Enable robots to handle delicate objects with human-like sensitivity
-- **Environmental Sensors**: Networks of sensors monitor air quality, temperature, and other conditions
+## Exercise
+Create a simple rclpy node that subscribes to a sensor topic (e.g., simulated LIDAR data) and publishes commands to an actuator topic (e.g., velocity commands) based on a simple AI decision algorithm.
 
-## Hands-On Exercise
+## Exercise Solution and Discussion
+The solution should demonstrate creating a node with a subscriber and publisher, processing data in the callback, and publishing results. Common mistakes include improper callback design, threading issues, or not properly handling ROS 2 lifecycle.
 
-Let's implement a simple sensor fusion system that combines data from multiple sensors to estimate position.
-
-<ExerciseBox
-  title="Sensor Fusion Simulation"
-  instructions="Create a Python simulation that fuses data from multiple noisy sensors to estimate the position of an object. Implement a simple Kalman filter or weighted average approach to combine sensor readings and reduce uncertainty."
-  expectedOutcome="A simulation showing how combining multiple sensor readings produces more accurate estimates than individual sensors."
-  toolsRequired={['Python 3.x', 'NumPy library', 'Matplotlib for visualization']}
-  troubleshootingTips={[
-    "Make sure your noise parameters are realistic for the simulation",
-    "Visualize both individual sensor readings and the fused estimate",
-    "Experiment with different weighting schemes to see their effects"
-  ]}
-/>
-
-### Exercise Steps:
-
-1. Create a simulated environment with a moving object
-2. Implement multiple noisy sensors measuring the object's position
-3. Design a sensor fusion algorithm (simple or advanced)
-4. Compare the fused estimate with individual sensor readings
-5. Visualize the results to demonstrate the improvement
-
-## Exercise Solutions
-
-### Solution Overview
-
-The solution demonstrates how combining multiple sensor readings can improve accuracy through sensor fusion techniques.
-
-### Key Implementation Points
-
-- Generate realistic sensor noise to simulate real-world conditions
-- Implement both simple averaging and more sophisticated fusion methods
-- Visualize the improvement in accuracy through plots
-
-<ConceptCard
-  title="Kalman Filter Basics"
-  description="The Kalman filter is a mathematical method that uses a series of measurements observed over time to estimate unknown variables, accounting for measurement noise."
-  keyPoints={[
-    "Predicts the next state based on the current state",
-    "Updates the prediction with new measurements",
-    "Maintains uncertainty estimates for optimal weighting"
-  ]}
-/>
-
-## Summary
-
-This lesson covered the essential role of sensors in Physical AI systems and how sensor data is processed to enable perception. We explored different types of sensors, their characteristics, and the important concept of sensor fusion. The hands-on exercise demonstrated how combining multiple sensor readings can improve accuracy and reliability.
-
-### Key Takeaways
-
-- Sensors enable Physical AI systems to perceive their environment
-- Different sensors have different strengths and limitations
-- Sensor fusion can significantly improve perception quality
-- Real-world applications require handling sensor noise and uncertainty
-
-<SummarySection
-  keyTakeaways={[
-    'Sensors are fundamental to Physical AI perception',
-    'Different sensor types serve different purposes',
-    'Sensor fusion improves accuracy and reliability',
-    'Real-world implementation requires handling uncertainty'
-  ]}
-  nextSteps={[
-    'Explore different types of actuators and their control',
-    'Learn about advanced sensor technologies',
-    'Study real-world sensor integration challenges'
-  ]}
-/>
+## Summary and Key Takeaways
+- rclpy enables Python-based ROS 2 nodes for AI integration
+- Provides all communication patterns (topics, services, actions)
+- Allows AI algorithms to control robots while maintaining development flexibility
+- Enables distributed AI-robot interaction
 
 ## Further Reading
+- [rclpy Documentation](https://docs.ros.org/en/humble/p/rclpy/)
+- [ROS 2 Python Tutorials](https://docs.ros.org/en/humble/Tutorials.html)
 
-<ResourceLink
-  title="Probabilistic Robotics"
-  url="https://mitpress.mit.edu/books/probabilistic-robotics"
-  type="book"
-  description="Comprehensive textbook on probabilistic methods in robotics, including sensor models and state estimation."
-  difficulty="advanced"
-/>
-
-<ResourceLink
-  title="Sensor Fusion Tutorial"
-  url="https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/"
-  type="article"
-  description="Visual explanation of Kalman filters and sensor fusion with intuitive diagrams."
-  difficulty="intermediate"
-/>
-
-<ResourceLink
-  title="Modern Sensor Technologies"
-  url="https://www.youtube.com/watch?v=Jn42QN35YDU"
-  type="video"
-  description="Overview of current sensor technologies and their applications in robotics and AI."
-  difficulty="beginner"
-/>
+## Assessment
+1. Explain the role of rclpy in bridging AI agents to robot controllers.
+2. Implement a basic rclpy node with subscriber and publisher.
+3. Describe how rclpy enables distributed AI-robot interaction.
