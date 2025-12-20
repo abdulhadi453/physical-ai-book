@@ -1,0 +1,19 @@
+{
+  "id": "chapter-1/researcher-resources",
+  "title": "Researcher Resources: Module 1 - Foundations of Physical AI",
+  "description": "This section provides advanced resources and materials for researchers exploring embodied AI and Physical AI concepts.",
+  "source": "@site/docs/chapter-1/researcher-resources.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/researcher-resources",
+  "permalink": "/hackathon-book/docs/chapter-1/researcher-resources",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/researcher-resources.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_position": 8,
+    "title": "Researcher Resources: Module 1 - Foundations of Physical AI"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "chapter-2/lesson-9",
+  "title": "IMU Sensor Simulation Guide",
+  "description": "Overview",
+  "source": "@site/docs/chapter-2/lesson-9.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/lesson-9",
+  "permalink": "/hackathon-book/docs/chapter-2/lesson-9",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/lesson-9.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "sidebar_position": 14
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Depth Camera Simulation Guide",
+    "permalink": "/hackathon-book/docs/chapter-2/lesson-8"
+  },
+  "next": {
+    "title": "Exercise 1: Basic Environment Creation",
+    "permalink": "/hackathon-book/docs/chapter-2/exercise-1"
+  }
+}

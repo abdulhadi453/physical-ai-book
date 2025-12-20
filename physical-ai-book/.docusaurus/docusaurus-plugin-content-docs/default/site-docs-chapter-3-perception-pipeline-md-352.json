@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/perception-pipeline",
+  "title": "Isaac ROS Perception Pipeline Implementation",
+  "description": "Overview",
+  "source": "@site/docs/chapter-3/perception-pipeline.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/perception-pipeline",
+  "permalink": "/hackathon-book/docs/chapter-3/perception-pipeline",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/perception-pipeline.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Isaac Sim Simulation Environment Configuration",
+    "permalink": "/hackathon-book/docs/chapter-3/simulation-setup"
+  },
+  "next": {
+    "title": "Multimodal Sensor Integration in Isaac Sim",
+    "permalink": "/hackathon-book/docs/chapter-3/sensor-integration"
+  }
+}

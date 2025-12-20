@@ -1,0 +1,62 @@
+{
+  "id": "chapter-1/lesson-6",
+  "title": "Module 1: Advanced ROS 2 Concepts for Humanoid Integration",
+  "description": "Advanced ROS 2 features and patterns for humanoid robot systems",
+  "source": "@site/docs/chapter-1/lesson-6.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/lesson-6",
+  "permalink": "/hackathon-book/docs/chapter-1/lesson-6",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/lesson-6.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/hackathon-book/docs/tags/ros-2"
+    },
+    {
+      "inline": true,
+      "label": "advanced",
+      "permalink": "/hackathon-book/docs/tags/advanced"
+    },
+    {
+      "inline": true,
+      "label": "integration",
+      "permalink": "/hackathon-book/docs/tags/integration"
+    },
+    {
+      "inline": true,
+      "label": "ai",
+      "permalink": "/hackathon-book/docs/tags/ai"
+    },
+    {
+      "inline": true,
+      "label": "humanoid",
+      "permalink": "/hackathon-book/docs/tags/humanoid"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "sidebar_position": 7,
+    "title": "Module 1: Advanced ROS 2 Concepts for Humanoid Integration",
+    "description": "Advanced ROS 2 features and patterns for humanoid robot systems",
+    "tags": [
+      "ros2",
+      "advanced",
+      "integration",
+      "ai",
+      "humanoid"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 1: Humanoid Context Applications",
+    "permalink": "/hackathon-book/docs/chapter-1/lesson-5"
+  },
+  "next": {
+    "title": "Chapter 2: The Digital Twin (Gazebo & Unity)",
+    "permalink": "/hackathon-book/docs/chapter-2/intro"
+  }
+}

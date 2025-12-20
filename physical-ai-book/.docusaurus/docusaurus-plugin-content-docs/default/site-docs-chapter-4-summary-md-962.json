@@ -1,0 +1,15 @@
+{
+  "id": "chapter-4/summary",
+  "title": "Module 4 Summary: Vision-Language-Action (VLA) Systems",
+  "description": "Overview",
+  "source": "@site/docs/chapter-4/summary.md",
+  "sourceDirName": "chapter-4",
+  "slug": "/chapter-4/summary",
+  "permalink": "/hackathon-book/docs/chapter-4/summary",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-4/summary.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

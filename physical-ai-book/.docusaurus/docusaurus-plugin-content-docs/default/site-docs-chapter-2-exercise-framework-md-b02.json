@@ -1,0 +1,18 @@
+{
+  "id": "chapter-2/exercise-framework",
+  "title": "Simulation Exercise Framework",
+  "description": "Overview",
+  "source": "@site/docs/chapter-2/exercise-framework.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/exercise-framework",
+  "permalink": "/hackathon-book/docs/chapter-2/exercise-framework",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/exercise-framework.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  }
+}

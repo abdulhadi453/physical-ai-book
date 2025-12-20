@@ -1,0 +1,27 @@
+{
+  "id": "chapter-2/lesson-5",
+  "title": "Unity Physics Environment Setup Guide",
+  "description": "Overview",
+  "source": "@site/docs/chapter-2/lesson-5.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/lesson-5",
+  "permalink": "/hackathon-book/docs/chapter-2/lesson-5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/lesson-5.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_position": 8
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Gazebo Physics Environment Setup Guide",
+    "permalink": "/hackathon-book/docs/chapter-2/lesson-4"
+  },
+  "next": {
+    "title": "Physics Parameters Configuration Guide",
+    "permalink": "/hackathon-book/docs/chapter-2/lesson-6"
+  }
+}

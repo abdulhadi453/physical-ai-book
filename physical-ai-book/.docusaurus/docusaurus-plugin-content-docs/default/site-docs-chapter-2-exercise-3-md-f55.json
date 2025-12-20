@@ -1,0 +1,27 @@
+{
+  "id": "chapter-2/exercise-3",
+  "title": "Exercise 3: Advanced Navigation",
+  "description": "Overview",
+  "source": "@site/docs/chapter-2/exercise-3.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/exercise-3",
+  "permalink": "/hackathon-book/docs/chapter-2/exercise-3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/exercise-3.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 18,
+  "frontMatter": {
+    "sidebar_position": 18
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Exercise 2: Sensor Integration",
+    "permalink": "/hackathon-book/docs/chapter-2/exercise-2"
+  },
+  "next": {
+    "title": "Exercise 4: Cross-Platform Comparative Analysis",
+    "permalink": "/hackathon-book/docs/chapter-2/exercise-4"
+  }
+}

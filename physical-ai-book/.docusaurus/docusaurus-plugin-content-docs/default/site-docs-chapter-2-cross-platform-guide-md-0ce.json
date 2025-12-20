@@ -1,0 +1,27 @@
+{
+  "id": "chapter-2/cross-platform-guide",
+  "title": "Cross-Platform Simulation Comparison Guide",
+  "description": "Overview",
+  "source": "@site/docs/chapter-2/cross-platform-guide.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/cross-platform-guide",
+  "permalink": "/hackathon-book/docs/chapter-2/cross-platform-guide",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/cross-platform-guide.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 21,
+  "frontMatter": {
+    "sidebar_position": 21
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Prerequisite Knowledge Validation for Module 3",
+    "permalink": "/hackathon-book/docs/chapter-2/prerequisite-check"
+  },
+  "next": {
+    "title": "Platform-Specific Differences: Gazebo vs Unity",
+    "permalink": "/hackathon-book/docs/chapter-2/platform-differences"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "chapter-4/researcher-resources",
+  "title": "Researcher Resources: Vision-Language-Action (VLA) Systems",
+  "description": "Overview",
+  "source": "@site/docs/chapter-4/researcher-resources.md",
+  "sourceDirName": "chapter-4",
+  "slug": "/chapter-4/researcher-resources",
+  "permalink": "/hackathon-book/docs/chapter-4/researcher-resources",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-4/researcher-resources.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Educator Guide: Vision-Language-Action (VLA) Systems",
+    "permalink": "/hackathon-book/docs/chapter-4/educator-guide"
+  },
+  "next": {
+    "title": "Performance Monitoring: Vision-Language-Action (VLA) Systems",
+    "permalink": "/hackathon-book/docs/chapter-4/performance-monitoring"
+  }
+}

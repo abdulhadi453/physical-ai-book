@@ -1,0 +1,24 @@
+{
+  "id": "chapter-4/capstone-project",
+  "title": "Capstone Project: Autonomous Humanoid Task",
+  "description": "Overview",
+  "source": "@site/docs/chapter-4/capstone-project.md",
+  "sourceDirName": "chapter-4",
+  "slug": "/chapter-4/capstone-project",
+  "permalink": "/hackathon-book/docs/chapter-4/capstone-project",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-4/capstone-project.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Security Considerations: Vision-Language-Action (VLA) Systems",
+    "permalink": "/hackathon-book/docs/chapter-4/security-considerations"
+  },
+  "next": {
+    "title": "Contributing",
+    "permalink": "/hackathon-book/docs/contributing"
+  }
+}

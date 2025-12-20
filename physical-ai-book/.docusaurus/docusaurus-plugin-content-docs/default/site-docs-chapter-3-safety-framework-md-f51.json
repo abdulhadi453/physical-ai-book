@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/safety-framework",
+  "title": "Safety and Reliability Framework for Isaac Sim AI-Robot Systems",
+  "description": "Overview",
+  "source": "@site/docs/chapter-3/safety-framework.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/safety-framework",
+  "permalink": "/hackathon-book/docs/chapter-3/safety-framework",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/safety-framework.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AI-Robot Communication Protocols for Isaac Sim",
+    "permalink": "/hackathon-book/docs/chapter-3/communication-protocols"
+  },
+  "next": {
+    "title": "Performance Monitoring Tools for Isaac Sim AI-Robot Systems",
+    "permalink": "/hackathon-book/docs/chapter-3/performance-monitoring"
+  }
+}

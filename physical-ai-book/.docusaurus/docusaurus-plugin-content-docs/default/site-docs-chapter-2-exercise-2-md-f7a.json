@@ -1,0 +1,27 @@
+{
+  "id": "chapter-2/exercise-2",
+  "title": "Exercise 2: Sensor Integration",
+  "description": "Overview",
+  "source": "@site/docs/chapter-2/exercise-2.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/exercise-2",
+  "permalink": "/hackathon-book/docs/chapter-2/exercise-2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/exercise-2.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "sidebar_position": 15
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Exercise 1: Basic Environment Creation",
+    "permalink": "/hackathon-book/docs/chapter-2/exercise-1"
+  },
+  "next": {
+    "title": "Exercise 3: Advanced Navigation",
+    "permalink": "/hackathon-book/docs/chapter-2/exercise-3"
+  }
+}
