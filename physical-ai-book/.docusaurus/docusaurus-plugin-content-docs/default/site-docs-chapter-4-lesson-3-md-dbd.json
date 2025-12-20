@@ -1,0 +1,24 @@
+{
+  "id": "chapter-4/lesson-3",
+  "title": "Lesson 3: Visual Perception Integration",
+  "description": "Overview",
+  "source": "@site/docs/chapter-4/lesson-3.md",
+  "sourceDirName": "chapter-4",
+  "slug": "/chapter-4/lesson-3",
+  "permalink": "/hackathon-book/docs/chapter-4/lesson-3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-4/lesson-3.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Lesson 2: LLM-based Cognitive Planning",
+    "permalink": "/hackathon-book/docs/chapter-4/lesson-2"
+  },
+  "next": {
+    "title": "Lesson 4: ROS 2 Action Execution",
+    "permalink": "/hackathon-book/docs/chapter-4/lesson-4"
+  }
+}

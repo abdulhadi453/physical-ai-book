@@ -1,0 +1,27 @@
+{
+  "id": "chapter-2/references",
+  "title": "References",
+  "description": "Overview",
+  "source": "@site/docs/chapter-2/references.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/references",
+  "permalink": "/hackathon-book/docs/chapter-2/references",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/references.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 28,
+  "frontMatter": {
+    "sidebar_position": 28
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AI Integration Guide for Digital Twin Simulation",
+    "permalink": "/hackathon-book/docs/chapter-2/ai-integration"
+  },
+  "next": {
+    "title": "Module 3: The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/hackathon-book/docs/chapter-3/intro"
+  }
+}

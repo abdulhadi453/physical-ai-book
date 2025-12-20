@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/researcher-resources",
+  "title": "Researcher Resources: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)",
+  "description": "Overview",
+  "source": "@site/docs/chapter-3/researcher-resources.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/researcher-resources",
+  "permalink": "/hackathon-book/docs/chapter-3/researcher-resources",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/researcher-resources.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/hackathon-book/docs/chapter-3/educator-guide"
+  },
+  "next": {
+    "title": "AI-Robot Communication Protocols for Isaac Sim",
+    "permalink": "/hackathon-book/docs/chapter-3/communication-protocols"
+  }
+}

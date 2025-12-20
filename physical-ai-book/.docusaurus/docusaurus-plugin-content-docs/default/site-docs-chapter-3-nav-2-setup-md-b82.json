@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/nav2-setup",
+  "title": "Nav2 Navigation Stack Integration with Isaac Sim",
+  "description": "Overview",
+  "source": "@site/docs/chapter-3/nav2-setup.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/nav2-setup",
+  "permalink": "/hackathon-book/docs/chapter-3/nav2-setup",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/nav2-setup.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Isaac ROS Bridge Setup and Configuration",
+    "permalink": "/hackathon-book/docs/chapter-3/isaac-ros-setup"
+  },
+  "next": {
+    "title": "Isaac Sim Simulation Environment Configuration",
+    "permalink": "/hackathon-book/docs/chapter-3/simulation-setup"
+  }
+}

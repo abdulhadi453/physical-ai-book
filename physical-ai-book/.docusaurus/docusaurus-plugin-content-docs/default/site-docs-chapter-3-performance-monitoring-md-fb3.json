@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/performance-monitoring",
+  "title": "Performance Monitoring Tools for Isaac Sim AI-Robot Systems",
+  "description": "Overview",
+  "source": "@site/docs/chapter-3/performance-monitoring.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/performance-monitoring",
+  "permalink": "/hackathon-book/docs/chapter-3/performance-monitoring",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/performance-monitoring.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Safety and Reliability Framework for Isaac Sim AI-Robot Systems",
+    "permalink": "/hackathon-book/docs/chapter-3/safety-framework"
+  },
+  "next": {
+    "title": "Module 3 Summary: The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/hackathon-book/docs/chapter-3/summary"
+  }
+}

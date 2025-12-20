@@ -1,0 +1,28 @@
+{
+  "id": "tutorial-basics/welcome",
+  "title": "Welcome to Physical AI Tutorials",
+  "description": "This section contains additional tutorials to help you understand and work with Physical AI concepts.",
+  "source": "@site/docs/tutorial-basics/welcome.md",
+  "sourceDirName": "tutorial-basics",
+  "slug": "/tutorial-basics/welcome",
+  "permalink": "/docs/tutorial-basics/welcome",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/physical-ai-book/physical-ai-book/edit/main/docs/tutorial-basics/welcome.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Welcome to Physical AI Tutorials"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Lesson 3: Learning and Adaptation in Physical AI",
+    "permalink": "/docs/chapter-2/lesson-3"
+  },
+  "next": {
+    "title": "Contributing",
+    "permalink": "/docs/contributing"
+  }
+}

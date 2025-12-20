@@ -1,0 +1,27 @@
+{
+  "id": "chapter-2/researcher-resources",
+  "title": "Researcher Resources for Digital Twin Simulation",
+  "description": "Overview",
+  "source": "@site/docs/chapter-2/researcher-resources.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/researcher-resources",
+  "permalink": "/hackathon-book/docs/chapter-2/researcher-resources",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/researcher-resources.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 26,
+  "frontMatter": {
+    "sidebar_position": 26
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Progress Tracking Guide for Digital Twin Simulation",
+    "permalink": "/hackathon-book/docs/chapter-2/progress-tracking-guide"
+  },
+  "next": {
+    "title": "AI Integration Guide for Digital Twin Simulation",
+    "permalink": "/hackathon-book/docs/chapter-2/ai-integration"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/intro",
+  "title": "Module 3: The AI-Robot Brain (NVIDIA Isaac™)",
+  "description": "Welcome to Module 3 of the Physical AI & Humanoid Robotics textbook. This module focuses on creating intelligent decision-making systems for robots using the NVIDIA Isaac platform. Here, you'll learn how to build AI agents that can perceive, reason, and act in physical environments, forming what we call the \"AI-Robot Brain.\"",
+  "source": "@site/docs/chapter-3/intro.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/intro",
+  "permalink": "/hackathon-book/docs/chapter-3/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/intro.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "References",
+    "permalink": "/hackathon-book/docs/chapter-2/references"
+  },
+  "next": {
+    "title": "Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration",
+    "permalink": "/hackathon-book/docs/chapter-3/lesson-1"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "chapter-1/lesson-4",
+  "title": "Module 1: Data Flow Tracing (AI → ROS 2 → Actuator)",
+  "description": "Understanding complete data flows from AI decisions to actuator commands",
+  "source": "@site/docs/chapter-1/lesson-4.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/lesson-4",
+  "permalink": "/hackathon-book/docs/chapter-1/lesson-4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/lesson-4.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/hackathon-book/docs/tags/ros-2"
+    },
+    {
+      "inline": true,
+      "label": "data-flow",
+      "permalink": "/hackathon-book/docs/tags/data-flow"
+    },
+    {
+      "inline": true,
+      "label": "ai-integration",
+      "permalink": "/hackathon-book/docs/tags/ai-integration"
+    },
+    {
+      "inline": true,
+      "label": "control",
+      "permalink": "/hackathon-book/docs/tags/control"
+    },
+    {
+      "inline": true,
+      "label": "architecture",
+      "permalink": "/hackathon-book/docs/tags/architecture"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "Module 1: Data Flow Tracing (AI → ROS 2 → Actuator)",
+    "description": "Understanding complete data flows from AI decisions to actuator commands",
+    "tags": [
+      "ros2",
+      "data-flow",
+      "ai-integration",
+      "control",
+      "architecture"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 1: URDF Fundamentals for Humanoid Robots",
+    "permalink": "/hackathon-book/docs/chapter-1/lesson-3"
+  },
+  "next": {
+    "title": "Module 1: Humanoid Context Applications",
+    "permalink": "/hackathon-book/docs/chapter-1/lesson-5"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "chapter-5/lesson-2",
+  "title": "Lesson 2: Safety, Ethics, and Reliability in Physical AI Systems",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapter-5/lesson-2.md",
+  "sourceDirName": "chapter-5",
+  "slug": "/chapter-5/lesson-2",
+  "permalink": "/hackathon-book/docs/chapter-5/lesson-2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-5/lesson-2.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Lesson 2: Safety, Ethics, and Reliability in Physical AI Systems"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Lesson 1: Real-World Deployment Considerations",
+    "permalink": "/hackathon-book/docs/chapter-5/lesson-1"
+  },
+  "next": {
+    "title": "Lesson 3: Simulation-to-Reality Transfer and Validation",
+    "permalink": "/hackathon-book/docs/chapter-5/lesson-3"
+  }
+}
