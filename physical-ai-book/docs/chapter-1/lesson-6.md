@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-title: 'Module 1: Advanced ROS 2 Concepts for Humanoid Integration'
+title: 'Lesson 1.1.6: Advanced ROS 2 Concepts for Humanoid Integration'
 description: Advanced ROS 2 features and patterns for humanoid robot systems
 tags: [ros2, advanced, integration, ai, humanoid]
 ---

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: 'Lesson 2: Gazebo Simulation Environments and Physics Modeling'
+title: 'Lesson 2.1.2: Unity Physics Environment Setup'
 ---
 
 import PrerequisiteIndicator from '@site/src/components/PrerequisiteIndicator/PrerequisiteIndicator';

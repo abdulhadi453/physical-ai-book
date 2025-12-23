@@ -1,11 +1,11 @@
 ---
 sidebar_position: 2
-title: 'Module 1: Communication Primitives (Topics, Services, Actions)'
+title: 'Lesson 1.1.1: Communication Primitives (Topics, Services, Actions)'
 description: Understanding ROS 2 communication patterns and their applications
 tags: [ros2, communication, topics, services, actions, ai-integration]
 ---
 
-# Communication Primitives (Topics, Services, Actions)
+# Lesson 1.1.1: Communication Primitives (Topics, Services, Actions)
 
 ## Learning Objectives
 - Students will be able to differentiate between ROS 2 communication patterns (nodes, topics, services, actions)

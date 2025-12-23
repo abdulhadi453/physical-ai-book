@@ -1,5 +1,7 @@
 # Module 3: The AI-Robot Brain (NVIDIA Isaac™)
 
+## Chapter 3.1: NVIDIA Isaac Platform Integration
+
 Welcome to Module 3 of the Physical AI & Humanoid Robotics textbook. This module focuses on creating intelligent decision-making systems for robots using the NVIDIA Isaac platform. Here, you'll learn how to build AI agents that can perceive, reason, and act in physical environments, forming what we call the "AI-Robot Brain."
 
 ## Learning Objectives

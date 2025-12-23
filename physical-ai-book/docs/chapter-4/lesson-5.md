@@ -1,4 +1,4 @@
-# Lesson 5: VLA System Integration and Capstone Project
+# Lesson 4.1.5: VLA System Integration
 
 ## Overview
 

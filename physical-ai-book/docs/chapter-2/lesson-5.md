@@ -1,8 +1,9 @@
 ---
 sidebar_position: 8
+title: 'Lesson 2.2.2: Unity Depth Camera Simulation'
 ---
 
-# Unity Physics Environment Setup Guide
+# Lesson 2.2.2: Unity Depth Camera Simulation
 
 ## Overview
 This lesson provides a comprehensive guide to setting up physics simulation environments using Unity, a powerful cross-platform game engine that can be leveraged for robotics simulation. Unity's physics engine offers realistic simulation capabilities with excellent visualization and rendering quality.

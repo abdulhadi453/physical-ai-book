@@ -1,8 +1,9 @@
 ---
 sidebar_position: 13
+title: 'Lesson 2.2.5: Depth Camera Simulation Guide'
 ---
 
-# Depth Camera Simulation Guide
+# Lesson 2.2.5: Depth Camera Simulation Guide
 
 ## Overview
 This lesson provides a comprehensive guide to simulating depth cameras in digital twin environments. Depth cameras provide crucial 3D spatial information by measuring the distance to objects in the scene. This guide covers both Gazebo and Unity implementations for realistic depth sensing in robotics applications.

@@ -1,4 +1,4 @@
-# Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration
+# Lesson 3.1.1: NVIDIA Isaac Simulation Environment and ROS Integration
 
 ## Overview
 

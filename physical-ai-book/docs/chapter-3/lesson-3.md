@@ -1,4 +1,4 @@
-# Lesson 3: Perception and AI Decision Making
+# Lesson 3.1.3: Perception and AI Decision Making
 
 ## Overview
 

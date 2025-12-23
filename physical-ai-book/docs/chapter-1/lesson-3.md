@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: 'Module 1: URDF Fundamentals for Humanoid Robots'
+title: 'Lesson 1.1.3: URDF Fundamentals for Humanoid Robots'
 description: Understanding Unified Robot Description Format for humanoid robot structures
 tags: [ros2, urdf, humanoid, robot-description, xml]
 ---

@@ -1,8 +1,9 @@
 ---
 sidebar_position: 7
+title: 'Lesson 2.2.1: Gazebo LiDAR Sensor Simulation'
 ---
 
-# Gazebo Physics Environment Setup Guide
+# Lesson 2.2.1: Gazebo LiDAR Sensor Simulation
 
 ## Overview
 This lesson provides a comprehensive guide to setting up physics simulation environments using Gazebo, a powerful open-source robotics simulator. Gazebo provides accurate and efficient simulation of robots in complex indoor and outdoor environments.

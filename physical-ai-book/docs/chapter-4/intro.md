@@ -1,6 +1,6 @@
-# Introduction to Vision-Language-Action (VLA) Systems
+# Module 4: Vision-Language-Action (VLA) Systems
 
-## Welcome to Module 4
+## Chapter 4.1: Introduction to Vision-Language-Action Systems
 
 Welcome to Module 4: Vision-Language-Action (VLA) Systems, the capstone module of our Physical AI & Humanoid Robotics curriculum. In this module, you will build upon the foundations established in the previous modules to create an integrated system that enables humanoid robots to understand and execute natural language commands through a sophisticated pipeline combining computer vision, natural language processing, and robotic action execution.
 

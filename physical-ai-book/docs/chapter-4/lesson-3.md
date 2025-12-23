@@ -1,4 +1,4 @@
-# Lesson 3: Visual Perception Integration
+# Lesson 4.1.3: Visual Perception Integration
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# Lesson 2: Navigation and Path Planning with Nav2
+# Lesson 3.1.2: Navigation and Path Planning with Nav2
 
 ## Overview
 

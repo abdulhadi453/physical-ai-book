@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Chapter 2: The Digital Twin (Gazebo & Unity)
+# Module 2: The Digital Twin (Gazebo & Unity)
 
 ## Welcome to Digital Twin Simulation
 

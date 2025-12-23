@@ -1,11 +1,11 @@
 ---
 sidebar_position: 1
-title: 'Module 1: Introduction to ROS 2 as the Robotic Nervous System'
+title: 'Chapter 1.1: Introduction to ROS 2 as the Robotic Nervous System'
 description: Understanding ROS 2 as middleware connecting AI agents to robot hardware
 tags: [ros2, architecture, middleware, ai-integration]
 ---
 
-# Introduction to ROS 2 as the Robotic Nervous System
+# Chapter 1.1: Introduction to ROS 2 as the Robotic Nervous System
 
 ## Learning Objectives
 - Students will be able to explain ROS 2 architecture conceptually

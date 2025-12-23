@@ -1,4 +1,4 @@
-# Lesson 4: Advanced AI Integration and Performance Optimization
+# Lesson 3.1.4: AI-Robot Integration and Optimization
 
 ## Overview
 

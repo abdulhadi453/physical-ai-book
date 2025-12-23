@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: 'Lesson 3: NVIDIA Isaac Platform Integration'
+title: 'Lesson 2.1.3: Physics Parameters Configuration'
 ---
 
 import PrerequisiteIndicator from '@site/src/components/PrerequisiteIndicator/PrerequisiteIndicator';

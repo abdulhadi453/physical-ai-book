@@ -1,11 +1,11 @@
 ---
 sidebar_position: 3
-title: 'Module 1: rclpy for AI Agent Integration'
+title: 'Lesson 1.1.2: rclpy for AI Agent Integration'
 description: Using rclpy to bridge AI agents with robot controllers
 tags: [ros2, rclpy, python, ai-integration, nodes]
 ---
 
-# rclpy for AI Agent Integration
+# Lesson 1.1.2: rclpy for AI Agent Integration
 
 ## Learning Objectives
 - Students will be able to implement rclpy nodes that bridge AI agents to robot controllers

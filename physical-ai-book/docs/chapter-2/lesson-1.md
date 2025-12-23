@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: 'Lesson 1: ROS 2 Architecture and Communication Patterns'
+title: 'Lesson 2.1.1: Physics Simulation Environment Setup'
 ---
 
 import PrerequisiteIndicator from '@site/src/components/PrerequisiteIndicator/PrerequisiteIndicator';

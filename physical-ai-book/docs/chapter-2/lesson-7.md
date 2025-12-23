@@ -1,8 +1,9 @@
 ---
 sidebar_position: 12
+title: 'Lesson 2.2.4: LiDAR Sensor Simulation Guide'
 ---
 
-# LiDAR Sensor Simulation Guide
+# Lesson 2.2.4: LiDAR Sensor Simulation Guide
 
 ## Overview
 This lesson provides a comprehensive guide to simulating LiDAR (Light Detection and Ranging) sensors in digital twin environments. LiDAR is a critical sensor for robotics applications, providing 3D spatial information about the environment. This guide covers both Gazebo and Unity implementations.

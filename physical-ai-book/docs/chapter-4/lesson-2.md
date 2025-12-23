@@ -1,4 +1,4 @@
-# Lesson 2: LLM-based Cognitive Planning
+# Lesson 4.1.2: LLM-based Cognitive Planning
 
 ## Overview
 

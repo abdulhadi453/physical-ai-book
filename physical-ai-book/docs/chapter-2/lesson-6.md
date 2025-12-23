@@ -1,8 +1,9 @@
 ---
 sidebar_position: 9
+title: 'Lesson 2.2.3: IMU Sensor Configuration'
 ---
 
-# Physics Parameters Configuration Guide
+# Lesson 2.2.3: IMU Sensor Configuration
 
 ## Overview
 This lesson provides a comprehensive guide to configuring physics parameters in simulation environments. Proper configuration of physics parameters is crucial for achieving realistic and stable simulations that accurately represent real-world physics behavior.

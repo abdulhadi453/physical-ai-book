@@ -1,8 +1,9 @@
 ---
 sidebar_position: 14
+title: 'Lesson 2.2.6: IMU Sensor Simulation Guide'
 ---
 
-# IMU Sensor Simulation Guide
+# Lesson 2.2.6: IMU Sensor Simulation Guide
 
 ## Overview
 This lesson provides a comprehensive guide to simulating Inertial Measurement Unit (IMU) sensors in digital twin environments. IMUs are critical sensors that measure acceleration, angular velocity, and orientation, providing essential data for robot navigation, stabilization, and motion control. This guide covers both Gazebo and Unity implementations.

@@ -1,4 +1,4 @@
-# Lesson 1: Voice Command Processing with Whisper
+# Lesson 4.1.1: Voice Command Processing with Whisper
 
 ## Overview
 

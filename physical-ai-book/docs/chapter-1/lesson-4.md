@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-title: 'Module 1: Data Flow Tracing (AI → ROS 2 → Actuator)'
+title: 'Lesson 1.1.4: Data Flow Tracing (AI → ROS 2 → Actuator)'
 description: Understanding complete data flows from AI decisions to actuator commands
 tags: [ros2, data-flow, ai-integration, control, architecture]
 ---

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-title: 'Module 1: Humanoid Context Applications'
+title: 'Lesson 1.1.5: Humanoid Context Applications'
 description: Applying ROS 2 concepts to humanoid robot scenarios
 tags: [ros2, humanoid, applications, integration, ai]
 ---
