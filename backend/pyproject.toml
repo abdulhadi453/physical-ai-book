@@ -1,7 +1,7 @@
 [project]
 name = "embedding-pipeline"
 version = "0.1.0"
-description = "Add your description here"
+description = "RAG Backend for Physical AI Book"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -11,4 +11,13 @@ dependencies = [
     "python-dotenv>=1.2.1",
     "qdrant-client>=1.16.2",
     "requests>=2.32.5",
+    # Agent dependencies
+    "fastapi>=0.115.0",
+    "uvicorn>=0.34.0",
+    "pydantic>=2.10.0",
+    "openai>=1.50.0",
+    "openai-agents>=0.0.7",
+    "httpx>=0.28.0",
+    "nest-asyncio>=1.6.0",
+    "bs4>=0.0.2",
 ]

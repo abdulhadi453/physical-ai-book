@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+import Chatbot from '@site/src/components/Chatbot';
+
 # Introduction to Physical AI & Humanoid Robotics
 
 Welcome to the **AI-Native Textbook for Physical AI & Humanoid Robotics** - an interactive learning platform designed to bridge the gap between artificial intelligence and embodied systems.
@@ -38,3 +40,11 @@ To begin your journey in Physical AI and Humanoid Robotics:
 4. Engage with the AI tutoring system for personalized assistance
 
 The content is structured to take you from basic robotics concepts to advanced humanoid systems, with each chapter building on the previous knowledge while maintaining accessibility for learners with computer science and AI backgrounds.
+
+---
+
+## Ask Questions About the Book
+
+Have a question? Use our AI-powered chatbot to search the entire textbook and get instant answers with source citations:
+
+<Chatbot />
