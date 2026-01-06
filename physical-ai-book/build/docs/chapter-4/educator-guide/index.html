@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-chapter-4/educator-guide" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Educator Guide: Vision-Language-Action (VLA) Systems | AI-Native Textbook for Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://physical-ai-book.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://physical-ai-book.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://physical-ai-book.github.io/docs/chapter-4/educator-guide"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="ur"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Educator Guide: Vision-Language-Action (VLA) Systems | AI-Native Textbook for Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://physical-ai-book.github.io/docs/chapter-4/educator-guide"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-4/educator-guide" hreflang="en"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/ur/docs/chapter-4/educator-guide" hreflang="ur"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-4/educator-guide" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Educator Guide: Vision-Language-Action (VLA) Systems","item":"https://physical-ai-book.github.io/docs/chapter-4/educator-guide"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics Atom Feed"><link rel="stylesheet" href="/assets/css/styles.cf33f44d.css">
+<script src="/assets/js/runtime~main.92299d71.js" defer="defer"></script>
+<script src="/assets/js/main.da092ae6.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/intro">Chapters</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro"><span title="Introduction to Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Introduction to Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-1/intro"><span title="Module 1: The Robotic Nervous System (ROS 2)" class="categoryLinkLabel_W154">Module 1: The Robotic Nervous System (ROS 2)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-2/intro"><span title="Module 2: The Digital Twin (Gazebo &amp; Unity)" class="categoryLinkLabel_W154">Module 2: The Digital Twin (Gazebo &amp; Unity)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-3/intro"><span title="Module 3: The AI-Robot Brain (NVIDIA Isaac™)" class="categoryLinkLabel_W154">Module 3: The AI-Robot Brain (NVIDIA Isaac™)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/chapter-4/intro"><span title="Module 4: Vision-Language-Action (VLA) Systems" class="categoryLinkLabel_W154">Module 4: Vision-Language-Action (VLA) Systems</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/chapter-4/intro"><span title="Chapter 4.1: Introduction to Vision-Language-Action Systems" class="categoryLinkLabel_W154">Chapter 4.1: Introduction to Vision-Language-Action Systems</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/docs/chapter-4/setup"><span title="Chapter 4.2: Advanced VLA Implementation" class="categoryLinkLabel_W154">Chapter 4.2: Advanced VLA Implementation</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-4/setup"><span title="VLA System Setup Guide" class="linkLabel_WmDU">VLA System Setup Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-4/integration-guide"><span title="Integration Guide: Vision-Language-Action (VLA) Systems" class="linkLabel_WmDU">Integration Guide: Vision-Language-Action (VLA) Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-4/exercises"><span title="VLA Practical Exercises" class="linkLabel_WmDU">VLA Practical Exercises</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-4/assessments"><span title="VLA Assessment Questions" class="linkLabel_WmDU">VLA Assessment Questions</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/chapter-4/educator-guide"><span title="Educator Guide: Vision-Language-Action (VLA) Systems" class="linkLabel_WmDU">Educator Guide: Vision-Language-Action (VLA) Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-4/researcher-resources"><span title="Researcher Resources: Vision-Language-Action (VLA) Systems" class="linkLabel_WmDU">Researcher Resources: Vision-Language-Action (VLA) Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-4/performance-monitoring"><span title="Performance Monitoring: Vision-Language-Action (VLA) Systems" class="linkLabel_WmDU">Performance Monitoring: Vision-Language-Action (VLA) Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-4/troubleshooting"><span title="Troubleshooting Guide: Vision-Language-Action (VLA) Systems" class="linkLabel_WmDU">Troubleshooting Guide: Vision-Language-Action (VLA) Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-4/security-considerations"><span title="Security Considerations: Vision-Language-Action (VLA) Systems" class="linkLabel_WmDU">Security Considerations: Vision-Language-Action (VLA) Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-4/capstone-project"><span title="Capstone Project: Autonomous Humanoid Task" class="linkLabel_WmDU">Capstone Project: Autonomous Humanoid Task</span></a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/contributing"><span title="Contributing" class="linkLabel_WmDU">Contributing</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module 4: Vision-Language-Action (VLA) Systems</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Chapter 4.2: Advanced VLA Implementation</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Educator Guide: Vision-Language-Action (VLA) Systems</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Educator Guide: Vision-Language-Action (VLA) Systems</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>This educator guide provides instructors with comprehensive resources for teaching Module 4: Vision-Language-Action (VLA) Systems. The module introduces students to the integration of speech processing, cognitive planning, visual perception, and robotic action execution to create systems that can understand and respond to natural language commands.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives">Learning Objectives<a href="#learning-objectives" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="primary-objectives">Primary Objectives<a href="#primary-objectives" class="hash-link" aria-label="Direct link to Primary Objectives" title="Direct link to Primary Objectives" translate="no">​</a></h3>
+<p>By the end of this module, students should be able to:</p>
+<ol>
+<li class=""><strong>Design and implement</strong> a complete VLA pipeline that processes voice commands into robotic actions</li>
+<li class=""><strong>Integrate</strong> Whisper speech-to-text processing with LLM-based cognitive planning</li>
+<li class=""><strong>Combine</strong> visual perception with language understanding for complex manipulation tasks</li>
+<li class=""><strong>Execute</strong> multi-step action sequences through ROS 2 action servers</li>
+<li class=""><strong>Evaluate</strong> the performance of integrated VLA systems in simulation environments</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="secondary-objectives">Secondary Objectives<a href="#secondary-objectives" class="hash-link" aria-label="Direct link to Secondary Objectives" title="Direct link to Secondary Objectives" translate="no">​</a></h3>
+<ul>
+<li class="">Understand the challenges and solutions in multimodal AI systems</li>
+<li class="">Apply AI safety and ethics principles to robotic systems</li>
+<li class="">Troubleshoot and debug complex integrated systems</li>
+<li class="">Work with simulation environments for robotics development</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Prerequisites<a href="#prerequisites" class="hash-link" aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="student-prerequisites">Student Prerequisites<a href="#student-prerequisites" class="hash-link" aria-label="Direct link to Student Prerequisites" title="Direct link to Student Prerequisites" translate="no">​</a></h3>
+<p>Students should have completed:</p>
+<ul>
+<li class="">Module 1: The Robotic Nervous System (ROS 2)</li>
+<li class="">Module 2: The Digital Twin (Gazebo &amp; Unity)</li>
+<li class="">Module 3: The AI-Robot Brain (NVIDIA Isaac™)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-prerequisites">Technical Prerequisites<a href="#technical-prerequisites" class="hash-link" aria-label="Direct link to Technical Prerequisites" title="Direct link to Technical Prerequisites" translate="no">​</a></h3>
+<ul>
+<li class="">Basic Python programming skills</li>
+<li class="">Understanding of ROS 2 concepts and architecture</li>
+<li class="">Familiarity with AI/ML concepts</li>
+<li class="">Experience with simulation environments</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="hardwaresoftware-requirements">Hardware/Software Requirements<a href="#hardwaresoftware-requirements" class="hash-link" aria-label="Direct link to Hardware/Software Requirements" title="Direct link to Hardware/Software Requirements" translate="no">​</a></h3>
+<ul>
+<li class="">Computer with NVIDIA GPU (RTX 3060 or better)</li>
+<li class="">Ubuntu 22.04 LTS or Windows with WSL2</li>
+<li class="">NVIDIA Isaac Sim environment</li>
+<li class="">ROS 2 Humble Hawksbill</li>
+<li class="">Microphone for voice input</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="module-structure-and-timeline">Module Structure and Timeline<a href="#module-structure-and-timeline" class="hash-link" aria-label="Direct link to Module Structure and Timeline" title="Direct link to Module Structure and Timeline" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-breakdown">Lesson Breakdown<a href="#lesson-breakdown" class="hash-link" aria-label="Direct link to Lesson Breakdown" title="Direct link to Lesson Breakdown" translate="no">​</a></h3>
+<table><thead><tr><th>Lesson</th><th>Topic</th><th>Duration</th><th>Key Activities</th></tr></thead><tbody><tr><td>1</td><td>Voice Command Processing</td><td>3 hours</td><td>Whisper integration, audio processing</td></tr><tr><td>2</td><td>LLM-based Cognitive Planning</td><td>4 hours</td><td>LLM integration, prompt engineering</td></tr><tr><td>3</td><td>Visual Perception Integration</td><td>4 hours</td><td>Object detection, 3D positioning</td></tr><tr><td>4</td><td>ROS 2 Action Execution</td><td>3 hours</td><td>Action servers, execution monitoring</td></tr><tr><td>5</td><td>VLA System Integration</td><td>4 hours</td><td>Complete system integration, capstone</td></tr><tr><td><strong>Total</strong></td><td></td><td><strong>18 hours</strong></td><td></td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-schedule">Recommended Schedule<a href="#recommended-schedule" class="hash-link" aria-label="Direct link to Recommended Schedule" title="Direct link to Recommended Schedule" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Week 1</strong>: Lessons 1-2 (Voice and Planning)</li>
+<li class=""><strong>Week 2</strong>: Lessons 3-4 (Vision and Action)</li>
+<li class=""><strong>Week 3</strong>: Lesson 5 and Capstone Project</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-specific-guidance">Lesson-Specific Guidance<a href="#lesson-specific-guidance" class="hash-link" aria-label="Direct link to Lesson-Specific Guidance" title="Direct link to Lesson-Specific Guidance" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-1-voice-command-processing">Lesson 1: Voice Command Processing<a href="#lesson-1-voice-command-processing" class="hash-link" aria-label="Direct link to Lesson 1: Voice Command Processing" title="Direct link to Lesson 1: Voice Command Processing" translate="no">​</a></h3>
+<p><strong>Duration</strong>: 3 hours (2 hours lecture, 1 hour lab)</p>
+<p><strong>Key Concepts</strong>:</p>
+<ul>
+<li class="">Speech-to-text conversion with Whisper</li>
+<li class="">Audio preprocessing and quality enhancement</li>
+<li class="">Confidence scoring and validation</li>
+</ul>
+<p><strong>Teaching Tips</strong>:</p>
+<ul>
+<li class="">Demonstrate Whisper&#x27;s capabilities with various audio inputs</li>
+<li class="">Show the impact of audio quality on transcription accuracy</li>
+<li class="">Discuss real-time processing challenges</li>
+</ul>
+<p><strong>Common Student Challenges</strong>:</p>
+<ul>
+<li class="">Audio input configuration issues</li>
+<li class="">Understanding confidence scoring</li>
+<li class="">Integrating with the broader system</li>
+</ul>
+<p><strong>Assessment Methods</strong>:</p>
+<ul>
+<li class="">Lab exercise: Implement basic voice command processing</li>
+<li class="">Quiz on Whisper architecture and configuration</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-2-llm-based-cognitive-planning">Lesson 2: LLM-based Cognitive Planning<a href="#lesson-2-llm-based-cognitive-planning" class="hash-link" aria-label="Direct link to Lesson 2: LLM-based Cognitive Planning" title="Direct link to Lesson 2: LLM-based Cognitive Planning" translate="no">​</a></h3>
+<p><strong>Duration</strong>: 4 hours (2.5 hours lecture, 1.5 hours lab)</p>
+<p><strong>Key Concepts</strong>:</p>
+<ul>
+<li class="">Natural language understanding with LLMs</li>
+<li class="">Task decomposition and action planning</li>
+<li class="">Prompt engineering for robotics</li>
+</ul>
+<p><strong>Teaching Tips</strong>:</p>
+<ul>
+<li class="">Show examples of good vs. poor prompts for planning</li>
+<li class="">Demonstrate how context affects planning quality</li>
+<li class="">Discuss limitations of current LLM approaches</li>
+</ul>
+<p><strong>Common Student Challenges</strong>:</p>
+<ul>
+<li class="">Crafting effective prompts for planning</li>
+<li class="">Understanding structured output formats</li>
+<li class="">Handling ambiguous commands</li>
+</ul>
+<p><strong>Assessment Methods</strong>:</p>
+<ul>
+<li class="">Lab exercise: Plan actions for various commands</li>
+<li class="">Peer review of prompt designs</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-3-visual-perception-integration">Lesson 3: Visual Perception Integration<a href="#lesson-3-visual-perception-integration" class="hash-link" aria-label="Direct link to Lesson 3: Visual Perception Integration" title="Direct link to Lesson 3: Visual Perception Integration" translate="no">​</a></h3>
+<p><strong>Duration</strong>: 4 hours (2.5 hours lecture, 1.5 hours lab)</p>
+<p><strong>Key Concepts</strong>:</p>
+<ul>
+<li class="">Object detection and classification</li>
+<li class="">3D position estimation</li>
+<li class="">Spatial reasoning and relationships</li>
+</ul>
+<p><strong>Teaching Tips</strong>:</p>
+<ul>
+<li class="">Use visual examples to demonstrate spatial relationships</li>
+<li class="">Show how perception quality affects downstream tasks</li>
+<li class="">Discuss the challenges of depth estimation from 2D images</li>
+</ul>
+<p><strong>Common Student Challenges</strong>:</p>
+<ul>
+<li class="">Understanding coordinate frame transformations</li>
+<li class="">Handling occluded or poorly visible objects</li>
+<li class="">Integrating perception with planning</li>
+</ul>
+<p><strong>Assessment Methods</strong>:</p>
+<ul>
+<li class="">Lab exercise: Detect objects and estimate positions</li>
+<li class="">Analysis of detection accuracy vs. speed trade-offs</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-4-ros-2-action-execution">Lesson 4: ROS 2 Action Execution<a href="#lesson-4-ros-2-action-execution" class="hash-link" aria-label="Direct link to Lesson 4: ROS 2 Action Execution" title="Direct link to Lesson 4: ROS 2 Action Execution" translate="no">​</a></h3>
+<p><strong>Duration</strong>: 3 hours (2 hours lecture, 1 hour lab)</p>
+<p><strong>Key Concepts</strong>:</p>
+<ul>
+<li class="">ROS 2 action servers and clients</li>
+<li class="">State monitoring and feedback</li>
+<li class="">Error handling and recovery</li>
+</ul>
+<p><strong>Teaching Tips</strong>:</p>
+<ul>
+<li class="">Emphasize the importance of state management</li>
+<li class="">Show examples of action success/failure scenarios</li>
+<li class="">Discuss safety considerations in action execution</li>
+</ul>
+<p><strong>Common Student Challenges</strong>:</p>
+<ul>
+<li class="">Understanding ROS 2 action architecture</li>
+<li class="">Implementing proper error handling</li>
+<li class="">Coordinating multi-step actions</li>
+</ul>
+<p><strong>Assessment Methods</strong>:</p>
+<ul>
+<li class="">Lab exercise: Execute action sequences and monitor state</li>
+<li class="">Debugging exercise with simulated failures</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-5-vla-system-integration">Lesson 5: VLA System Integration<a href="#lesson-5-vla-system-integration" class="hash-link" aria-label="Direct link to Lesson 5: VLA System Integration" title="Direct link to Lesson 5: VLA System Integration" translate="no">​</a></h3>
+<p><strong>Duration</strong>: 4 hours (1.5 hours lecture, 2.5 hours lab)</p>
+<p><strong>Key Concepts</strong>:</p>
+<ul>
+<li class="">End-to-end system integration</li>
+<li class="">Performance optimization</li>
+<li class="">Capstone project execution</li>
+</ul>
+<p><strong>Teaching Tips</strong>:</p>
+<ul>
+<li class="">Walk through the complete data flow</li>
+<li class="">Show debugging techniques for integrated systems</li>
+<li class="">Emphasize testing and validation</li>
+</ul>
+<p><strong>Common Student Challenges</strong>:</p>
+<ul>
+<li class="">Managing complexity of integrated system</li>
+<li class="">Debugging issues across multiple components</li>
+<li class="">Optimizing performance across the pipeline</li>
+</ul>
+<p><strong>Assessment Methods</strong>:</p>
+<ul>
+<li class="">Capstone project demonstration</li>
+<li class="">System performance analysis report</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assessment-strategies">Assessment Strategies<a href="#assessment-strategies" class="hash-link" aria-label="Direct link to Assessment Strategies" title="Direct link to Assessment Strategies" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="formative-assessments">Formative Assessments<a href="#formative-assessments" class="hash-link" aria-label="Direct link to Formative Assessments" title="Direct link to Formative Assessments" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Daily Check-ins</strong>: Quick quizzes at the start of each class</li>
+<li class=""><strong>Code Reviews</strong>: Peer and instructor code review sessions</li>
+<li class=""><strong>Progress Demos</strong>: Students demonstrate working components</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="summative-assessments">Summative Assessments<a href="#summative-assessments" class="hash-link" aria-label="Direct link to Summative Assessments" title="Direct link to Summative Assessments" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Component Projects</strong>: Individual components built throughout the module</li>
+<li class=""><strong>Integration Project</strong>: Complete VLA system implementation</li>
+<li class=""><strong>Capstone Demonstration</strong>: Autonomous task execution</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="rubric-for-capstone-project">Rubric for Capstone Project<a href="#rubric-for-capstone-project" class="hash-link" aria-label="Direct link to Rubric for Capstone Project" title="Direct link to Rubric for Capstone Project" translate="no">​</a></h3>
+<table><thead><tr><th>Criteria</th><th>Excellent (4)</th><th>Proficient (3)</th><th>Developing (2)</th><th>Beginning (1)</th></tr></thead><tbody><tr><td>System Integration</td><td>All components work seamlessly together</td><td>Most components integrated with minor issues</td><td>Basic integration with significant issues</td><td>Limited integration, major components missing</td></tr><tr><td>Task Execution</td><td>Completes complex tasks with high success rate (&gt;80%)</td><td>Completes tasks with moderate success rate (60-80%)</td><td>Completes simple tasks with low success rate (40-60%)</td><td>Struggles with basic task execution (&lt;40%)</td></tr><tr><td>Code Quality</td><td>Clean, well-documented, follows best practices</td><td>Good code with adequate documentation</td><td>Basic code with minimal documentation</td><td>Poor code quality, inadequate documentation</td></tr><tr><td>Problem Solving</td><td>Creative solutions, deep understanding</td><td>Effective solutions, good understanding</td><td>Basic solutions, surface understanding</td><td>Limited solutions, minimal understanding</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="differentiation-strategies">Differentiation Strategies<a href="#differentiation-strategies" class="hash-link" aria-label="Direct link to Differentiation Strategies" title="Direct link to Differentiation Strategies" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-advanced-students">For Advanced Students<a href="#for-advanced-students" class="hash-link" aria-label="Direct link to For Advanced Students" title="Direct link to For Advanced Students" translate="no">​</a></h3>
+<ul>
+<li class="">Implement custom object detection models</li>
+<li class="">Optimize system performance using advanced techniques</li>
+<li class="">Explore multi-robot coordination scenarios</li>
+<li class="">Research and implement alternative approaches</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-struggling-students">For Struggling Students<a href="#for-struggling-students" class="hash-link" aria-label="Direct link to For Struggling Students" title="Direct link to For Struggling Students" translate="no">​</a></h3>
+<ul>
+<li class="">Provide additional scaffolding with partial implementations</li>
+<li class="">Focus on understanding concepts rather than implementation details</li>
+<li class="">Pair with stronger students for collaborative learning</li>
+<li class="">Offer additional lab time and instructor support</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-english-language-learners">For English Language Learners<a href="#for-english-language-learners" class="hash-link" aria-label="Direct link to For English Language Learners" title="Direct link to For English Language Learners" translate="no">​</a></h3>
+<ul>
+<li class="">Provide visual aids and diagrams</li>
+<li class="">Use simple, clear language in instructions</li>
+<li class="">Allow extra time for processing technical concepts</li>
+<li class="">Encourage use of native language for initial understanding</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="resources-and-materials">Resources and Materials<a href="#resources-and-materials" class="hash-link" aria-label="Direct link to Resources and Materials" title="Direct link to Resources and Materials" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="required-software">Required Software<a href="#required-software" class="hash-link" aria-label="Direct link to Required Software" title="Direct link to Required Software" translate="no">​</a></h3>
+<ul>
+<li class="">NVIDIA Isaac Sim</li>
+<li class="">ROS 2 Humble Hawksbill</li>
+<li class="">Python 3.11+ with required packages</li>
+<li class="">OpenAI API access</li>
+<li class="">Development environment (IDE recommended)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-readings">Recommended Readings<a href="#recommended-readings" class="hash-link" aria-label="Direct link to Recommended Readings" title="Direct link to Recommended Readings" translate="no">​</a></h3>
+<ul>
+<li class="">&quot;Robotics, Vision and Control&quot; by Peter Corke</li>
+<li class="">&quot;Probabilistic Robotics&quot; by Thrun, Burgard, and Fox</li>
+<li class="">OpenAI documentation for Whisper and GPT models</li>
+<li class="">ROS 2 documentation for action interfaces</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="supplementary-materials">Supplementary Materials<a href="#supplementary-materials" class="hash-link" aria-label="Direct link to Supplementary Materials" title="Direct link to Supplementary Materials" translate="no">​</a></h3>
+<ul>
+<li class="">Video tutorials for each component</li>
+<li class="">Sample code repositories</li>
+<li class="">Troubleshooting guides</li>
+<li class="">Performance benchmarking tools</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-student-misconceptions">Common Student Misconceptions<a href="#common-student-misconceptions" class="hash-link" aria-label="Direct link to Common Student Misconceptions" title="Direct link to Common Student Misconceptions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="about-voice-processing">About Voice Processing<a href="#about-voice-processing" class="hash-link" aria-label="Direct link to About Voice Processing" title="Direct link to About Voice Processing" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Misconception</strong>: Whisper will always provide perfect transcriptions</li>
+<li class=""><strong>Reality</strong>: Audio quality, background noise, and accents affect accuracy</li>
+<li class=""><strong>Teaching Strategy</strong>: Demonstrate with various audio inputs and discuss limitations</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="about-llm-planning">About LLM Planning<a href="#about-llm-planning" class="hash-link" aria-label="Direct link to About LLM Planning" title="Direct link to About LLM Planning" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Misconception</strong>: LLMs will always generate correct action sequences</li>
+<li class=""><strong>Reality</strong>: Planning quality depends on prompts, context, and model limitations</li>
+<li class=""><strong>Teaching Strategy</strong>: Show examples of good and poor planning, discuss validation</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="about-visual-perception">About Visual Perception<a href="#about-visual-perception" class="hash-link" aria-label="Direct link to About Visual Perception" title="Direct link to About Visual Perception" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Misconception</strong>: Object detection works perfectly in all conditions</li>
+<li class=""><strong>Reality</strong>: Lighting, occlusion, and object similarity affect detection</li>
+<li class=""><strong>Teaching Strategy</strong>: Demonstrate failure cases and discuss robustness</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="about-action-execution">About Action Execution<a href="#about-action-execution" class="hash-link" aria-label="Direct link to About Action Execution" title="Direct link to About Action Execution" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Misconception</strong>: Actions always succeed as planned</li>
+<li class=""><strong>Reality</strong>: Environmental conditions and robot limitations cause failures</li>
+<li class=""><strong>Teaching Strategy</strong>: Emphasize error handling and recovery strategies</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="safety-and-ethics-considerations">Safety and Ethics Considerations<a href="#safety-and-ethics-considerations" class="hash-link" aria-label="Direct link to Safety and Ethics Considerations" title="Direct link to Safety and Ethics Considerations" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="physical-safety">Physical Safety<a href="#physical-safety" class="hash-link" aria-label="Direct link to Physical Safety" title="Direct link to Physical Safety" translate="no">​</a></h3>
+<ul>
+<li class="">Emphasize safety protocols for simulation environments</li>
+<li class="">Discuss the importance of emergency stops and safety boundaries</li>
+<li class="">Address potential safety issues in real-world deployment</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="data-privacy">Data Privacy<a href="#data-privacy" class="hash-link" aria-label="Direct link to Data Privacy" title="Direct link to Data Privacy" translate="no">​</a></h3>
+<ul>
+<li class="">Discuss handling of voice data and user privacy</li>
+<li class="">Address data retention and processing policies</li>
+<li class="">Consider implications of storing user interactions</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-ethics">AI Ethics<a href="#ai-ethics" class="hash-link" aria-label="Direct link to AI Ethics" title="Direct link to AI Ethics" translate="no">​</a></h3>
+<ul>
+<li class="">Discuss bias in AI models and its impact on robotic behavior</li>
+<li class="">Address transparency in AI decision-making</li>
+<li class="">Consider the implications of autonomous robotic systems</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="technology-integration-tips">Technology Integration Tips<a href="#technology-integration-tips" class="hash-link" aria-label="Direct link to Technology Integration Tips" title="Direct link to Technology Integration Tips" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="audio-setup">Audio Setup<a href="#audio-setup" class="hash-link" aria-label="Direct link to Audio Setup" title="Direct link to Audio Setup" translate="no">​</a></h3>
+<ul>
+<li class="">Test microphones in advance</li>
+<li class="">Provide alternatives for students with audio issues</li>
+<li class="">Consider noise-canceling solutions for shared spaces</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="simulation-environment">Simulation Environment<a href="#simulation-environment" class="hash-link" aria-label="Direct link to Simulation Environment" title="Direct link to Simulation Environment" translate="no">​</a></h3>
+<ul>
+<li class="">Ensure Isaac Sim is properly configured on all machines</li>
+<li class="">Have backup plans for simulation access issues</li>
+<li class="">Provide cloud-based alternatives if needed</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="network-requirements">Network Requirements<a href="#network-requirements" class="hash-link" aria-label="Direct link to Network Requirements" title="Direct link to Network Requirements" translate="no">​</a></h3>
+<ul>
+<li class="">Verify internet connectivity for LLM access</li>
+<li class="">Consider bandwidth requirements for multiple simultaneous users</li>
+<li class="">Have offline alternatives for core functionality</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="extension-activities">Extension Activities<a href="#extension-activities" class="hash-link" aria-label="Direct link to Extension Activities" title="Direct link to Extension Activities" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="research-projects">Research Projects<a href="#research-projects" class="hash-link" aria-label="Direct link to Research Projects" title="Direct link to Research Projects" translate="no">​</a></h3>
+<ul>
+<li class="">Investigate alternative speech recognition systems</li>
+<li class="">Explore different LLM architectures for planning</li>
+<li class="">Research advanced computer vision techniques</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="competition-preparation">Competition Preparation<a href="#competition-preparation" class="hash-link" aria-label="Direct link to Competition Preparation" title="Direct link to Competition Preparation" translate="no">​</a></h3>
+<ul>
+<li class="">Organize VLA system competitions</li>
+<li class="">Participate in robotics challenges</li>
+<li class="">Prepare for hackathons or innovation contests</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="industry-connections">Industry Connections<a href="#industry-connections" class="hash-link" aria-label="Direct link to Industry Connections" title="Direct link to Industry Connections" translate="no">​</a></h3>
+<ul>
+<li class="">Invite robotics industry professionals to speak</li>
+<li class="">Arrange site visits to robotics companies</li>
+<li class="">Connect with research institutions working on similar systems</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting-guide-for-instructors">Troubleshooting Guide for Instructors<a href="#troubleshooting-guide-for-instructors" class="hash-link" aria-label="Direct link to Troubleshooting Guide for Instructors" title="Direct link to Troubleshooting Guide for Instructors" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-technical-issues">Common Technical Issues<a href="#common-technical-issues" class="hash-link" aria-label="Direct link to Common Technical Issues" title="Direct link to Common Technical Issues" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Audio Input Problems</strong></p>
+<ul>
+<li class="">Check microphone permissions</li>
+<li class="">Verify audio driver installation</li>
+<li class="">Test with simple recording software first</li>
+</ul>
+</li>
+<li class="">
+<p><strong>LLM Connection Failures</strong></p>
+<ul>
+<li class="">Verify API key configuration</li>
+<li class="">Check network connectivity</li>
+<li class="">Confirm rate limit compliance</li>
+</ul>
+</li>
+<li class="">
+<p><strong>ROS 2 Communication Issues</strong></p>
+<ul>
+<li class="">Ensure proper environment sourcing</li>
+<li class="">Check ROS_DOMAIN_ID settings</li>
+<li class="">Verify network configuration</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Isaac Sim Connection Problems</strong></p>
+<ul>
+<li class="">Confirm server is running</li>
+<li class="">Check port accessibility</li>
+<li class="">Verify container or installation status</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="student-support-strategies">Student Support Strategies<a href="#student-support-strategies" class="hash-link" aria-label="Direct link to Student Support Strategies" title="Direct link to Student Support Strategies" translate="no">​</a></h3>
+<ul>
+<li class="">Maintain a FAQ document with common solutions</li>
+<li class="">Create video tutorials for complex setup procedures</li>
+<li class="">Establish peer mentoring relationships</li>
+<li class="">Schedule additional office hours during challenging weeks</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reflection-and-continuous-improvement">Reflection and Continuous Improvement<a href="#reflection-and-continuous-improvement" class="hash-link" aria-label="Direct link to Reflection and Continuous Improvement" title="Direct link to Reflection and Continuous Improvement" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="end-of-module-survey-questions">End-of-Module Survey Questions<a href="#end-of-module-survey-questions" class="hash-link" aria-label="Direct link to End-of-Module Survey Questions" title="Direct link to End-of-Module Survey Questions" translate="no">​</a></h3>
+<ol>
+<li class="">Which lesson did you find most challenging and why?</li>
+<li class="">What aspects of the VLA system were most interesting to you?</li>
+<li class="">How could the module be improved for future students?</li>
+<li class="">What additional resources would have been helpful?</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructor-reflection-prompts">Instructor Reflection Prompts<a href="#instructor-reflection-prompts" class="hash-link" aria-label="Direct link to Instructor Reflection Prompts" title="Direct link to Instructor Reflection Prompts" translate="no">​</a></h3>
+<ul>
+<li class="">Which concepts did students struggle with most?</li>
+<li class="">Were the practical exercises appropriately challenging?</li>
+<li class="">How effective were the assessment methods?</li>
+<li class="">What technical issues occurred most frequently?</li>
+<li class="">How can the module be updated for future technology changes?</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="connections-to-other-modules">Connections to Other Modules<a href="#connections-to-other-modules" class="hash-link" aria-label="Direct link to Connections to Other Modules" title="Direct link to Connections to Other Modules" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisite-connections">Prerequisite Connections<a href="#prerequisite-connections" class="hash-link" aria-label="Direct link to Prerequisite Connections" title="Direct link to Prerequisite Connections" translate="no">​</a></h3>
+<ul>
+<li class="">Builds upon ROS 2 knowledge from Module 1</li>
+<li class="">Uses simulation environments from Module 2</li>
+<li class="">Integrates AI concepts from Module 3</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="future-module-connections">Future Module Connections<a href="#future-module-connections" class="hash-link" aria-label="Direct link to Future Module Connections" title="Direct link to Future Module Connections" translate="no">​</a></h3>
+<ul>
+<li class="">Provides foundation for advanced robotics modules</li>
+<li class="">Supports capstone project development</li>
+<li class="">Enables research project opportunities</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="accessibility-considerations">Accessibility Considerations<a href="#accessibility-considerations" class="hash-link" aria-label="Direct link to Accessibility Considerations" title="Direct link to Accessibility Considerations" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-students-with-disabilities">For Students with Disabilities<a href="#for-students-with-disabilities" class="hash-link" aria-label="Direct link to For Students with Disabilities" title="Direct link to For Students with Disabilities" translate="no">​</a></h3>
+<ul>
+<li class="">Provide alternative input methods for voice processing</li>
+<li class="">Offer visual alternatives to audio feedback</li>
+<li class="">Ensure development environment is accessible</li>
+<li class="">Consider extended time for complex implementations</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="universal-design-principles">Universal Design Principles<a href="#universal-design-principles" class="hash-link" aria-label="Direct link to Universal Design Principles" title="Direct link to Universal Design Principles" translate="no">​</a></h3>
+<ul>
+<li class="">Offer multiple ways to engage with content</li>
+<li class="">Provide various means of representation</li>
+<li class="">Allow for different methods of expression</li>
+<li class="">Support multiple engagement strategies</li>
+</ul>
+<p>This educator guide provides a comprehensive framework for teaching the Vision-Language-Action Systems module. Instructors should adapt the content and pacing based on their specific student population and available resources while maintaining the core learning objectives and assessment standards.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-4/educator-guide.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/chapter-4/assessments"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">VLA Assessment Questions</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/chapter-4/researcher-resources"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Researcher Resources: Vision-Language-Action (VLA) Systems</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#learning-objectives" class="table-of-contents__link toc-highlight">Learning Objectives</a><ul><li><a href="#primary-objectives" class="table-of-contents__link toc-highlight">Primary Objectives</a></li><li><a href="#secondary-objectives" class="table-of-contents__link toc-highlight">Secondary Objectives</a></li></ul></li><li><a href="#prerequisites" class="table-of-contents__link toc-highlight">Prerequisites</a><ul><li><a href="#student-prerequisites" class="table-of-contents__link toc-highlight">Student Prerequisites</a></li><li><a href="#technical-prerequisites" class="table-of-contents__link toc-highlight">Technical Prerequisites</a></li><li><a href="#hardwaresoftware-requirements" class="table-of-contents__link toc-highlight">Hardware/Software Requirements</a></li></ul></li><li><a href="#module-structure-and-timeline" class="table-of-contents__link toc-highlight">Module Structure and Timeline</a><ul><li><a href="#lesson-breakdown" class="table-of-contents__link toc-highlight">Lesson Breakdown</a></li><li><a href="#recommended-schedule" class="table-of-contents__link toc-highlight">Recommended Schedule</a></li></ul></li><li><a href="#lesson-specific-guidance" class="table-of-contents__link toc-highlight">Lesson-Specific Guidance</a><ul><li><a href="#lesson-1-voice-command-processing" class="table-of-contents__link toc-highlight">Lesson 1: Voice Command Processing</a></li><li><a href="#lesson-2-llm-based-cognitive-planning" class="table-of-contents__link toc-highlight">Lesson 2: LLM-based Cognitive Planning</a></li><li><a href="#lesson-3-visual-perception-integration" class="table-of-contents__link toc-highlight">Lesson 3: Visual Perception Integration</a></li><li><a href="#lesson-4-ros-2-action-execution" class="table-of-contents__link toc-highlight">Lesson 4: ROS 2 Action Execution</a></li><li><a href="#lesson-5-vla-system-integration" class="table-of-contents__link toc-highlight">Lesson 5: VLA System Integration</a></li></ul></li><li><a href="#assessment-strategies" class="table-of-contents__link toc-highlight">Assessment Strategies</a><ul><li><a href="#formative-assessments" class="table-of-contents__link toc-highlight">Formative Assessments</a></li><li><a href="#summative-assessments" class="table-of-contents__link toc-highlight">Summative Assessments</a></li><li><a href="#rubric-for-capstone-project" class="table-of-contents__link toc-highlight">Rubric for Capstone Project</a></li></ul></li><li><a href="#differentiation-strategies" class="table-of-contents__link toc-highlight">Differentiation Strategies</a><ul><li><a href="#for-advanced-students" class="table-of-contents__link toc-highlight">For Advanced Students</a></li><li><a href="#for-struggling-students" class="table-of-contents__link toc-highlight">For Struggling Students</a></li><li><a href="#for-english-language-learners" class="table-of-contents__link toc-highlight">For English Language Learners</a></li></ul></li><li><a href="#resources-and-materials" class="table-of-contents__link toc-highlight">Resources and Materials</a><ul><li><a href="#required-software" class="table-of-contents__link toc-highlight">Required Software</a></li><li><a href="#recommended-readings" class="table-of-contents__link toc-highlight">Recommended Readings</a></li><li><a href="#supplementary-materials" class="table-of-contents__link toc-highlight">Supplementary Materials</a></li></ul></li><li><a href="#common-student-misconceptions" class="table-of-contents__link toc-highlight">Common Student Misconceptions</a><ul><li><a href="#about-voice-processing" class="table-of-contents__link toc-highlight">About Voice Processing</a></li><li><a href="#about-llm-planning" class="table-of-contents__link toc-highlight">About LLM Planning</a></li><li><a href="#about-visual-perception" class="table-of-contents__link toc-highlight">About Visual Perception</a></li><li><a href="#about-action-execution" class="table-of-contents__link toc-highlight">About Action Execution</a></li></ul></li><li><a href="#safety-and-ethics-considerations" class="table-of-contents__link toc-highlight">Safety and Ethics Considerations</a><ul><li><a href="#physical-safety" class="table-of-contents__link toc-highlight">Physical Safety</a></li><li><a href="#data-privacy" class="table-of-contents__link toc-highlight">Data Privacy</a></li><li><a href="#ai-ethics" class="table-of-contents__link toc-highlight">AI Ethics</a></li></ul></li><li><a href="#technology-integration-tips" class="table-of-contents__link toc-highlight">Technology Integration Tips</a><ul><li><a href="#audio-setup" class="table-of-contents__link toc-highlight">Audio Setup</a></li><li><a href="#simulation-environment" class="table-of-contents__link toc-highlight">Simulation Environment</a></li><li><a href="#network-requirements" class="table-of-contents__link toc-highlight">Network Requirements</a></li></ul></li><li><a href="#extension-activities" class="table-of-contents__link toc-highlight">Extension Activities</a><ul><li><a href="#research-projects" class="table-of-contents__link toc-highlight">Research Projects</a></li><li><a href="#competition-preparation" class="table-of-contents__link toc-highlight">Competition Preparation</a></li><li><a href="#industry-connections" class="table-of-contents__link toc-highlight">Industry Connections</a></li></ul></li><li><a href="#troubleshooting-guide-for-instructors" class="table-of-contents__link toc-highlight">Troubleshooting Guide for Instructors</a><ul><li><a href="#common-technical-issues" class="table-of-contents__link toc-highlight">Common Technical Issues</a></li><li><a href="#student-support-strategies" class="table-of-contents__link toc-highlight">Student Support Strategies</a></li></ul></li><li><a href="#reflection-and-continuous-improvement" class="table-of-contents__link toc-highlight">Reflection and Continuous Improvement</a><ul><li><a href="#end-of-module-survey-questions" class="table-of-contents__link toc-highlight">End-of-Module Survey Questions</a></li><li><a href="#instructor-reflection-prompts" class="table-of-contents__link toc-highlight">Instructor Reflection Prompts</a></li></ul></li><li><a href="#connections-to-other-modules" class="table-of-contents__link toc-highlight">Connections to Other Modules</a><ul><li><a href="#prerequisite-connections" class="table-of-contents__link toc-highlight">Prerequisite Connections</a></li><li><a href="#future-module-connections" class="table-of-contents__link toc-highlight">Future Module Connections</a></li></ul></li><li><a href="#accessibility-considerations" class="table-of-contents__link toc-highlight">Accessibility Considerations</a><ul><li><a href="#for-students-with-disabilities" class="table-of-contents__link toc-highlight">For Students with Disabilities</a></li><li><a href="#universal-design-principles" class="table-of-contents__link toc-highlight">Universal Design Principles</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Chapters</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Discussions<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/docs/contributing">Contributing</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
