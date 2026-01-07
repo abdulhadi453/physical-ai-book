@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-chapter-2/lesson-5" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Lesson 2.2.2: Unity Depth Camera Simulation | AI-Native Textbook for Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://physical-ai-book.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://physical-ai-book.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://physical-ai-book.github.io/docs/chapter-2/lesson-5"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="ur"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Lesson 2.2.2: Unity Depth Camera Simulation | AI-Native Textbook for Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://physical-ai-book.github.io/docs/chapter-2/lesson-5"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-2/lesson-5" hreflang="en"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/ur/docs/chapter-2/lesson-5" hreflang="ur"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-2/lesson-5" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Lesson 2.2.2: Unity Depth Camera Simulation","item":"https://physical-ai-book.github.io/docs/chapter-2/lesson-5"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics Atom Feed"><link rel="stylesheet" href="/assets/css/styles.cf33f44d.css">
+<script src="/assets/js/runtime~main.92299d71.js" defer="defer"></script>
+<script src="/assets/js/main.da092ae6.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/intro">Chapters</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro"><span title="Introduction to Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Introduction to Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-1/intro"><span title="Module 1: The Robotic Nervous System (ROS 2)" class="categoryLinkLabel_W154">Module 1: The Robotic Nervous System (ROS 2)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/chapter-2/intro"><span title="Module 2: The Digital Twin (Gazebo &amp; Unity)" class="categoryLinkLabel_W154">Module 2: The Digital Twin (Gazebo &amp; Unity)</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/chapter-2/intro"><span title="Chapter 2.1: Physics Simulation Environment Setup" class="categoryLinkLabel_W154">Chapter 2.1: Physics Simulation Environment Setup</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/docs/chapter-2/lesson-4"><span title="Chapter 2.2: Sensor Simulation and Integration" class="categoryLinkLabel_W154">Chapter 2.2: Sensor Simulation and Integration</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-2/lesson-4"><span title="Lesson 2.2.1: Gazebo LiDAR Sensor Simulation" class="linkLabel_WmDU">Lesson 2.2.1: Gazebo LiDAR Sensor Simulation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/chapter-2/lesson-5"><span title="Lesson 2.2.2: Unity Depth Camera Simulation" class="linkLabel_WmDU">Lesson 2.2.2: Unity Depth Camera Simulation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-2/lesson-6"><span title="Lesson 2.2.3: IMU Sensor Configuration" class="linkLabel_WmDU">Lesson 2.2.3: IMU Sensor Configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-2/lesson-7"><span title="Lesson 2.2.4: LiDAR Sensor Simulation Guide" class="linkLabel_WmDU">Lesson 2.2.4: LiDAR Sensor Simulation Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-2/lesson-8"><span title="Lesson 2.2.5: Depth Camera Simulation Guide" class="linkLabel_WmDU">Lesson 2.2.5: Depth Camera Simulation Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-2/lesson-9"><span title="Lesson 2.2.6: IMU Sensor Simulation Guide" class="linkLabel_WmDU">Lesson 2.2.6: IMU Sensor Simulation Guide</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/chapter-2/exercise-1"><span title="Chapter 2.3: Advanced Simulation and Validation" class="categoryLinkLabel_W154">Chapter 2.3: Advanced Simulation and Validation</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-3/intro"><span title="Module 3: The AI-Robot Brain (NVIDIA Isaac™)" class="categoryLinkLabel_W154">Module 3: The AI-Robot Brain (NVIDIA Isaac™)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-4/intro"><span title="Module 4: Vision-Language-Action (VLA) Systems" class="categoryLinkLabel_W154">Module 4: Vision-Language-Action (VLA) Systems</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/contributing"><span title="Contributing" class="linkLabel_WmDU">Contributing</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module 2: The Digital Twin (Gazebo &amp; Unity)</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Chapter 2.2: Sensor Simulation and Integration</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Lesson 2.2.2: Unity Depth Camera Simulation</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Lesson 2.2.2: Unity Depth Camera Simulation</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>This lesson provides a comprehensive guide to setting up physics simulation environments using Unity, a powerful cross-platform game engine that can be leveraged for robotics simulation. Unity&#x27;s physics engine offers realistic simulation capabilities with excellent visualization and rendering quality.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives">Learning Objectives<a href="#learning-objectives" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ul>
+<li class="">Install and configure Unity for physics simulation</li>
+<li class="">Create basic simulation environments with custom physics parameters</li>
+<li class="">Configure gravity, friction, and collision properties in Unity</li>
+<li class="">Validate physics behavior in Unity simulation environments</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Prerequisites<a href="#prerequisites" class="hash-link" aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites" translate="no">​</a></h2>
+<ul>
+<li class="">Basic understanding of physics simulation concepts</li>
+<li class="">Windows, macOS, or Linux development environment</li>
+<li class="">Unity Hub and Unity Editor installation</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="unity-installation">Unity Installation<a href="#unity-installation" class="hash-link" aria-label="Direct link to Unity Installation" title="Direct link to Unity Installation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="unity-hub-setup">Unity Hub Setup<a href="#unity-hub-setup" class="hash-link" aria-label="Direct link to Unity Hub Setup" title="Direct link to Unity Hub Setup" translate="no">​</a></h3>
+<ol>
+<li class="">Download Unity Hub from the official Unity website</li>
+<li class="">Install Unity Hub following the platform-specific instructions</li>
+<li class="">Create or log in to your Unity account</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="unity-editor-installation">Unity Editor Installation<a href="#unity-editor-installation" class="hash-link" aria-label="Direct link to Unity Editor Installation" title="Direct link to Unity Editor Installation" translate="no">​</a></h3>
+<ol>
+<li class="">Open Unity Hub</li>
+<li class="">Go to the &quot;Installs&quot; tab</li>
+<li class="">Click &quot;Add&quot; to install a new Unity version</li>
+<li class="">Select a stable LTS (Long Term Support) version</li>
+<li class="">Include the &quot;Physics&quot; and &quot;XR&quot; packages during installation</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="basic-environment-creation">Basic Environment Creation<a href="#basic-environment-creation" class="hash-link" aria-label="Direct link to Basic Environment Creation" title="Direct link to Basic Environment Creation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="creating-a-new-project">Creating a New Project<a href="#creating-a-new-project" class="hash-link" aria-label="Direct link to Creating a New Project" title="Direct link to Creating a New Project" translate="no">​</a></h3>
+<ol>
+<li class="">Open Unity Hub</li>
+<li class="">Click &quot;New Project&quot;</li>
+<li class="">Choose the &quot;3D (Built-in Render Pipeline)&quot; template</li>
+<li class="">Name your project (e.g., &quot;RoboticsSimulation&quot;)</li>
+<li class="">Select a location and click &quot;Create Project&quot;</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="physics-engine-configuration">Physics Engine Configuration<a href="#physics-engine-configuration" class="hash-link" aria-label="Direct link to Physics Engine Configuration" title="Direct link to Physics Engine Configuration" translate="no">​</a></h3>
+<p>Unity uses NVIDIA&#x27;s PhysX engine by default. Configure physics settings:</p>
+<ol>
+<li class="">Go to <strong>Edit &gt; Project Settings &gt; Physics</strong></li>
+<li class="">Adjust the following parameters:<!-- -->
+<ul>
+<li class=""><strong>Gravity</strong>: Default is (0, -9.81, 0) for Earth gravity</li>
+<li class=""><strong>Default Material</strong>: Configure friction and bounce</li>
+<li class=""><strong>Solver Iteration Count</strong>: Higher values for stability</li>
+<li class=""><strong>Contact Offset</strong>: Small positive value for collision detection</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="physics-parameters-configuration">Physics Parameters Configuration<a href="#physics-parameters-configuration" class="hash-link" aria-label="Direct link to Physics Parameters Configuration" title="Direct link to Physics Parameters Configuration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gravity-settings">Gravity Settings<a href="#gravity-settings" class="hash-link" aria-label="Direct link to Gravity Settings" title="Direct link to Gravity Settings" translate="no">​</a></h3>
+<p>Modify gravity in the Physics settings:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Edit &gt; Project Settings &gt; Physics &gt; Gravity</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Default: (0, -9.81, 0) - Earth&#x27;s gravity</span><br></span></code></pre></div></div>
+<p>For different gravity environments:</p>
+<ul>
+<li class="">Moon gravity: (0, -1.62, 0)</li>
+<li class="">Zero gravity: (0, 0, 0)</li>
+<li class="">Custom gravity: Adjust based on your simulation needs</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="friction-properties">Friction Properties<a href="#friction-properties" class="hash-link" aria-label="Direct link to Friction Properties" title="Direct link to Friction Properties" translate="no">​</a></h3>
+<p>Configure friction using Physic Materials:</p>
+<ol>
+<li class="">
+<p>Create a new Physic Material:</p>
+<ul>
+<li class="">Right-click in Project window</li>
+<li class="">Create &gt; Physic Material</li>
+<li class="">Name it appropriately (e.g., &quot;HighFriction&quot;, &quot;LowFriction&quot;)</li>
+</ul>
+</li>
+<li class="">
+<p>Adjust friction properties:</p>
+<ul>
+<li class=""><strong>Dynamic Friction</strong>: Resistance when objects are moving</li>
+<li class=""><strong>Static Friction</strong>: Resistance when objects are at rest</li>
+<li class=""><strong>Bounciness</strong>: How bouncy the material is (0 = no bounce, 1 = fully bouncy)</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="collision-detection">Collision Detection<a href="#collision-detection" class="hash-link" aria-label="Direct link to Collision Detection" title="Direct link to Collision Detection" translate="no">​</a></h3>
+<p>Configure collision detection modes:</p>
+<ul>
+<li class=""><strong>Discrete</strong>: Default mode, good for most objects</li>
+<li class=""><strong>Continuous</strong>: For fast-moving objects to prevent tunneling</li>
+<li class=""><strong>Continuous Dynamic</strong>: For fast-moving objects with changing collision shapes</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="practical-example-simple-physics-environment">Practical Example: Simple Physics Environment<a href="#practical-example-simple-physics-environment" class="hash-link" aria-label="Direct link to Practical Example: Simple Physics Environment" title="Direct link to Practical Example: Simple Physics Environment" translate="no">​</a></h2>
+<p>Let&#x27;s create a simple environment with a ball and a plane:</p>
+<ol>
+<li class="">
+<p><strong>Create the Ground Plane</strong>:</p>
+<ul>
+<li class="">Right-click in Hierarchy &gt; 3D Object &gt; Plane</li>
+<li class="">Position at (0, 0, 0)</li>
+<li class="">Scale as needed</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Create a Ball</strong>:</p>
+<ul>
+<li class="">Right-click in Hierarchy &gt; 3D Object &gt; Sphere</li>
+<li class="">Position at (0, 5, 0) - 5 units above the ground</li>
+<li class="">Add Rigidbody component:<!-- -->
+<ul>
+<li class="">Select the sphere</li>
+<li class="">Add Component &gt; Physics &gt; Rigidbody</li>
+<li class="">Adjust Mass (e.g., 1) and Drag values</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Configure Physics Materials</strong>:</p>
+<ul>
+<li class="">Create a Physic Material for the ground</li>
+<li class="">Set Dynamic Friction to 0.5, Static Friction to 0.5</li>
+<li class="">Apply to the plane&#x27;s collider</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Add Visual Components</strong>:</p>
+<ul>
+<li class="">Add materials for better visualization</li>
+<li class="">Add lighting (Directional Light)</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Test the Simulation</strong>:</p>
+<ul>
+<li class="">Click Play to run the simulation</li>
+<li class="">The ball should fall and bounce on the plane</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="physics-validation">Physics Validation<a href="#physics-validation" class="hash-link" aria-label="Direct link to Physics Validation" title="Direct link to Physics Validation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="checking-physics-behavior">Checking Physics Behavior<a href="#checking-physics-behavior" class="hash-link" aria-label="Direct link to Checking Physics Behavior" title="Direct link to Checking Physics Behavior" translate="no">​</a></h3>
+<ol>
+<li class=""><strong>Gravity Validation</strong>: Ensure objects fall at the expected rate (9.81 m/s² by default)</li>
+<li class=""><strong>Collision Detection</strong>: Verify objects collide and respond appropriately</li>
+<li class=""><strong>Friction Effects</strong>: Test how different friction values affect object movement</li>
+<li class=""><strong>Stability</strong>: Check for stable simulation without jittering or instability</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-optimization">Performance Optimization<a href="#performance-optimization" class="hash-link" aria-label="Direct link to Performance Optimization" title="Direct link to Performance Optimization" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Fixed Timestep</strong>: Adjust in Time settings (Edit &gt; Project Settings &gt; Time)</li>
+<li class=""><strong>Solver Iterations</strong>: Balance between accuracy and performance</li>
+<li class=""><strong>Layer-based Collision</strong>: Use layers to optimize collision detection</li>
+<li class=""><strong>Object pooling</strong>: For simulations with many similar objects</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="advanced-physics-features">Advanced Physics Features<a href="#advanced-physics-features" class="hash-link" aria-label="Direct link to Advanced Physics Features" title="Direct link to Advanced Physics Features" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="custom-physics-components">Custom Physics Components<a href="#custom-physics-components" class="hash-link" aria-label="Direct link to Custom Physics Components" title="Direct link to Custom Physics Components" translate="no">​</a></h3>
+<p>Create custom physics behaviors using C# scripts:</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">using UnityEngine;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">public class CustomPhysicsController : MonoBehaviour</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    private Rigidbody rb;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    void Start()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        rb = GetComponent&lt;Rigidbody&gt;();</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    void FixedUpdate()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        // Custom physics calculations</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        // Apply forces, torques, or modify physics properties</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        rb.AddForce(Vector3.up * 10f);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="physics-queries">Physics Queries<a href="#physics-queries" class="hash-link" aria-label="Direct link to Physics Queries" title="Direct link to Physics Queries" translate="no">​</a></h3>
+<p>Use Unity&#x27;s physics query system to detect collisions and overlaps:</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">// Raycasting</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">RaycastHit hit;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">if (Physics.Raycast(transform.position, Vector3.down, out hit, 10f))</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Debug.Log(&quot;Hit object: &quot; + hit.collider.name);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">// Sphere overlap</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Collider[] overlaps = Physics.OverlapSphere(transform.position, 1f);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">foreach (Collider col in overlaps)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Debug.Log(&quot;Overlapping with: &quot; + col.name);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="joint-systems">Joint Systems<a href="#joint-systems" class="hash-link" aria-label="Direct link to Joint Systems" title="Direct link to Joint Systems" translate="no">​</a></h3>
+<p>Connect objects with various joint types:</p>
+<ul>
+<li class=""><strong>Fixed Joint</strong>: Rigidly connects two objects</li>
+<li class=""><strong>Hinge Joint</strong>: Allows rotation around a single axis</li>
+<li class=""><strong>Spring Joint</strong>: Connects with spring-like behavior</li>
+<li class=""><strong>Character Joint</strong>: Specialized for ragdoll physics</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting-common-issues">Troubleshooting Common Issues<a href="#troubleshooting-common-issues" class="hash-link" aria-label="Direct link to Troubleshooting Common Issues" title="Direct link to Troubleshooting Common Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="physics-instability">Physics Instability<a href="#physics-instability" class="hash-link" aria-label="Direct link to Physics Instability" title="Direct link to Physics Instability" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Symptom</strong>: Objects vibrating or flying apart</li>
+<li class=""><strong>Solution</strong>: Increase solver iterations or reduce fixed timestep</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slow-performance">Slow Performance<a href="#slow-performance" class="hash-link" aria-label="Direct link to Slow Performance" title="Direct link to Slow Performance" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Symptom</strong>: Low simulation speed</li>
+<li class=""><strong>Solution</strong>: Optimize collision meshes, reduce solver iterations, or simplify physics</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="penetration-issues">Penetration Issues<a href="#penetration-issues" class="hash-link" aria-label="Direct link to Penetration Issues" title="Direct link to Penetration Issues" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Symptom</strong>: Objects passing through each other</li>
+<li class=""><strong>Solution</strong>: Enable continuous collision detection for fast-moving objects</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="unexpected-behavior">Unexpected Behavior<a href="#unexpected-behavior" class="hash-link" aria-label="Direct link to Unexpected Behavior" title="Direct link to Unexpected Behavior" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Symptom</strong>: Objects not responding as expected</li>
+<li class=""><strong>Solution</strong>: Check mass properties, ensure colliders are present, verify Rigidbody settings</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="unity-robotics-simulation-tools">Unity Robotics Simulation Tools<a href="#unity-robotics-simulation-tools" class="hash-link" aria-label="Direct link to Unity Robotics Simulation Tools" title="Direct link to Unity Robotics Simulation Tools" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="unity-robotics-hub">Unity Robotics Hub<a href="#unity-robotics-hub" class="hash-link" aria-label="Direct link to Unity Robotics Hub" title="Direct link to Unity Robotics Hub" translate="no">​</a></h3>
+<p>Unity provides specialized tools for robotics simulation:</p>
+<ul>
+<li class=""><strong>ROS#</strong>: Bridge between Unity and ROS/ROS2</li>
+<li class=""><strong>ML-Agents</strong>: For AI training in simulation</li>
+<li class=""><strong>OpenXR</strong>: For VR/AR simulation experiences</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="importing-robot-models">Importing Robot Models<a href="#importing-robot-models" class="hash-link" aria-label="Direct link to Importing Robot Models" title="Direct link to Importing Robot Models" translate="no">​</a></h3>
+<ol>
+<li class="">Import robot models in FBX or OBJ format</li>
+<li class="">Add colliders to each part</li>
+<li class="">Configure joints between parts</li>
+<li class="">Add Rigidbody components as needed</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="physics-parameter-selection">Physics Parameter Selection<a href="#physics-parameter-selection" class="hash-link" aria-label="Direct link to Physics Parameter Selection" title="Direct link to Physics Parameter Selection" translate="no">​</a></h3>
+<ul>
+<li class="">Start with default Unity physics settings</li>
+<li class="">Adjust based on specific simulation requirements</li>
+<li class="">Test with simple scenarios before complex ones</li>
+<li class="">Document parameter changes for reproducibility</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="environment-design">Environment Design<a href="#environment-design" class="hash-link" aria-label="Direct link to Environment Design" title="Direct link to Environment Design" translate="no">​</a></h3>
+<ul>
+<li class="">Use realistic physical properties for accurate simulation</li>
+<li class="">Validate simulation results against theoretical models</li>
+<li class="">Consider computational performance for real-time applications</li>
+<li class="">Plan for scalability to multiple robots or objects</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-with-robotics-frameworks">Integration with Robotics Frameworks<a href="#integration-with-robotics-frameworks" class="hash-link" aria-label="Direct link to Integration with Robotics Frameworks" title="Direct link to Integration with Robotics Frameworks" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="rosros2-integration">ROS/ROS2 Integration<a href="#rosros2-integration" class="hash-link" aria-label="Direct link to ROS/ROS2 Integration" title="Direct link to ROS/ROS2 Integration" translate="no">​</a></h3>
+<p>Unity can integrate with ROS/ROS2 for robotics applications:</p>
+<ul>
+<li class="">Use Unity Robotics Package for ROS communication</li>
+<li class="">Implement sensor simulation plugins</li>
+<li class="">Connect to real robot control systems</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sensor-simulation">Sensor Simulation<a href="#sensor-simulation" class="hash-link" aria-label="Direct link to Sensor Simulation" title="Direct link to Sensor Simulation" translate="no">​</a></h3>
+<p>Unity can simulate various sensors:</p>
+<ul>
+<li class=""><strong>Cameras</strong>: For visual perception</li>
+<li class=""><strong>LiDAR</strong>: Using raycasting or specialized plugins</li>
+<li class=""><strong>IMU</strong>: Simulating acceleration and orientation data</li>
+<li class=""><strong>Force/Torque sensors</strong>: Measuring interaction forces</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" translate="no">​</a></h2>
+<p>Unity provides a powerful platform for physics simulation with excellent visualization capabilities. Understanding Unity&#x27;s physics system and proper configuration is crucial for creating realistic and stable simulation environments for robotics applications.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
+<p>After mastering Unity physics setup, proceed to learn about physics parameters configuration in detail to optimize your simulation environments.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/lesson-5.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/chapter-2/lesson-4"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Lesson 2.2.1: Gazebo LiDAR Sensor Simulation</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/chapter-2/lesson-6"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Lesson 2.2.3: IMU Sensor Configuration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#learning-objectives" class="table-of-contents__link toc-highlight">Learning Objectives</a></li><li><a href="#prerequisites" class="table-of-contents__link toc-highlight">Prerequisites</a></li><li><a href="#unity-installation" class="table-of-contents__link toc-highlight">Unity Installation</a><ul><li><a href="#unity-hub-setup" class="table-of-contents__link toc-highlight">Unity Hub Setup</a></li><li><a href="#unity-editor-installation" class="table-of-contents__link toc-highlight">Unity Editor Installation</a></li></ul></li><li><a href="#basic-environment-creation" class="table-of-contents__link toc-highlight">Basic Environment Creation</a><ul><li><a href="#creating-a-new-project" class="table-of-contents__link toc-highlight">Creating a New Project</a></li><li><a href="#physics-engine-configuration" class="table-of-contents__link toc-highlight">Physics Engine Configuration</a></li></ul></li><li><a href="#physics-parameters-configuration" class="table-of-contents__link toc-highlight">Physics Parameters Configuration</a><ul><li><a href="#gravity-settings" class="table-of-contents__link toc-highlight">Gravity Settings</a></li><li><a href="#friction-properties" class="table-of-contents__link toc-highlight">Friction Properties</a></li><li><a href="#collision-detection" class="table-of-contents__link toc-highlight">Collision Detection</a></li></ul></li><li><a href="#practical-example-simple-physics-environment" class="table-of-contents__link toc-highlight">Practical Example: Simple Physics Environment</a></li><li><a href="#physics-validation" class="table-of-contents__link toc-highlight">Physics Validation</a><ul><li><a href="#checking-physics-behavior" class="table-of-contents__link toc-highlight">Checking Physics Behavior</a></li><li><a href="#performance-optimization" class="table-of-contents__link toc-highlight">Performance Optimization</a></li></ul></li><li><a href="#advanced-physics-features" class="table-of-contents__link toc-highlight">Advanced Physics Features</a><ul><li><a href="#custom-physics-components" class="table-of-contents__link toc-highlight">Custom Physics Components</a></li><li><a href="#physics-queries" class="table-of-contents__link toc-highlight">Physics Queries</a></li><li><a href="#joint-systems" class="table-of-contents__link toc-highlight">Joint Systems</a></li></ul></li><li><a href="#troubleshooting-common-issues" class="table-of-contents__link toc-highlight">Troubleshooting Common Issues</a><ul><li><a href="#physics-instability" class="table-of-contents__link toc-highlight">Physics Instability</a></li><li><a href="#slow-performance" class="table-of-contents__link toc-highlight">Slow Performance</a></li><li><a href="#penetration-issues" class="table-of-contents__link toc-highlight">Penetration Issues</a></li><li><a href="#unexpected-behavior" class="table-of-contents__link toc-highlight">Unexpected Behavior</a></li></ul></li><li><a href="#unity-robotics-simulation-tools" class="table-of-contents__link toc-highlight">Unity Robotics Simulation Tools</a><ul><li><a href="#unity-robotics-hub" class="table-of-contents__link toc-highlight">Unity Robotics Hub</a></li><li><a href="#importing-robot-models" class="table-of-contents__link toc-highlight">Importing Robot Models</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#physics-parameter-selection" class="table-of-contents__link toc-highlight">Physics Parameter Selection</a></li><li><a href="#environment-design" class="table-of-contents__link toc-highlight">Environment Design</a></li></ul></li><li><a href="#integration-with-robotics-frameworks" class="table-of-contents__link toc-highlight">Integration with Robotics Frameworks</a><ul><li><a href="#rosros2-integration" class="table-of-contents__link toc-highlight">ROS/ROS2 Integration</a></li><li><a href="#sensor-simulation" class="table-of-contents__link toc-highlight">Sensor Simulation</a></li></ul></li><li><a href="#summary" class="table-of-contents__link toc-highlight">Summary</a></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Chapters</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Discussions<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/docs/contributing">Contributing</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

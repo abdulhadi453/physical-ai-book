@@ -1,0 +1,62 @@
+{
+  "id": "chapter-1/lesson-3",
+  "title": "Module 1: URDF Fundamentals for Humanoid Robots",
+  "description": "Understanding Unified Robot Description Format for humanoid robot structures",
+  "source": "@site/docs/chapter-1/lesson-3.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/lesson-3",
+  "permalink": "/hackathon-book/docs/chapter-1/lesson-3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/lesson-3.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/hackathon-book/docs/tags/ros-2"
+    },
+    {
+      "inline": true,
+      "label": "urdf",
+      "permalink": "/hackathon-book/docs/tags/urdf"
+    },
+    {
+      "inline": true,
+      "label": "humanoid",
+      "permalink": "/hackathon-book/docs/tags/humanoid"
+    },
+    {
+      "inline": true,
+      "label": "robot-description",
+      "permalink": "/hackathon-book/docs/tags/robot-description"
+    },
+    {
+      "inline": true,
+      "label": "xml",
+      "permalink": "/hackathon-book/docs/tags/xml"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Module 1: URDF Fundamentals for Humanoid Robots",
+    "description": "Understanding Unified Robot Description Format for humanoid robot structures",
+    "tags": [
+      "ros2",
+      "urdf",
+      "humanoid",
+      "robot-description",
+      "xml"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 1: rclpy for AI Agent Integration",
+    "permalink": "/hackathon-book/docs/chapter-1/lesson-2"
+  },
+  "next": {
+    "title": "Module 1: Data Flow Tracing (AI → ROS 2 → Actuator)",
+    "permalink": "/hackathon-book/docs/chapter-1/lesson-4"
+  }
+}

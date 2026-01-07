@@ -1,0 +1,24 @@
+{
+  "id": "contributing",
+  "title": "Contributing",
+  "description": "We welcome contributions from the community to help improve this AI-Native Textbook for Physical AI & Humanoid Robotics! This guide explains how you can contribute to the project, which is designed for the competitive hackathon focused on creating AI-enhanced educational materials.",
+  "source": "@site/docs/contributing.md",
+  "sourceDirName": ".",
+  "slug": "/contributing",
+  "permalink": "/hackathon-book/docs/contributing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contributing.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 100,
+  "frontMatter": {
+    "sidebar_position": 100,
+    "title": "Contributing"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Capstone Project: Autonomous Humanoid Task",
+    "permalink": "/hackathon-book/docs/chapter-4/capstone-project"
+  }
+}

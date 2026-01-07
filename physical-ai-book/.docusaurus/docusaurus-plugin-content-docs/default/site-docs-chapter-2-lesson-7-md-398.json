@@ -1,0 +1,27 @@
+{
+  "id": "chapter-2/lesson-7",
+  "title": "LiDAR Sensor Simulation Guide",
+  "description": "Overview",
+  "source": "@site/docs/chapter-2/lesson-7.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/lesson-7",
+  "permalink": "/hackathon-book/docs/chapter-2/lesson-7",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/lesson-7.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "sidebar_position": 12
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Physics Parameters Configuration Guide",
+    "permalink": "/hackathon-book/docs/chapter-2/lesson-6"
+  },
+  "next": {
+    "title": "Depth Camera Simulation Guide",
+    "permalink": "/hackathon-book/docs/chapter-2/lesson-8"
+  }
+}

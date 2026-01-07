@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/assessments",
+  "title": "Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™)",
+  "description": "Overview",
+  "source": "@site/docs/chapter-3/assessments.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/assessments",
+  "permalink": "/hackathon-book/docs/chapter-3/assessments",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/assessments.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 3 Exercise Framework: The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/hackathon-book/docs/chapter-3/exercises"
+  },
+  "next": {
+    "title": "Module 3 Assessment: The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/hackathon-book/docs/chapter-3/assessment"
+  }
+}

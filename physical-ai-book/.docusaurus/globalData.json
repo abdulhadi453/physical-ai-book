@@ -1,0 +1,462 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/hackathon-book/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/hackathon-book/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "chapter-1/ai-integration",
+              "path": "/hackathon-book/docs/chapter-1/ai-integration"
+            },
+            {
+              "id": "chapter-1/educator-guide",
+              "path": "/hackathon-book/docs/chapter-1/educator-guide"
+            },
+            {
+              "id": "chapter-1/intro",
+              "path": "/hackathon-book/docs/chapter-1/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-1/lesson-1",
+              "path": "/hackathon-book/docs/chapter-1/lesson-1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-1/lesson-1-perception-action",
+              "path": "/hackathon-book/docs/chapter-1/lesson-1-perception-action"
+            },
+            {
+              "id": "chapter-1/lesson-2",
+              "path": "/hackathon-book/docs/chapter-1/lesson-2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-1/lesson-2-math-foundations",
+              "path": "/hackathon-book/docs/chapter-1/lesson-2-math-foundations"
+            },
+            {
+              "id": "chapter-1/lesson-3",
+              "path": "/hackathon-book/docs/chapter-1/lesson-3",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-1/lesson-3-embodiment",
+              "path": "/hackathon-book/docs/chapter-1/lesson-3-embodiment"
+            },
+            {
+              "id": "chapter-1/lesson-4",
+              "path": "/hackathon-book/docs/chapter-1/lesson-4",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-1/lesson-5",
+              "path": "/hackathon-book/docs/chapter-1/lesson-5",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-1/lesson-6",
+              "path": "/hackathon-book/docs/chapter-1/lesson-6",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-1/module-assessment",
+              "path": "/hackathon-book/docs/chapter-1/module-assessment"
+            },
+            {
+              "id": "chapter-1/progress-tracking-guide",
+              "path": "/hackathon-book/docs/chapter-1/progress-tracking-guide"
+            },
+            {
+              "id": "chapter-1/quality-validation",
+              "path": "/hackathon-book/docs/chapter-1/quality-validation"
+            },
+            {
+              "id": "chapter-1/researcher-resources",
+              "path": "/hackathon-book/docs/chapter-1/researcher-resources"
+            },
+            {
+              "id": "chapter-2/ai-integration",
+              "path": "/hackathon-book/docs/chapter-2/ai-integration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/assessment-framework",
+              "path": "/hackathon-book/docs/chapter-2/assessment-framework"
+            },
+            {
+              "id": "chapter-2/assessments",
+              "path": "/hackathon-book/docs/chapter-2/assessments",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/cross-platform-guide",
+              "path": "/hackathon-book/docs/chapter-2/cross-platform-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/educator-guide",
+              "path": "/hackathon-book/docs/chapter-2/educator-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/exercise-1",
+              "path": "/hackathon-book/docs/chapter-2/exercise-1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/exercise-2",
+              "path": "/hackathon-book/docs/chapter-2/exercise-2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/exercise-3",
+              "path": "/hackathon-book/docs/chapter-2/exercise-3",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/exercise-4",
+              "path": "/hackathon-book/docs/chapter-2/exercise-4",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/exercise-framework",
+              "path": "/hackathon-book/docs/chapter-2/exercise-framework"
+            },
+            {
+              "id": "chapter-2/intro",
+              "path": "/hackathon-book/docs/chapter-2/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/lesson-1",
+              "path": "/hackathon-book/docs/chapter-2/lesson-1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/lesson-2",
+              "path": "/hackathon-book/docs/chapter-2/lesson-2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/lesson-3",
+              "path": "/hackathon-book/docs/chapter-2/lesson-3",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/lesson-4",
+              "path": "/hackathon-book/docs/chapter-2/lesson-4",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/lesson-5",
+              "path": "/hackathon-book/docs/chapter-2/lesson-5",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/lesson-6",
+              "path": "/hackathon-book/docs/chapter-2/lesson-6",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/lesson-7",
+              "path": "/hackathon-book/docs/chapter-2/lesson-7",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/lesson-8",
+              "path": "/hackathon-book/docs/chapter-2/lesson-8",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/lesson-9",
+              "path": "/hackathon-book/docs/chapter-2/lesson-9",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/platform-differences",
+              "path": "/hackathon-book/docs/chapter-2/platform-differences",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/prerequisite-check",
+              "path": "/hackathon-book/docs/chapter-2/prerequisite-check",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/progress-tracking-guide",
+              "path": "/hackathon-book/docs/chapter-2/progress-tracking-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/quality-validation",
+              "path": "/hackathon-book/docs/chapter-2/quality-validation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/references",
+              "path": "/hackathon-book/docs/chapter-2/references",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/researcher-resources",
+              "path": "/hackathon-book/docs/chapter-2/researcher-resources",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/sensor-assessments",
+              "path": "/hackathon-book/docs/chapter-2/sensor-assessments",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/sensor-validation-tests",
+              "path": "/hackathon-book/docs/chapter-2/sensor-validation-tests",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2/tests",
+              "path": "/hackathon-book/docs/chapter-2/tests",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/assessment",
+              "path": "/hackathon-book/docs/chapter-3/assessment",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/assessments",
+              "path": "/hackathon-book/docs/chapter-3/assessments",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/communication-protocols",
+              "path": "/hackathon-book/docs/chapter-3/communication-protocols",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/educator-guide",
+              "path": "/hackathon-book/docs/chapter-3/educator-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/exercises",
+              "path": "/hackathon-book/docs/chapter-3/exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/intro",
+              "path": "/hackathon-book/docs/chapter-3/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/isaac-ros-setup",
+              "path": "/hackathon-book/docs/chapter-3/isaac-ros-setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/lesson-1",
+              "path": "/hackathon-book/docs/chapter-3/lesson-1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/lesson-2",
+              "path": "/hackathon-book/docs/chapter-3/lesson-2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/lesson-3",
+              "path": "/hackathon-book/docs/chapter-3/lesson-3",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/lesson-4",
+              "path": "/hackathon-book/docs/chapter-3/lesson-4",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/model-deployment",
+              "path": "/hackathon-book/docs/chapter-3/model-deployment",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/nav2-setup",
+              "path": "/hackathon-book/docs/chapter-3/nav2-setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/perception-pipeline",
+              "path": "/hackathon-book/docs/chapter-3/perception-pipeline",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/performance-monitoring",
+              "path": "/hackathon-book/docs/chapter-3/performance-monitoring",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/progress-tracking-guide",
+              "path": "/hackathon-book/docs/chapter-3/progress-tracking-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/researcher-resources",
+              "path": "/hackathon-book/docs/chapter-3/researcher-resources",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/safety-framework",
+              "path": "/hackathon-book/docs/chapter-3/safety-framework",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/sensor-integration",
+              "path": "/hackathon-book/docs/chapter-3/sensor-integration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/setup",
+              "path": "/hackathon-book/docs/chapter-3/setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/simulation-setup",
+              "path": "/hackathon-book/docs/chapter-3/simulation-setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3/summary",
+              "path": "/hackathon-book/docs/chapter-3/summary",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/assessments",
+              "path": "/hackathon-book/docs/chapter-4/assessments",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/capstone-project",
+              "path": "/hackathon-book/docs/chapter-4/capstone-project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/educator-guide",
+              "path": "/hackathon-book/docs/chapter-4/educator-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/exercises",
+              "path": "/hackathon-book/docs/chapter-4/exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/glossary",
+              "path": "/hackathon-book/docs/chapter-4/glossary"
+            },
+            {
+              "id": "chapter-4/integration-guide",
+              "path": "/hackathon-book/docs/chapter-4/integration-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/intro",
+              "path": "/hackathon-book/docs/chapter-4/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/lesson-1",
+              "path": "/hackathon-book/docs/chapter-4/lesson-1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/lesson-2",
+              "path": "/hackathon-book/docs/chapter-4/lesson-2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/lesson-3",
+              "path": "/hackathon-book/docs/chapter-4/lesson-3",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/lesson-4",
+              "path": "/hackathon-book/docs/chapter-4/lesson-4",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/lesson-5",
+              "path": "/hackathon-book/docs/chapter-4/lesson-5",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/performance-monitoring",
+              "path": "/hackathon-book/docs/chapter-4/performance-monitoring",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/reference",
+              "path": "/hackathon-book/docs/chapter-4/reference"
+            },
+            {
+              "id": "chapter-4/researcher-resources",
+              "path": "/hackathon-book/docs/chapter-4/researcher-resources",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/security-considerations",
+              "path": "/hackathon-book/docs/chapter-4/security-considerations",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/setup",
+              "path": "/hackathon-book/docs/chapter-4/setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4/summary",
+              "path": "/hackathon-book/docs/chapter-4/summary"
+            },
+            {
+              "id": "chapter-4/troubleshooting",
+              "path": "/hackathon-book/docs/chapter-4/troubleshooting",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "contributing",
+              "path": "/hackathon-book/docs/contributing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/hackathon-book/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-extras/manage-docs-versions",
+              "path": "/hackathon-book/docs/tutorial-extras/manage-docs-versions"
+            },
+            {
+              "id": "tutorial-extras/translate-your-site",
+              "path": "/hackathon-book/docs/tutorial-extras/translate-your-site"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/hackathon-book/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

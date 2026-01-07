@@ -1,0 +1,27 @@
+{
+  "id": "chapter-2/progress-tracking-guide",
+  "title": "Progress Tracking Guide for Digital Twin Simulation",
+  "description": "Overview",
+  "source": "@site/docs/chapter-2/progress-tracking-guide.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/progress-tracking-guide",
+  "permalink": "/hackathon-book/docs/chapter-2/progress-tracking-guide",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/progress-tracking-guide.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 25,
+  "frontMatter": {
+    "sidebar_position": 25
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quality Validation Guide for Digital Twin Simulation",
+    "permalink": "/hackathon-book/docs/chapter-2/quality-validation"
+  },
+  "next": {
+    "title": "Researcher Resources for Digital Twin Simulation",
+    "permalink": "/hackathon-book/docs/chapter-2/researcher-resources"
+  }
+}

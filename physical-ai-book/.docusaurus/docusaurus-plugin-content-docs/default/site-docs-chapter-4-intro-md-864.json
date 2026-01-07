@@ -1,0 +1,24 @@
+{
+  "id": "chapter-4/intro",
+  "title": "Introduction to Vision-Language-Action (VLA) Systems",
+  "description": "Welcome to Module 4",
+  "source": "@site/docs/chapter-4/intro.md",
+  "sourceDirName": "chapter-4",
+  "slug": "/chapter-4/intro",
+  "permalink": "/hackathon-book/docs/chapter-4/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-4/intro.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 3 Summary: The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/hackathon-book/docs/chapter-3/summary"
+  },
+  "next": {
+    "title": "Lesson 1: Voice Command Processing with Whisper",
+    "permalink": "/hackathon-book/docs/chapter-4/lesson-1"
+  }
+}

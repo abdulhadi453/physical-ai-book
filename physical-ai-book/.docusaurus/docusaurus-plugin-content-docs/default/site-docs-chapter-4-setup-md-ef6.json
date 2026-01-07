@@ -1,0 +1,24 @@
+{
+  "id": "chapter-4/setup",
+  "title": "VLA System Setup Guide",
+  "description": "Overview",
+  "source": "@site/docs/chapter-4/setup.md",
+  "sourceDirName": "chapter-4",
+  "slug": "/chapter-4/setup",
+  "permalink": "/hackathon-book/docs/chapter-4/setup",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-4/setup.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Lesson 5: VLA System Integration and Capstone Project",
+    "permalink": "/hackathon-book/docs/chapter-4/lesson-5"
+  },
+  "next": {
+    "title": "Integration Guide: Vision-Language-Action (VLA) Systems",
+    "permalink": "/hackathon-book/docs/chapter-4/integration-guide"
+  }
+}

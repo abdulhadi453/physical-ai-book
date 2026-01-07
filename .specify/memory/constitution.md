@@ -1,100 +1,55 @@
-<!-- Sync Impact Report:
-Version change: 1.2.0 -> 2.0.0 (major rewrite to match user requirements)
-Modified principles: Completely replaced with new structure following specified 12 sections
-Added sections: All 12 required sections with formal, enforcement-oriented language
-Removed sections: Previous informal structure
-Templates requiring updates: .specify/templates/plan-template.md, .specify/templates/spec-template.md, .specify/templates/tasks-template.md
-Follow-up TODOs: None
--->
+# [PROJECT_NAME] Constitution
+<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
 
-# Physical AI & Humanoid Robotics Constitution
+## Core Principles
 
-## 1. Project Definition
+### [PRINCIPLE_1_NAME]
+<!-- Example: I. Library-First -->
+[PRINCIPLE_1_DESCRIPTION]
+<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
-Physical AI & Humanoid Robotics: AI-Native Technical Textbook + Interactive Learning System. A panaversity hackathon project evaluated by senior AI engineers and educators. This project MUST deliver a Docusaurus-based textbook teaching Physical AI and Humanoid Robotics using ROS 2, Gazebo, Unity, NVIDIA Isaac, and Vision-Language-Action systems, with embedded AI agents and RAG-based learning.
+### [PRINCIPLE_2_NAME]
+<!-- Example: II. CLI Interface -->
+[PRINCIPLE_2_DESCRIPTION]
+<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
 
-## 2. Purpose of the Constitution
+### [PRINCIPLE_3_NAME]
+<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
+[PRINCIPLE_3_DESCRIPTION]
+<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
 
-This constitution is the highest governing specification. All future specs, content, code, agents, and architecture MUST comply with it. Any violation is grounds for rejection. This document establishes mandatory requirements and non-negotiable constraints that govern all project development activities.
+### [PRINCIPLE_4_NAME]
+<!-- Example: IV. Integration Testing -->
+[PRINCIPLE_4_DESCRIPTION]
+<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
 
-## 3. Core Principles
+### [PRINCIPLE_5_NAME]
+<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
+[PRINCIPLE_5_DESCRIPTION]
+<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
 
-- **Spec-Driven Development**: All content, code, and architecture MUST originate from approved specifications. No implementation without approved specs is permitted.
-- **AI-Native Integration**: All components MUST leverage AI agents and RAG systems for enhanced learning experiences.
-- **Technical Rigor**: All robotics claims MUST respect physical constraints. Simulation vs real-world limits MUST be explicit.
-- **Accessibility**: Content MUST be accessible to CS/Engineering audience with appropriate theory → simulation → deployment progression.
-- **Safety First**: Ethics and safety MUST be addressed in all technical content.
+### [PRINCIPLE_6_NAME]
 
-## 4. Spec-Driven Development Rules
 
-- Spec-Driven Development is REQUIRED: No content, code, or architecture development without approved specifications is permitted.
-- Claude Code and Spec-Kit Plus MUST be used for all development activities.
-- All specifications MUST pass constitutional compliance checks before approval.
-- Any deviation from approved specs MUST trigger constitutional review.
+[PRINCIPLE__DESCRIPTION]
 
-## 5. AI-Native Design Mandates
+## [SECTION_2_NAME]
+<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
 
-- Content MUST be chunked for RAG to enable effective retrieval-augmented generation.
-- Embedded chatbot MUST answer strictly from book content only.
-- "Answer from selected text only" mode is REQUIRED to prevent hallucinations.
-- Reusable intelligence via Claude subagents is REQUIRED for scalable learning assistance.
-- AI agents MUST enhance education while preserving human comprehension.
+[SECTION_2_CONTENT]
+<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
-## 6. Content & Pedagogy Standards
+## [SECTION_3_NAME]
+<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
 
-- Audience: CS/Engineering background with theory → simulation → deployment progression.
-- Robotics claims MUST respect physical constraints and real-world limitations.
-- Simulation vs real-world limits MUST be explicitly documented and explained.
-- Safety and ethics MUST be addressed in all technical content.
-- All content MUST support the pedagogical progression from theory to practice.
+[SECTION_3_CONTENT]
+<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
-## 7. Technical Stack Constraints
+## Governance
+<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-- RAG stack: OpenAI Agents/ChatKit, FastAPI, Neon Postgres, Qdrant is REQUIRED.
-- Authentication via better-auth is REQUIRED for all user interactions.
-- User profiling at signup (software + hardware background) is REQUIRED.
-- Chapter-level personalization button is REQUIRED for adaptive learning.
-- Chapter-level Urdu translation button is REQUIRED for accessibility.
-- Docusaurus + GitHub Pages is the mandated delivery platform.
+[GOVERNANCE_RULES]
+<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
 
-## 8. Verification & Reproducibility Rules
-
-- All technical examples MUST be reproducible in both simulation and real-world environments.
-- All code examples MUST include verification procedures and expected outcomes.
-- All simulations MUST include validation against physical constraints.
-- All deployments MUST include verification of real-world safety requirements.
-- Reproducibility tests MUST be included in all deliverables.
-
-## 9. Ethical & Safety Requirements
-
-- All robotic systems described MUST include safety protocols and risk assessments.
-- All AI systems MUST include ethical considerations and bias mitigation strategies.
-- All hardware interactions MUST include safety warnings and protective measures.
-- All simulation-to-reality transfers MUST include safety validation procedures.
-- All content MUST comply with ethical AI development practices.
-
-## 10. Evaluation Alignment
-
-- Content evaluation MUST be performed by senior AI engineers and educators.
-- All technical claims MUST be validated against real-world physical constraints.
-- All AI integration MUST be evaluated for educational effectiveness.
-- All safety requirements MUST be verified by qualified reviewers.
-- All accessibility features MUST be tested with target audience groups.
-
-## 11. Success Criteria
-
-- Students MUST be able to implement Physical AI concepts in simulation and deployment.
-- Students MUST demonstrate understanding of simulation vs real-world limitations.
-- Students MUST complete projects that respect physical constraints and safety requirements.
-- Students MUST utilize AI assistance tools appropriately while maintaining comprehension.
-- The system MUST support the specified technical stack and accessibility requirements.
-
-## 12. Non-Compliance Policy
-
-- Any deliverable that violates constitutional requirements MUST be rejected immediately.
-- Any specification that conflicts with constitutional requirements MUST be revised.
-- Any implementation that bypasses constitutional constraints MUST be discarded.
-- Any content that fails to meet mandatory requirements MUST be redeveloped.
-- Constitutional compliance is the responsibility of all contributors and reviewers.
-
-**Version**: 2.0.0 | **Ratified**: 2025-12-09 | **Last Amended**: 2025-12-15
+**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
+<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->

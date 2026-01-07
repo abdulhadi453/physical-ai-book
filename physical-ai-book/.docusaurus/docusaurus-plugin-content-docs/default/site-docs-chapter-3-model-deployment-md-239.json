@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/model-deployment",
+  "title": "AI Model Deployment in Isaac Sim Environment",
+  "description": "Overview",
+  "source": "@site/docs/chapter-3/model-deployment.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/model-deployment",
+  "permalink": "/hackathon-book/docs/chapter-3/model-deployment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/model-deployment.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Multimodal Sensor Integration in Isaac Sim",
+    "permalink": "/hackathon-book/docs/chapter-3/sensor-integration"
+  },
+  "next": {
+    "title": "Module 3 Exercise Framework: The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/hackathon-book/docs/chapter-3/exercises"
+  }
+}

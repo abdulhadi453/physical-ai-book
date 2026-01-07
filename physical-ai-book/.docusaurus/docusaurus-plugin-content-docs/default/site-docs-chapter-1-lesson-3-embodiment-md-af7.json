@@ -1,0 +1,19 @@
+{
+  "id": "chapter-1/lesson-3-embodiment",
+  "title": "Lesson 3: Introduction to Robot Embodiment and Its Role in Intelligence",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapter-1/lesson-3-embodiment.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/lesson-3-embodiment",
+  "permalink": "/hackathon-book/docs/chapter-1/lesson-3-embodiment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/lesson-3-embodiment.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Lesson 3: Introduction to Robot Embodiment and Its Role in Intelligence"
+  }
+}

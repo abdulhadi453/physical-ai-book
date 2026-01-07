@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-chapter-3/assessments" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™) | AI-Native Textbook for Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://physical-ai-book.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://physical-ai-book.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://physical-ai-book.github.io/docs/chapter-3/assessments"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="ur"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™) | AI-Native Textbook for Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://physical-ai-book.github.io/docs/chapter-3/assessments"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-3/assessments" hreflang="en"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/ur/docs/chapter-3/assessments" hreflang="ur"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-3/assessments" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™)","item":"https://physical-ai-book.github.io/docs/chapter-3/assessments"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics Atom Feed"><link rel="stylesheet" href="/assets/css/styles.cf33f44d.css">
+<script src="/assets/js/runtime~main.92299d71.js" defer="defer"></script>
+<script src="/assets/js/main.da092ae6.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/intro">Chapters</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro"><span title="Introduction to Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Introduction to Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-1/intro"><span title="Module 1: The Robotic Nervous System (ROS 2)" class="categoryLinkLabel_W154">Module 1: The Robotic Nervous System (ROS 2)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-2/intro"><span title="Module 2: The Digital Twin (Gazebo &amp; Unity)" class="categoryLinkLabel_W154">Module 2: The Digital Twin (Gazebo &amp; Unity)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/chapter-3/intro"><span title="Module 3: The AI-Robot Brain (NVIDIA Isaac™)" class="categoryLinkLabel_W154">Module 3: The AI-Robot Brain (NVIDIA Isaac™)</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/chapter-3/intro"><span title="Chapter 3.1: NVIDIA Isaac Platform Integration" class="categoryLinkLabel_W154">Chapter 3.1: NVIDIA Isaac Platform Integration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/chapter-3/setup"><span title="Chapter 3.2: System Setup and Configuration" class="categoryLinkLabel_W154">Chapter 3.2: System Setup and Configuration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/docs/chapter-3/perception-pipeline"><span title="Chapter 3.3: Advanced Implementation" class="categoryLinkLabel_W154">Chapter 3.3: Advanced Implementation</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/perception-pipeline"><span title="Isaac ROS Perception Pipeline Implementation" class="linkLabel_WmDU">Isaac ROS Perception Pipeline Implementation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/sensor-integration"><span title="Multimodal Sensor Integration in Isaac Sim" class="linkLabel_WmDU">Multimodal Sensor Integration in Isaac Sim</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/model-deployment"><span title="AI Model Deployment in Isaac Sim Environment" class="linkLabel_WmDU">AI Model Deployment in Isaac Sim Environment</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/exercises"><span title="Module 3 Exercise Framework: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Exercise Framework: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/chapter-3/assessments"><span title="Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/assessment"><span title="Module 3 Assessment: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Assessment: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/progress-tracking-guide"><span title="Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/educator-guide"><span title="Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/researcher-resources"><span title="Researcher Resources: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Researcher Resources: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/communication-protocols"><span title="AI-Robot Communication Protocols for Isaac Sim" class="linkLabel_WmDU">AI-Robot Communication Protocols for Isaac Sim</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/safety-framework"><span title="Safety and Reliability Framework for Isaac Sim AI-Robot Systems" class="linkLabel_WmDU">Safety and Reliability Framework for Isaac Sim AI-Robot Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/performance-monitoring"><span title="Performance Monitoring Tools for Isaac Sim AI-Robot Systems" class="linkLabel_WmDU">Performance Monitoring Tools for Isaac Sim AI-Robot Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/summary"><span title="Module 3 Summary: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Summary: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-4/intro"><span title="Module 4: Vision-Language-Action (VLA) Systems" class="categoryLinkLabel_W154">Module 4: Vision-Language-Action (VLA) Systems</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/contributing"><span title="Contributing" class="linkLabel_WmDU">Contributing</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module 3: The AI-Robot Brain (NVIDIA Isaac™)</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Chapter 3.3: Advanced Implementation</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™)</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™)</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>This document outlines the assessment framework for Module 3, which covers the NVIDIA Isaac platform for creating AI-robot brains. The assessments are designed to evaluate student understanding of perception, navigation, and decision-making systems.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assessment-structure">Assessment Structure<a href="#assessment-structure" class="hash-link" aria-label="Direct link to Assessment Structure" title="Direct link to Assessment Structure" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-formative-assessments-knowledge-checks">1. Formative Assessments (Knowledge Checks)<a href="#1-formative-assessments-knowledge-checks" class="hash-link" aria-label="Direct link to 1. Formative Assessments (Knowledge Checks)" title="Direct link to 1. Formative Assessments (Knowledge Checks)" translate="no">​</a></h3>
+<ul>
+<li class="">Embedded throughout each lesson</li>
+<li class="">Immediate feedback for self-correction</li>
+<li class="">Focus on conceptual understanding</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-summative-assessments-module-completion">2. Summative Assessments (Module Completion)<a href="#2-summative-assessments-module-completion" class="hash-link" aria-label="Direct link to 2. Summative Assessments (Module Completion)" title="Direct link to 2. Summative Assessments (Module Completion)" translate="no">​</a></h3>
+<ul>
+<li class="">Comprehensive evaluation at module end</li>
+<li class="">Practical implementation tasks</li>
+<li class="">Achievement of learning objectives</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-performance-assessments-simulation-tasks">3. Performance Assessments (Simulation Tasks)<a href="#3-performance-assessments-simulation-tasks" class="hash-link" aria-label="Direct link to 3. Performance Assessments (Simulation Tasks)" title="Direct link to 3. Performance Assessments (Simulation Tasks)" translate="no">​</a></h3>
+<ul>
+<li class="">Hands-on exercises in Isaac Sim</li>
+<li class="">Real-world scenario applications</li>
+<li class="">Practical skill demonstration</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives-assessment-matrix">Learning Objectives Assessment Matrix<a href="#learning-objectives-assessment-matrix" class="hash-link" aria-label="Direct link to Learning Objectives Assessment Matrix" title="Direct link to Learning Objectives Assessment Matrix" translate="no">​</a></h2>
+<table><thead><tr><th>Learning Objective</th><th>LO-1</th><th>LO-2</th><th>LO-3</th><th>LO-4</th><th>LO-5</th><th>LO-6</th></tr></thead><tbody><tr><td>Objective</td><td>Design and implement AI agents using NVIDIA Isaac platform that can process multimodal sensor data</td><td>Integrate vision-language-action systems with robotic platforms for complex task execution</td><td>Apply machine learning models within NVIDIA Isaac for perception and decision-making</td><td>Create intelligent control systems that demonstrate embodied intelligence principles</td><td>Deploy AI-robotic systems on NVIDIA Isaac simulation and target platforms</td><td>Evaluate and optimize AI-robot performance using NVIDIA Isaac tools</td></tr><tr><td>Assessment Method</td><td>Practical Exercise 1</td><td>Practical Exercise 2</td><td>Practical Exercise 3</td><td>Capstone Project</td><td>Simulation Task</td><td>Performance Evaluation</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="formative-assessment-questions">Formative Assessment Questions<a href="#formative-assessment-questions" class="hash-link" aria-label="Direct link to Formative Assessment Questions" title="Direct link to Formative Assessment Questions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-1-nvidia-isaac-simulation-environment-and-ros-integration">Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration<a href="#lesson-1-nvidia-isaac-simulation-environment-and-ros-integration" class="hash-link" aria-label="Direct link to Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration" title="Direct link to Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="knowledge-check-11">Knowledge Check 1.1<a href="#knowledge-check-11" class="hash-link" aria-label="Direct link to Knowledge Check 1.1" title="Direct link to Knowledge Check 1.1" translate="no">​</a></h4>
+<p><strong>Question</strong>: What are the main components of the NVIDIA Isaac platform?
+<strong>Options</strong>:</p>
+<ul>
+<li class="">A) Isaac Sim, Isaac ROS, Isaac Apps, Isaac Mission Control</li>
+<li class="">B) ROS, Gazebo, MoveIt, OpenCV</li>
+<li class="">C) TensorFlow, PyTorch, CUDA, OpenAI</li>
+<li class="">D) Docker, Kubernetes, Git, Jenkins
+<strong>Answer</strong>: A
+<strong>Explanation</strong>: The NVIDIA Isaac platform consists of Isaac Sim (simulation), Isaac ROS (perception and navigation packages), Isaac Apps (reference applications), and Isaac Mission Control (deployment tools).</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="knowledge-check-12">Knowledge Check 1.2<a href="#knowledge-check-12" class="hash-link" aria-label="Direct link to Knowledge Check 1.2" title="Direct link to Knowledge Check 1.2" translate="no">​</a></h4>
+<p><strong>Question</strong>: What is the purpose of the Isaac ROS bridge?
+<strong>Options</strong>:</p>
+<ul>
+<li class="">A) To connect Isaac Sim with ROS 2 for communication</li>
+<li class="">B) To improve robot performance</li>
+<li class="">C) To reduce computational requirements</li>
+<li class="">D) To create 3D models
+<strong>Answer</strong>: A
+<strong>Explanation</strong>: The Isaac ROS bridge enables communication between Isaac Sim and ROS 2, allowing ROS nodes to interact with the simulated environment.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="knowledge-check-13">Knowledge Check 1.3<a href="#knowledge-check-13" class="hash-link" aria-label="Direct link to Knowledge Check 1.3" title="Direct link to Knowledge Check 1.3" translate="no">​</a></h4>
+<p><strong>Question</strong>: Which of the following is NOT a component of a perception pipeline?
+<strong>Options</strong>:</p>
+<ul>
+<li class="">A) Sensor Interface</li>
+<li class="">B) Preprocessing</li>
+<li class="">C) Feature Extraction</li>
+<li class="">D) Hardware Assembly
+<strong>Answer</strong>: D
+<strong>Explanation</strong>: Hardware Assembly is not part of a perception pipeline, which consists of sensor interface, preprocessing, feature extraction, object detection, and decision making components.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-2-navigation-and-path-planning-with-nav2">Lesson 2: Navigation and Path Planning with Nav2<a href="#lesson-2-navigation-and-path-planning-with-nav2" class="hash-link" aria-label="Direct link to Lesson 2: Navigation and Path Planning with Nav2" title="Direct link to Lesson 2: Navigation and Path Planning with Nav2" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="knowledge-check-21">Knowledge Check 2.1<a href="#knowledge-check-21" class="hash-link" aria-label="Direct link to Knowledge Check 2.1" title="Direct link to Knowledge Check 2.1" translate="no">​</a></h4>
+<p><strong>Question</strong>: What are the two main types of planners in Nav2?
+<strong>Options</strong>:</p>
+<ul>
+<li class="">A) Global and Local Planners</li>
+<li class="">B) Fast and Slow Planners</li>
+<li class="">C) Indoor and Outdoor Planners</li>
+<li class="">D) Simple and Complex Planners
+<strong>Answer</strong>: A
+<strong>Explanation</strong>: Nav2 uses Global Planners for path planning from start to goal and Local Planners for generating velocity commands while following the path.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="knowledge-check-22">Knowledge Check 2.2<a href="#knowledge-check-22" class="hash-link" aria-label="Direct link to Knowledge Check 2.2" title="Direct link to Knowledge Check 2.2" translate="no">​</a></h4>
+<p><strong>Question</strong>: What is the purpose of recovery behaviors in Nav2?
+<strong>Options</strong>:</p>
+<ul>
+<li class="">A) To handle navigation failures and help the robot recover</li>
+<li class="">B) To improve path planning speed</li>
+<li class="">C) To reduce computational requirements</li>
+<li class="">D) To enhance sensor performance
+<strong>Answer</strong>: A
+<strong>Explanation</strong>: Recovery behaviors are designed to handle navigation failures and help the robot recover from situations where normal navigation is not possible.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="knowledge-check-23">Knowledge Check 2.3<a href="#knowledge-check-23" class="hash-link" aria-label="Direct link to Knowledge Check 2.3" title="Direct link to Knowledge Check 2.3" translate="no">​</a></h4>
+<p><strong>Question</strong>: What does a costmap represent in navigation?
+<strong>Options</strong>:</p>
+<ul>
+<li class="">A) An environment representation with obstacle information</li>
+<li class="">B) A financial calculation for robot operations</li>
+<li class="">C) A performance metric for navigation</li>
+<li class="">D) A communication protocol
+<strong>Answer</strong>: A
+<strong>Explanation</strong>: Costmaps represent the environment with obstacle information, helping the robot navigate safely around obstacles.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-3-perception-and-ai-decision-making">Lesson 3: Perception and AI Decision Making<a href="#lesson-3-perception-and-ai-decision-making" class="hash-link" aria-label="Direct link to Lesson 3: Perception and AI Decision Making" title="Direct link to Lesson 3: Perception and AI Decision Making" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="knowledge-check-31">Knowledge Check 3.1<a href="#knowledge-check-31" class="hash-link" aria-label="Direct link to Knowledge Check 3.1" title="Direct link to Knowledge Check 3.1" translate="no">​</a></h4>
+<p><strong>Question</strong>: What is the main difference between object detection and semantic segmentation?
+<strong>Options</strong>:</p>
+<ul>
+<li class="">A) Object detection identifies objects, segmentation labels every pixel</li>
+<li class="">B) Object detection is faster than segmentation</li>
+<li class="">C) Object detection uses cameras, segmentation uses LiDAR</li>
+<li class="">D) No difference, they are the same
+<strong>Answer</strong>: A
+<strong>Explanation</strong>: Object detection identifies and localizes objects in an image, while semantic segmentation assigns a class label to every pixel in the image.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="knowledge-check-32">Knowledge Check 3.2<a href="#knowledge-check-32" class="hash-link" aria-label="Direct link to Knowledge Check 3.2" title="Direct link to Knowledge Check 3.2" translate="no">​</a></h4>
+<p><strong>Question</strong>: What is sensor fusion?
+<strong>Options</strong>:</p>
+<ul>
+<li class="">A) Combining data from multiple sensors to improve perception</li>
+<li class="">B) Merging two sensors into one</li>
+<li class="">C) Reducing the number of sensors</li>
+<li class="">D) Improving sensor resolution
+<strong>Answer</strong>: A
+<strong>Explanation</strong>: Sensor fusion is the process of combining data from multiple sensors to improve perception accuracy and reliability.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="knowledge-check-33">Knowledge Check 3.3<a href="#knowledge-check-33" class="hash-link" aria-label="Direct link to Knowledge Check 3.3" title="Direct link to Knowledge Check 3.3" translate="no">​</a></h4>
+<p><strong>Question</strong>: What is a behavior tree in AI decision making?
+<strong>Question</strong>: What is a behavior tree in AI decision making?
+<strong>Options</strong>:</p>
+<ul>
+<li class="">A) A structured approach to AI decision making</li>
+<li class="">B) A type of neural network</li>
+<li class="">C) A sensor fusion technique</li>
+<li class="">D) A path planning algorithm
+<strong>Answer</strong>: A
+<strong>Explanation</strong>: A behavior tree is a structured approach to AI decision making that organizes behaviors in a tree-like structure for complex robot behavior.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="summative-assessment-module-completion-test">Summative Assessment: Module Completion Test<a href="#summative-assessment-module-completion-test" class="hash-link" aria-label="Direct link to Summative Assessment: Module Completion Test" title="Direct link to Summative Assessment: Module Completion Test" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-a-theoretical-knowledge-40">Section A: Theoretical Knowledge (40%)<a href="#section-a-theoretical-knowledge-40" class="hash-link" aria-label="Direct link to Section A: Theoretical Knowledge (40%)" title="Direct link to Section A: Theoretical Knowledge (40%)" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="question-a1">Question A1<a href="#question-a1" class="hash-link" aria-label="Direct link to Question A1" title="Direct link to Question A1" translate="no">​</a></h4>
+<p>Explain the architecture of the NVIDIA Isaac platform and how its components work together to create an AI-robot brain. Include at least 4 main components in your explanation.</p>
+<p><strong>Scoring Rubric</strong>:</p>
+<ul>
+<li class="">5 points: Complete explanation with all 4+ components</li>
+<li class="">4 points: Good explanation with 3-4 components</li>
+<li class="">3 points: Adequate explanation with 2-3 components</li>
+<li class="">2 points: Basic explanation with 1-2 components</li>
+<li class="">1 point: Minimal understanding</li>
+<li class="">0 points: No response or incorrect</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="question-a2">Question A2<a href="#question-a2" class="hash-link" aria-label="Direct link to Question A2" title="Direct link to Question A2" translate="no">​</a></h4>
+<p>Compare and contrast global and local path planning in Nav2. Discuss the advantages and disadvantages of each approach and provide examples of when each would be most appropriate.</p>
+<p><strong>Scoring Rubric</strong>:</p>
+<ul>
+<li class="">5 points: Comprehensive comparison with examples</li>
+<li class="">4 points: Good comparison with some examples</li>
+<li class="">3 points: Adequate comparison</li>
+<li class="">2 points: Basic comparison</li>
+<li class="">1 point: Minimal understanding</li>
+<li class="">0 points: No response or incorrect</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="question-a3">Question A3<a href="#question-a3" class="hash-link" aria-label="Direct link to Question A3" title="Direct link to Question A3" translate="no">​</a></h4>
+<p>Describe the complete pipeline for AI perception in robotics, from sensor input to decision making. Include preprocessing, AI inference, postprocessing, and decision interface in your explanation.</p>
+<p><strong>Scoring Rubric</strong>:</p>
+<ul>
+<li class="">5 points: Complete pipeline description</li>
+<li class="">4 points: Good description with minor omissions</li>
+<li class="">3 points: Adequate description</li>
+<li class="">2 points: Basic description</li>
+<li class="">1 point: Minimal understanding</li>
+<li class="">0 points: No response or incorrect</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-b-practical-application-60">Section B: Practical Application (60%)<a href="#section-b-practical-application-60" class="hash-link" aria-label="Direct link to Section B: Practical Application (60%)" title="Direct link to Section B: Practical Application (60%)" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="question-b1-simulation-task-20">Question B1: Simulation Task (20%)<a href="#question-b1-simulation-task-20" class="hash-link" aria-label="Direct link to Question B1: Simulation Task (20%)" title="Direct link to Question B1: Simulation Task (20%)" translate="no">​</a></h4>
+<p>Implement a basic perception pipeline using Isaac ROS that detects objects in a camera image and publishes the detections in the standard ROS 2 format. Include error handling and proper node structure.</p>
+<p><strong>Scoring Rubric</strong>:</p>
+<ul>
+<li class="">20 points: Complete implementation with all requirements</li>
+<li class="">16 points: Implementation with minor issues</li>
+<li class="">12 points: Implementation with some issues</li>
+<li class="">8 points: Partial implementation</li>
+<li class="">4 points: Basic attempt</li>
+<li class="">0 points: No response or completely incorrect</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="question-b2-navigation-task-20">Question B2: Navigation Task (20%)<a href="#question-b2-navigation-task-20" class="hash-link" aria-label="Direct link to Question B2: Navigation Task (20%)" title="Direct link to Question B2: Navigation Task (20%)" translate="no">​</a></h4>
+<p>Configure Nav2 for a differential drive robot in Isaac Sim with appropriate parameters for global and local planners. Implement a navigation system that can successfully navigate to goals while avoiding obstacles.</p>
+<p><strong>Scoring Rubric</strong>:</p>
+<ul>
+<li class="">20 points: Complete navigation system with successful navigation</li>
+<li class="">16 points: Navigation system with minor issues</li>
+<li class="">12 points: Navigation system with some issues</li>
+<li class="">8 points: Partial implementation</li>
+<li class="">4 points: Basic attempt</li>
+<li class="">0 points: No response or completely incorrect</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="question-b3-integration-challenge-20">Question B3: Integration Challenge (20%)<a href="#question-b3-integration-challenge-20" class="hash-link" aria-label="Direct link to Question B3: Integration Challenge (20%)" title="Direct link to Question B3: Integration Challenge (20%)" translate="no">​</a></h4>
+<p>Design and implement a complete AI-robot system that integrates perception, navigation, and decision making. The system should detect objects in the environment, navigate to interesting objects, and perform appropriate actions based on object type.</p>
+<p><strong>Scoring Rubric</strong>:</p>
+<ul>
+<li class="">20 points: Complete integrated system with all components</li>
+<li class="">16 points: Integrated system with minor issues</li>
+<li class="">12 points: Integrated system with some issues</li>
+<li class="">8 points: Partial integration</li>
+<li class="">4 points: Basic attempt at integration</li>
+<li class="">0 points: No response or completely incorrect</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-assessment-simulation-tasks">Performance Assessment: Simulation Tasks<a href="#performance-assessment-simulation-tasks" class="hash-link" aria-label="Direct link to Performance Assessment: Simulation Tasks" title="Direct link to Performance Assessment: Simulation Tasks" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="task-1-perception-performance-30">Task 1: Perception Performance (30%)<a href="#task-1-perception-performance-30" class="hash-link" aria-label="Direct link to Task 1: Perception Performance (30%)" title="Direct link to Task 1: Perception Performance (30%)" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Objective</strong>: Optimize an object detection pipeline for real-time performance</li>
+<li class=""><strong>Requirements</strong>:<!-- -->
+<ul>
+<li class="">Achieve at least 10 FPS on provided test data</li>
+<li class="">Maintain detection accuracy above 85%</li>
+<li class="">Use GPU acceleration appropriately</li>
+</ul>
+</li>
+<li class=""><strong>Evaluation</strong>: Performance metrics and code optimization</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="task-2-navigation-efficiency-30">Task 2: Navigation Efficiency (30%)<a href="#task-2-navigation-efficiency-30" class="hash-link" aria-label="Direct link to Task 2: Navigation Efficiency (30%)" title="Direct link to Task 2: Navigation Efficiency (30%)" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Objective</strong>: Navigate efficiently through a complex environment</li>
+<li class=""><strong>Requirements</strong>:<!-- -->
+<ul>
+<li class="">Reach goal with 95% success rate</li>
+<li class="">Path efficiency above 0.8 (optimal path length / actual path length)</li>
+<li class="">Average navigation time under 120 seconds</li>
+</ul>
+</li>
+<li class=""><strong>Evaluation</strong>: Success rate, path efficiency, and time metrics</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="task-3-decision-making-40">Task 3: Decision Making (40%)<a href="#task-3-decision-making-40" class="hash-link" aria-label="Direct link to Task 3: Decision Making (40%)" title="Direct link to Task 3: Decision Making (40%)" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Objective</strong>: Implement intelligent behavior for a multi-object environment</li>
+<li class=""><strong>Requirements</strong>:<!-- -->
+<ul>
+<li class="">Correctly identify and prioritize different object types</li>
+<li class="">Navigate efficiently between objects based on priority</li>
+<li class="">Demonstrate adaptive behavior when environment changes</li>
+</ul>
+</li>
+<li class=""><strong>Evaluation</strong>: Behavioral correctness and adaptability</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="mastery-thresholds">Mastery Thresholds<a href="#mastery-thresholds" class="hash-link" aria-label="Direct link to Mastery Thresholds" title="Direct link to Mastery Thresholds" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="module-completion-requirements">Module Completion Requirements<a href="#module-completion-requirements" class="hash-link" aria-label="Direct link to Module Completion Requirements" title="Direct link to Module Completion Requirements" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Knowledge Assessment</strong>: 85% or higher</li>
+<li class=""><strong>Practical Implementation</strong>: 90% or higher</li>
+<li class=""><strong>Performance Evaluation</strong>: 80% or higher</li>
+<li class=""><strong>Overall Module Score</strong>: 90% or higher</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="remediation-path">Remediation Path<a href="#remediation-path" class="hash-link" aria-label="Direct link to Remediation Path" title="Direct link to Remediation Path" translate="no">​</a></h3>
+<p>If a student does not meet the mastery threshold:</p>
+<ol>
+<li class="">Identify specific areas of weakness from assessment results</li>
+<li class="">Complete targeted remedial exercises</li>
+<li class="">Re-attempt specific assessment components</li>
+<li class="">Re-take module completion assessment after remediation</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assessment-validation-criteria">Assessment Validation Criteria<a href="#assessment-validation-criteria" class="hash-link" aria-label="Direct link to Assessment Validation Criteria" title="Direct link to Assessment Validation Criteria" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-nvidia-isaac-platform-understanding">1. NVIDIA Isaac Platform Understanding<a href="#1-nvidia-isaac-platform-understanding" class="hash-link" aria-label="Direct link to 1. NVIDIA Isaac Platform Understanding" title="Direct link to 1. NVIDIA Isaac Platform Understanding" translate="no">​</a></h3>
+<ul>
+<li class="">Students demonstrate knowledge of Isaac platform components</li>
+<li class="">Students can configure Isaac Sim and ROS integration</li>
+<li class="">Students understand perception pipeline architecture</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-navigation-system-implementation">2. Navigation System Implementation<a href="#2-navigation-system-implementation" class="hash-link" aria-label="Direct link to 2. Navigation System Implementation" title="Direct link to 2. Navigation System Implementation" translate="no">​</a></h3>
+<ul>
+<li class="">Students can configure Nav2 with appropriate parameters</li>
+<li class="">Students implement effective path planning algorithms</li>
+<li class="">Students create robust obstacle avoidance systems</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-ai-perception-and-decision-making">3. AI Perception and Decision Making<a href="#3-ai-perception-and-decision-making" class="hash-link" aria-label="Direct link to 3. AI Perception and Decision Making" title="Direct link to 3. AI Perception and Decision Making" translate="no">​</a></h3>
+<ul>
+<li class="">Students implement AI perception systems effectively</li>
+<li class="">Students integrate perception with decision making</li>
+<li class="">Students optimize systems for performance</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assessment-tools-and-resources">Assessment Tools and Resources<a href="#assessment-tools-and-resources" class="hash-link" aria-label="Direct link to Assessment Tools and Resources" title="Direct link to Assessment Tools and Resources" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="automated-testing-framework">Automated Testing Framework<a href="#automated-testing-framework" class="hash-link" aria-label="Direct link to Automated Testing Framework" title="Direct link to Automated Testing Framework" translate="no">​</a></h3>
+<ul>
+<li class="">Unit tests for perception algorithms</li>
+<li class="">Integration tests for navigation systems</li>
+<li class="">Performance benchmarks for optimization tasks</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="simulation-scenarios">Simulation Scenarios<a href="#simulation-scenarios" class="hash-link" aria-label="Direct link to Simulation Scenarios" title="Direct link to Simulation Scenarios" translate="no">​</a></h3>
+<ul>
+<li class="">Object detection test environments</li>
+<li class="">Navigation challenge courses</li>
+<li class="">Multi-object interaction scenarios</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="evaluation-metrics">Evaluation Metrics<a href="#evaluation-metrics" class="hash-link" aria-label="Direct link to Evaluation Metrics" title="Direct link to Evaluation Metrics" translate="no">​</a></h3>
+<ul>
+<li class="">Accuracy metrics for perception systems</li>
+<li class="">Success rate for navigation tasks</li>
+<li class="">Performance metrics (FPS, latency, throughput)</li>
+<li class="">Safety metrics (collision avoidance)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructor-guide-for-assessment-administration">Instructor Guide for Assessment Administration<a href="#instructor-guide-for-assessment-administration" class="hash-link" aria-label="Direct link to Instructor Guide for Assessment Administration" title="Direct link to Instructor Guide for Assessment Administration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pre-assessment-setup">Pre-Assessment Setup<a href="#pre-assessment-setup" class="hash-link" aria-label="Direct link to Pre-Assessment Setup" title="Direct link to Pre-Assessment Setup" translate="no">​</a></h3>
+<ol>
+<li class="">Ensure Isaac Sim environment is properly configured</li>
+<li class="">Prepare test scenarios and datasets</li>
+<li class="">Set up automated grading tools</li>
+<li class="">Verify student access to required resources</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="during-assessment">During Assessment<a href="#during-assessment" class="hash-link" aria-label="Direct link to During Assessment" title="Direct link to During Assessment" translate="no">​</a></h3>
+<ol>
+<li class="">Monitor student progress and provide support</li>
+<li class="">Record performance metrics automatically</li>
+<li class="">Note any technical issues that arise</li>
+<li class="">Ensure academic integrity</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="post-assessment">Post-Assessment<a href="#post-assessment" class="hash-link" aria-label="Direct link to Post-Assessment" title="Direct link to Post-Assessment" translate="no">​</a></h3>
+<ol>
+<li class="">Grade assessments using automated tools</li>
+<li class="">Review results for learning outcomes achievement</li>
+<li class="">Provide detailed feedback to students</li>
+<li class="">Identify areas for curriculum improvement</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="continuous-improvement">Continuous Improvement<a href="#continuous-improvement" class="hash-link" aria-label="Direct link to Continuous Improvement" title="Direct link to Continuous Improvement" translate="no">​</a></h2>
+<p>Assessment effectiveness will be evaluated based on:</p>
+<ul>
+<li class="">Student performance trends</li>
+<li class="">Feedback from students and instructors</li>
+<li class="">Alignment with industry standards</li>
+<li class="">Updates to NVIDIA Isaac platform</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/assessments.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/chapter-3/exercises"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Module 3 Exercise Framework: The AI-Robot Brain (NVIDIA Isaac™)</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/chapter-3/assessment"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Module 3 Assessment: The AI-Robot Brain (NVIDIA Isaac™)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#assessment-structure" class="table-of-contents__link toc-highlight">Assessment Structure</a><ul><li><a href="#1-formative-assessments-knowledge-checks" class="table-of-contents__link toc-highlight">1. Formative Assessments (Knowledge Checks)</a></li><li><a href="#2-summative-assessments-module-completion" class="table-of-contents__link toc-highlight">2. Summative Assessments (Module Completion)</a></li><li><a href="#3-performance-assessments-simulation-tasks" class="table-of-contents__link toc-highlight">3. Performance Assessments (Simulation Tasks)</a></li></ul></li><li><a href="#learning-objectives-assessment-matrix" class="table-of-contents__link toc-highlight">Learning Objectives Assessment Matrix</a></li><li><a href="#formative-assessment-questions" class="table-of-contents__link toc-highlight">Formative Assessment Questions</a><ul><li><a href="#lesson-1-nvidia-isaac-simulation-environment-and-ros-integration" class="table-of-contents__link toc-highlight">Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration</a></li><li><a href="#lesson-2-navigation-and-path-planning-with-nav2" class="table-of-contents__link toc-highlight">Lesson 2: Navigation and Path Planning with Nav2</a></li><li><a href="#lesson-3-perception-and-ai-decision-making" class="table-of-contents__link toc-highlight">Lesson 3: Perception and AI Decision Making</a></li></ul></li><li><a href="#summative-assessment-module-completion-test" class="table-of-contents__link toc-highlight">Summative Assessment: Module Completion Test</a><ul><li><a href="#section-a-theoretical-knowledge-40" class="table-of-contents__link toc-highlight">Section A: Theoretical Knowledge (40%)</a></li><li><a href="#section-b-practical-application-60" class="table-of-contents__link toc-highlight">Section B: Practical Application (60%)</a></li></ul></li><li><a href="#performance-assessment-simulation-tasks" class="table-of-contents__link toc-highlight">Performance Assessment: Simulation Tasks</a><ul><li><a href="#task-1-perception-performance-30" class="table-of-contents__link toc-highlight">Task 1: Perception Performance (30%)</a></li><li><a href="#task-2-navigation-efficiency-30" class="table-of-contents__link toc-highlight">Task 2: Navigation Efficiency (30%)</a></li><li><a href="#task-3-decision-making-40" class="table-of-contents__link toc-highlight">Task 3: Decision Making (40%)</a></li></ul></li><li><a href="#mastery-thresholds" class="table-of-contents__link toc-highlight">Mastery Thresholds</a><ul><li><a href="#module-completion-requirements" class="table-of-contents__link toc-highlight">Module Completion Requirements</a></li><li><a href="#remediation-path" class="table-of-contents__link toc-highlight">Remediation Path</a></li></ul></li><li><a href="#assessment-validation-criteria" class="table-of-contents__link toc-highlight">Assessment Validation Criteria</a><ul><li><a href="#1-nvidia-isaac-platform-understanding" class="table-of-contents__link toc-highlight">1. NVIDIA Isaac Platform Understanding</a></li><li><a href="#2-navigation-system-implementation" class="table-of-contents__link toc-highlight">2. Navigation System Implementation</a></li><li><a href="#3-ai-perception-and-decision-making" class="table-of-contents__link toc-highlight">3. AI Perception and Decision Making</a></li></ul></li><li><a href="#assessment-tools-and-resources" class="table-of-contents__link toc-highlight">Assessment Tools and Resources</a><ul><li><a href="#automated-testing-framework" class="table-of-contents__link toc-highlight">Automated Testing Framework</a></li><li><a href="#simulation-scenarios" class="table-of-contents__link toc-highlight">Simulation Scenarios</a></li><li><a href="#evaluation-metrics" class="table-of-contents__link toc-highlight">Evaluation Metrics</a></li></ul></li><li><a href="#instructor-guide-for-assessment-administration" class="table-of-contents__link toc-highlight">Instructor Guide for Assessment Administration</a><ul><li><a href="#pre-assessment-setup" class="table-of-contents__link toc-highlight">Pre-Assessment Setup</a></li><li><a href="#during-assessment" class="table-of-contents__link toc-highlight">During Assessment</a></li><li><a href="#post-assessment" class="table-of-contents__link toc-highlight">Post-Assessment</a></li></ul></li><li><a href="#continuous-improvement" class="table-of-contents__link toc-highlight">Continuous Improvement</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Chapters</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Discussions<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/docs/contributing">Contributing</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

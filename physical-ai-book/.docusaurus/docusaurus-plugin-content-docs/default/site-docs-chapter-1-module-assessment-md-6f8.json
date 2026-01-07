@@ -1,0 +1,19 @@
+{
+  "id": "chapter-1/module-assessment",
+  "title": "Module 1 Assessment: Foundations of Physical AI",
+  "description": "Complete this comprehensive assessment to validate your understanding of the foundational concepts of Physical AI. Achieve a score of 85% or higher to demonstrate mastery per spec FR9.",
+  "source": "@site/docs/chapter-1/module-assessment.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/module-assessment",
+  "permalink": "/hackathon-book/docs/chapter-1/module-assessment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/module-assessment.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "Module 1 Assessment: Foundations of Physical AI"
+  }
+}

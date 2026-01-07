@@ -1,0 +1,19 @@
+{
+  "id": "chapter-1/ai-integration",
+  "title": "AI Integration: Personalized Learning Features",
+  "description": "This section describes how AI features are integrated into the Physical AI textbook to provide personalized learning experiences.",
+  "source": "@site/docs/chapter-1/ai-integration.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/ai-integration",
+  "permalink": "/hackathon-book/docs/chapter-1/ai-integration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/ai-integration.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9,
+    "title": "AI Integration: Personalized Learning Features"
+  }
+}

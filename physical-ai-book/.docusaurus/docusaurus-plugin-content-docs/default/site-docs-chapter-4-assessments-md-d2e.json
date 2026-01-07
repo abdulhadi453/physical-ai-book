@@ -1,0 +1,24 @@
+{
+  "id": "chapter-4/assessments",
+  "title": "VLA Assessment Questions",
+  "description": "Overview",
+  "source": "@site/docs/chapter-4/assessments.md",
+  "sourceDirName": "chapter-4",
+  "slug": "/chapter-4/assessments",
+  "permalink": "/hackathon-book/docs/chapter-4/assessments",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-4/assessments.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "VLA Practical Exercises",
+    "permalink": "/hackathon-book/docs/chapter-4/exercises"
+  },
+  "next": {
+    "title": "Educator Guide: Vision-Language-Action (VLA) Systems",
+    "permalink": "/hackathon-book/docs/chapter-4/educator-guide"
+  }
+}

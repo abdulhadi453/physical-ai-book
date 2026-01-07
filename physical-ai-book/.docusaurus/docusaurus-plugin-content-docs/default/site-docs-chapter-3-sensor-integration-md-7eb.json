@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/sensor-integration",
+  "title": "Multimodal Sensor Integration in Isaac Sim",
+  "description": "Overview",
+  "source": "@site/docs/chapter-3/sensor-integration.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/sensor-integration",
+  "permalink": "/hackathon-book/docs/chapter-3/sensor-integration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/sensor-integration.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Isaac ROS Perception Pipeline Implementation",
+    "permalink": "/hackathon-book/docs/chapter-3/perception-pipeline"
+  },
+  "next": {
+    "title": "AI Model Deployment in Isaac Sim Environment",
+    "permalink": "/hackathon-book/docs/chapter-3/model-deployment"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "chapter-1/lesson-2-math-foundations",
+  "title": "Lesson 2: Mathematical Foundations for Robotics and AI Integration",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapter-1/lesson-2-math-foundations.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/lesson-2-math-foundations",
+  "permalink": "/hackathon-book/docs/chapter-1/lesson-2-math-foundations",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/lesson-2-math-foundations.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Lesson 2: Mathematical Foundations for Robotics and AI Integration"
+  }
+}

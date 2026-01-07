@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ur" dir="rtl" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-chapter-1/lesson-1-perception-action" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Lesson 1: Core Principles of Perception-Action Loops | AI-Native Textbook for Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://physical-ai-book.github.io/ur/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://physical-ai-book.github.io/ur/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://physical-ai-book.github.io/ur/docs/chapter-1/lesson-1-perception-action"><meta data-rh="true" property="og:locale" content="ur"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="ur"><meta data-rh="true" name="docsearch:language" content="ur"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Lesson 1: Core Principles of Perception-Action Loops | AI-Native Textbook for Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Learning Objectives"><meta data-rh="true" property="og:description" content="Learning Objectives"><link data-rh="true" rel="icon" href="/ur/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://physical-ai-book.github.io/ur/docs/chapter-1/lesson-1-perception-action"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-1/lesson-1-perception-action" hreflang="en"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/ur/docs/chapter-1/lesson-1-perception-action" hreflang="ur"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-1/lesson-1-perception-action" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/ur/blog/rss.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/ur/blog/atom.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics Atom Feed"><link rel="stylesheet" href="/ur/assets/css/styles.00a4f8ad.css">
+<script src="/ur/assets/js/runtime~main.1140a14f.js" defer="defer"></script>
+<script src="/ur/assets/js/main.f6501a17.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/ur/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/ur/"><div class="navbar__logo"><img src="/ur/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/ur/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a class="navbar__item navbar__link" href="/ur/docs/intro">Chapters</a><a class="navbar__item navbar__link" href="/ur/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Lesson 1: Core Principles of Perception-Action Loops</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives">Learning Objectives<a href="#learning-objectives" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ul>
+<li class="">Explain the perception-action loop and identify its components</li>
+<li class="">Describe how perception and action are interconnected in Physical AI systems</li>
+<li class="">Analyze the role of feedback in maintaining system stability</li>
+<li class="">Design simple systems based on perception-action principles per spec FR2</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Prerequisites<a href="#prerequisites" class="hash-link" aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites" translate="no">​</a></h2>
+<p>Before starting this lesson, you should:</p>
+<ul>
+<li class="">Understand basic Physical AI concepts from the introduction</li>
+<li class="">Have familiarity with systems thinking</li>
+<li class="">Basic understanding of feedback and control concepts</li>
+</ul>
+<div class="margin-bottom--lg prereqIndicator_G2rP"><div class="prereqHeader_Gu2h"><h4 class="prereqTitle_ye0u">📋 Prerequisites</h4></div><div class="prereqBody_ontO"><div class="prereqProgress_yCV6"><div class="progressBar_vsV8"><div class="progressFill_kQr0" style="width:50%"></div></div><div class="progressText_J3uk">1<!-- --> of <!-- -->2<!-- --> completed</div></div><ul class="prereqList__atb"><li class="prereqItem_bQXG completed_vqFb">✅<!-- --> <!-- -->Physical AI fundamentals</li><li class="prereqItem_bQXG incomplete_q35r">⭕<!-- --> <!-- -->Basic systems concepts</li></ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="theoretical-concepts">Theoretical Concepts<a href="#theoretical-concepts" class="hash-link" aria-label="Direct link to Theoretical Concepts" title="Direct link to Theoretical Concepts" translate="no">​</a></h2>
+<p>The perception-action loop is the fundamental mechanism that enables Physical AI systems to interact with the physical world. Unlike traditional AI systems that process data in isolation, Physical AI systems operate in a continuous cycle of sensing, reasoning, and acting.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="components-of-the-perception-action-loop">Components of the Perception-Action Loop<a href="#components-of-the-perception-action-loop" class="hash-link" aria-label="Direct link to Components of the Perception-Action Loop" title="Direct link to Components of the Perception-Action Loop" translate="no">​</a></h3>
+<ol>
+<li class=""><strong>Perception</strong>: Gathering information from the environment through sensors</li>
+<li class=""><strong>Reasoning/Planning</strong>: Processing sensor data and formulating actions based on goals</li>
+<li class=""><strong>Action</strong>: Executing physical movements or changes through actuators</li>
+<li class=""><strong>Environment</strong>: The physical world that responds to system actions</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="types-of-perception-action-loops">Types of Perception-Action Loops<a href="#types-of-perception-action-loops" class="hash-link" aria-label="Direct link to Types of Perception-Action Loops" title="Direct link to Types of Perception-Action Loops" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Reactive Loops</strong>: Immediate response to sensory input</li>
+<li class=""><strong>Deliberative Loops</strong>: Include planning and reasoning before action</li>
+<li class=""><strong>Hybrid Loops</strong>: Combine reactive and deliberative elements</li>
+</ul>
+<div class="margin-bottom--lg conceptCard_CZdW"><div class="conceptHeader_rKS0"><h3 class="conceptTitle_eSRo">💡 <!-- -->Closed-Loop vs Open-Loop Systems</h3></div><div class="conceptBody_FvyR"><div class="conceptSection_WvXX"><p>Closed-loop systems use feedback from the environment to adjust behavior, while open-loop systems execute predetermined sequences without environmental feedback.</p></div><div class="conceptSection_WvXX"><h4>Examples:</h4><ul><li>A thermostat adjusting temperature based on sensor readings (closed-loop)</li><li>A pre-programmed dance routine (open-loop)</li></ul></div><div class="conceptSection_WvXX"><h4>Key Points:</h4><ul><li>Closed-loop systems adapt to changes in the environment</li><li>Open-loop systems follow fixed patterns regardless of outcomes</li><li>Most effective Physical AI systems use closed-loop control</li></ul></div></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="feedback-and-stability">Feedback and Stability<a href="#feedback-and-stability" class="hash-link" aria-label="Direct link to Feedback and Stability" title="Direct link to Feedback and Stability" translate="no">​</a></h3>
+<p>Feedback is critical for system stability in Physical AI applications. Positive feedback amplifies changes and can lead to instability, while negative feedback (or corrective feedback) helps maintain desired states.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="real-world-context">Real World Context<a href="#real-world-context" class="hash-link" aria-label="Direct link to Real World Context" title="Direct link to Real World Context" translate="no">​</a></h2>
+<p>Perception-action loops are fundamental to many successful Physical AI applications:</p>
+<ul>
+<li class=""><strong>Autonomous Vehicles</strong>: Continuously sense surroundings, plan routes, and execute driving commands</li>
+<li class=""><strong>Robotic Assembly</strong>: Visual feedback guides precise manipulation tasks</li>
+<li class=""><strong>Adaptive Manufacturing</strong>: Production systems adjust parameters based on quality sensors</li>
+<li class=""><strong>Assistive Robotics</strong>: Wheelchairs and exoskeletons respond to user intentions in real-time</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="hands-on-exercise">Hands-On Exercise<a href="#hands-on-exercise" class="hash-link" aria-label="Direct link to Hands-On Exercise" title="Direct link to Hands-On Exercise" translate="no">​</a></h2>
+<p>Let&#x27;s implement a simple perception-action loop simulation using Python. We&#x27;ll create a robot that follows a wall while maintaining a fixed distance.</p>
+<div class="margin-bottom--lg exerciseBox_IORH"><div class="exerciseHeader_M8rb"><h3 class="exerciseTitle_zXUJ">🔧 <!-- -->Wall Following Robot with Perception-Action Loop</h3></div><div class="exerciseBody_EpRN"><div class="exerciseSection_OODc"><h4>Instructions:</h4><p>Create a Python simulation of a robot with proximity sensors that follows a wall. Implement the complete perception-action loop: sense distance to wall, process the information to determine desired action, execute movement commands, and sense the results of those actions.</p></div><div class="exerciseSection_OODc"><h4>Expected Outcome:</h4><p>A working simulation demonstrating how a robot uses continuous sensing and adjustment to follow a wall, showing the effectiveness of closed-loop control.</p></div><div class="exerciseSection_OODc"><h4>Tools Required:</h4><ul><li>Python 3.x</li><li>Matplotlib for visualization</li><li>Basic math libraries</li></ul></div><div class="exerciseSection_OODc"><h4>Troubleshooting Tips:</h4><ul><li>Ensure your sensor readings are accurate before making decisions</li><li>Consider how to handle corner cases like wall ends or sharp turns</li><li>Make sure your control algorithm is stable and doesn&#x27;t oscillate</li></ul></div></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-steps">Exercise Steps:<a href="#exercise-steps" class="hash-link" aria-label="Direct link to Exercise Steps:" title="Direct link to Exercise Steps:" translate="no">​</a></h3>
+<ol>
+<li class="">Model the robot with proximity sensors (front, left, right)</li>
+<li class="">Implement the perception system to interpret sensor data</li>
+<li class="">Create a control algorithm that determines movement based on sensor readings</li>
+<li class="">Execute actions and update the robot&#x27;s position</li>
+<li class="">Loop continuously to demonstrate the perception-action cycle</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-solutions">Exercise Solutions<a href="#exercise-solutions" class="hash-link" aria-label="Direct link to Exercise Solutions" title="Direct link to Exercise Solutions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="solution-overview">Solution Overview<a href="#solution-overview" class="hash-link" aria-label="Direct link to Solution Overview" title="Direct link to Solution Overview" translate="no">​</a></h3>
+<p>The solution involves creating a simulation where a robot uses proximity sensors to follow a wall. The key is implementing a control system that maintains a desired distance from the wall.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-implementation-points">Key Implementation Points<a href="#key-implementation-points" class="hash-link" aria-label="Direct link to Key Implementation Points" title="Direct link to Key Implementation Points" translate="no">​</a></h3>
+<ul>
+<li class="">Use multiple sensors to detect wall proximity from different angles</li>
+<li class="">Implement a control algorithm that adjusts turn rate based on sensor differences</li>
+<li class="">Ensure the robot can handle corners and wall variations</li>
+<li class="">Visualize the robot&#x27;s path to demonstrate loop effectiveness</li>
+</ul>
+<div class="margin-bottom--lg conceptCard_CZdW"><div class="conceptHeader_rKS0"><h3 class="conceptTitle_eSRo">💡 <!-- -->Sensor-Based Control Strategies</h3></div><div class="conceptBody_FvyR"><div class="conceptSection_WvXX"><p>Different approaches to using sensor data for control, from simple reflexes to complex planning algorithms.</p></div><div class="conceptSection_WvXX"><h4>Key Points:</h4><ul><li>Reactive control responds immediately to sensor input</li><li>Deliberative control considers future states before acting</li><li>Hybrid approaches balance reactivity and planning</li></ul></div></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" translate="no">​</a></h2>
+<p>In this lesson, we&#x27;ve explored the core principles of perception-action loops that form the foundation of Physical AI systems. We learned about the components of these loops, the importance of feedback, and how these principles apply to real-world applications. The hands-on exercise demonstrated how a simple perception-action loop can enable complex behaviors like wall following.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-takeaways">Key Takeaways<a href="#key-takeaways" class="hash-link" aria-label="Direct link to Key Takeaways" title="Direct link to Key Takeaways" translate="no">​</a></h3>
+<ul>
+<li class="">Perception-action loops are fundamental to Physical AI systems</li>
+<li class="">Feedback enables adaptation and stability</li>
+<li class="">Different loop types serve different purposes</li>
+<li class="">Real-world applications rely on these principles</li>
+</ul>
+<div class="margin-bottom--lg summarySection_sC_2"><div class="summaryHeader_yUjF"><h3 class="summaryTitle_ewb9">📋 <!-- -->Summary</h3></div><div class="summaryBody_Gd53"><div class="summarySection_sC_2"><h4>Key Takeaways:</h4><ul><li>Perception-action loops connect sensing to acting in Physical AI</li><li>Feedback is essential for system stability</li><li>Different control strategies balance reactivity and planning</li><li>Real-world applications demonstrate these principles effectively</li></ul></div><div class="summarySection_sC_2"><h4>Next Steps:</h4><ul><li>Explore mathematical modeling of perception-action systems</li><li>Study advanced control techniques</li><li>Investigate embodiment effects on loop performance</li></ul></div></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assessment">Assessment<a href="#assessment" class="hash-link" aria-label="Direct link to Assessment" title="Direct link to Assessment" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="knowledge-check">Knowledge Check<a href="#knowledge-check" class="hash-link" aria-label="Direct link to Knowledge Check" title="Direct link to Knowledge Check" translate="no">​</a></h3>
+<p>Test your understanding of perception-action loops:</p>
+<ol>
+<li class="">
+<p><strong>What are the three main components of a perception-action loop?</strong></p>
+<ul>
+<li class="">a) Input, Process, Output</li>
+<li class="">b) Perception, Reasoning, Action</li>
+<li class="">c) Sensors, Computer, Actuators</li>
+<li class="">d) Data, Algorithm, Movement</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Why is feedback important in perception-action systems?</strong></p>
+<ul>
+<li class="">a) It makes the system faster</li>
+<li class="">b) It enables adaptation to environmental changes</li>
+<li class="">c) It reduces computational requirements</li>
+<li class="">d) It eliminates the need for sensors</li>
+</ul>
+</li>
+<li class="">
+<p><strong>What distinguishes a closed-loop system from an open-loop system?</strong></p>
+<ul>
+<li class="">a) Closed-loop systems use more sensors</li>
+<li class="">b) Closed-loop systems use feedback to adjust behavior</li>
+<li class="">c) Closed-loop systems are always more complex</li>
+<li class="">d) Closed-loop systems operate faster</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="practical-application">Practical Application<a href="#practical-application" class="hash-link" aria-label="Direct link to Practical Application" title="Direct link to Practical Application" translate="no">​</a></h3>
+<ol start="4">
+<li class="">
+<p>In the wall-following exercise, how does the robot use feedback to maintain its path?</p>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""> <!-- -->By continuously sensing distance to the wall and adjusting its movement accordingly</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->By following a pre-programmed path</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->By moving in straight lines between waypoints</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->By avoiding all obstacles</li>
+</ul>
+</li>
+<li class="">
+<p><strong>True/False</strong>: All Physical AI systems must implement perception-action loops.</p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="answers-and-explanations">Answers and Explanations<a href="#answers-and-explanations" class="hash-link" aria-label="Direct link to Answers and Explanations" title="Direct link to Answers and Explanations" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Answer: b)</strong> Perception, Reasoning, Action</p>
+<ul>
+<li class=""><em>Explanation: The perception-action loop specifically involves perceiving the environment, reasoning about it, and taking action.</em></li>
+</ul>
+</li>
+<li class="">
+<p><strong>Answer: b)</strong> It enables adaptation to environmental changes</p>
+<ul>
+<li class=""><em>Explanation: Feedback allows the system to respond to changes and maintain desired behavior.</em></li>
+</ul>
+</li>
+<li class="">
+<p><strong>Answer: b)</strong> Closed-loop systems use feedback to adjust behavior</p>
+<ul>
+<li class=""><em>Explanation: This is the defining characteristic of closed-loop vs open-loop systems.</em></li>
+</ul>
+</li>
+<li class="">
+<p><strong>Answer: By continuously sensing distance to the wall and adjusting its movement accordingly</strong></p>
+<ul>
+<li class=""><em>Explanation: This demonstrates the complete perception-action cycle with feedback.</em></li>
+</ul>
+</li>
+<li class="">
+<p><strong>Answer: True</strong></p>
+<ul>
+<li class=""><em>Explanation: By definition, Physical AI systems interact with the physical world through perception-action loops.</em></li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="further-reading">Further Reading<a href="#further-reading" class="hash-link" aria-label="Direct link to Further Reading" title="Direct link to Further Reading" translate="no">​</a></h2>
+<div class="margin-bottom--md resourceLink_WIqC"><div class="resourceHeader___il"><h4 class="resourceTitle_IdXl">📄<!-- --> <a href="https://www.sciencedirect.com/topics/neuroscience/perception-action-cycle" target="_blank" rel="noopener noreferrer">The Perception-Action Cycle: A Contemporary Framework</a></h4><span class="difficultyBadge_JiMY" style="background-color:#fbbc04">intermediate</span></div><div class="resourceDescription_Qyb6">Academic overview of perception-action cycle theory and its applications in robotics and AI.</div></div>
+<div class="margin-bottom--md resourceLink_WIqC"><div class="resourceHeader___il"><h4 class="resourceTitle_IdXl">📄<!-- --> <a href="https://plato.stanford.edu/entries/embodied-cognition/" target="_blank" rel="noopener noreferrer">Embodied Cognition and Perception-Action Loops</a></h4><span class="difficultyBadge_JiMY" style="background-color:#ea4335">advanced</span></div><div class="resourceDescription_Qyb6">Philosophical and scientific perspective on how embodiment influences perception-action relationships.</div></div>
+<div class="margin-bottom--md resourceLink_WIqC"><div class="resourceHeader___il"><h4 class="resourceTitle_IdXl">🎬<!-- --> <a href="https://www.youtube.com/playlist?list=PLMrJAkhIeNNSVjnVj0E2uYPRl6ujJc58X" target="_blank" rel="noopener noreferrer">Control Systems in Robotics</a></h4><span class="difficultyBadge_JiMY" style="background-color:#fbbc04">intermediate</span></div><div class="resourceDescription_Qyb6">MIT course on control systems in robotics, covering perception-action principles.</div></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/lesson-1-perception-action.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#learning-objectives" class="table-of-contents__link toc-highlight">Learning Objectives</a></li><li><a href="#prerequisites" class="table-of-contents__link toc-highlight">Prerequisites</a></li><li><a href="#theoretical-concepts" class="table-of-contents__link toc-highlight">Theoretical Concepts</a><ul><li><a href="#components-of-the-perception-action-loop" class="table-of-contents__link toc-highlight">Components of the Perception-Action Loop</a></li><li><a href="#types-of-perception-action-loops" class="table-of-contents__link toc-highlight">Types of Perception-Action Loops</a></li><li><a href="#feedback-and-stability" class="table-of-contents__link toc-highlight">Feedback and Stability</a></li></ul></li><li><a href="#real-world-context" class="table-of-contents__link toc-highlight">Real World Context</a></li><li><a href="#hands-on-exercise" class="table-of-contents__link toc-highlight">Hands-On Exercise</a><ul><li><a href="#exercise-steps" class="table-of-contents__link toc-highlight">Exercise Steps:</a></li></ul></li><li><a href="#exercise-solutions" class="table-of-contents__link toc-highlight">Exercise Solutions</a><ul><li><a href="#solution-overview" class="table-of-contents__link toc-highlight">Solution Overview</a></li><li><a href="#key-implementation-points" class="table-of-contents__link toc-highlight">Key Implementation Points</a></li></ul></li><li><a href="#summary" class="table-of-contents__link toc-highlight">Summary</a><ul><li><a href="#key-takeaways" class="table-of-contents__link toc-highlight">Key Takeaways</a></li></ul></li><li><a href="#assessment" class="table-of-contents__link toc-highlight">Assessment</a><ul><li><a href="#knowledge-check" class="table-of-contents__link toc-highlight">Knowledge Check</a></li><li><a href="#practical-application" class="table-of-contents__link toc-highlight">Practical Application</a></li><li><a href="#answers-and-explanations" class="table-of-contents__link toc-highlight">Answers and Explanations</a></li></ul></li><li><a href="#further-reading" class="table-of-contents__link toc-highlight">Further Reading</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Chapters</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/ur/docs/intro">Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Discussions<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/ur/docs/contributing">Contributing</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/ur/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

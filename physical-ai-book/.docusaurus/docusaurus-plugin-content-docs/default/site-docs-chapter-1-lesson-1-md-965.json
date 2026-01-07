@@ -1,0 +1,68 @@
+{
+  "id": "chapter-1/lesson-1",
+  "title": "Module 1: Communication Primitives (Topics, Services, Actions)",
+  "description": "Understanding ROS 2 communication patterns and their applications",
+  "source": "@site/docs/chapter-1/lesson-1.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/lesson-1",
+  "permalink": "/hackathon-book/docs/chapter-1/lesson-1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/lesson-1.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/hackathon-book/docs/tags/ros-2"
+    },
+    {
+      "inline": true,
+      "label": "communication",
+      "permalink": "/hackathon-book/docs/tags/communication"
+    },
+    {
+      "inline": true,
+      "label": "topics",
+      "permalink": "/hackathon-book/docs/tags/topics"
+    },
+    {
+      "inline": true,
+      "label": "services",
+      "permalink": "/hackathon-book/docs/tags/services"
+    },
+    {
+      "inline": true,
+      "label": "actions",
+      "permalink": "/hackathon-book/docs/tags/actions"
+    },
+    {
+      "inline": true,
+      "label": "ai-integration",
+      "permalink": "/hackathon-book/docs/tags/ai-integration"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Module 1: Communication Primitives (Topics, Services, Actions)",
+    "description": "Understanding ROS 2 communication patterns and their applications",
+    "tags": [
+      "ros2",
+      "communication",
+      "topics",
+      "services",
+      "actions",
+      "ai-integration"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 1: Introduction to ROS 2 as the Robotic Nervous System",
+    "permalink": "/hackathon-book/docs/chapter-1/intro"
+  },
+  "next": {
+    "title": "Module 1: rclpy for AI Agent Integration",
+    "permalink": "/hackathon-book/docs/chapter-1/lesson-2"
+  }
+}
