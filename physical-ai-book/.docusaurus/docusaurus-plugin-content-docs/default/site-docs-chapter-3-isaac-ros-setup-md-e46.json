@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/isaac-ros-setup",
+  "title": "Isaac ROS Bridge Setup and Configuration",
+  "description": "Overview",
+  "source": "@site/docs/chapter-3/isaac-ros-setup.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/isaac-ros-setup",
+  "permalink": "/hackathon-book/docs/chapter-3/isaac-ros-setup",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/isaac-ros-setup.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 3 Setup: NVIDIA Isaac Platform Configuration",
+    "permalink": "/hackathon-book/docs/chapter-3/setup"
+  },
+  "next": {
+    "title": "Nav2 Navigation Stack Integration with Isaac Sim",
+    "permalink": "/hackathon-book/docs/chapter-3/nav2-setup"
+  }
+}

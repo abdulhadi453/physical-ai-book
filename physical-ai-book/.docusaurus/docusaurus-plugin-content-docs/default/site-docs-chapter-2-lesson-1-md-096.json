@@ -1,0 +1,28 @@
+{
+  "id": "chapter-2/lesson-1",
+  "title": "Lesson 1: ROS 2 Architecture and Communication Patterns",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapter-2/lesson-1.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/lesson-1",
+  "permalink": "/hackathon-book/docs/chapter-2/lesson-1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/lesson-1.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Lesson 1: ROS 2 Architecture and Communication Patterns"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2: The Digital Twin (Gazebo & Unity)",
+    "permalink": "/hackathon-book/docs/chapter-2/intro"
+  },
+  "next": {
+    "title": "Lesson 2: Gazebo Simulation Environments and Physics Modeling",
+    "permalink": "/hackathon-book/docs/chapter-2/lesson-2"
+  }
+}

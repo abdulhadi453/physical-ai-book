@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-chapter-3/educator-guide" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™) | AI-Native Textbook for Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://physical-ai-book.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://physical-ai-book.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://physical-ai-book.github.io/docs/chapter-3/educator-guide"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="ur"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™) | AI-Native Textbook for Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://physical-ai-book.github.io/docs/chapter-3/educator-guide"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-3/educator-guide" hreflang="en"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/ur/docs/chapter-3/educator-guide" hreflang="ur"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-3/educator-guide" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)","item":"https://physical-ai-book.github.io/docs/chapter-3/educator-guide"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics Atom Feed"><link rel="stylesheet" href="/assets/css/styles.cf33f44d.css">
+<script src="/assets/js/runtime~main.92299d71.js" defer="defer"></script>
+<script src="/assets/js/main.da092ae6.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/intro">Chapters</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro"><span title="Introduction to Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Introduction to Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-1/intro"><span title="Module 1: The Robotic Nervous System (ROS 2)" class="categoryLinkLabel_W154">Module 1: The Robotic Nervous System (ROS 2)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-2/intro"><span title="Module 2: The Digital Twin (Gazebo &amp; Unity)" class="categoryLinkLabel_W154">Module 2: The Digital Twin (Gazebo &amp; Unity)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/chapter-3/intro"><span title="Module 3: The AI-Robot Brain (NVIDIA Isaac™)" class="categoryLinkLabel_W154">Module 3: The AI-Robot Brain (NVIDIA Isaac™)</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/chapter-3/intro"><span title="Chapter 3.1: NVIDIA Isaac Platform Integration" class="categoryLinkLabel_W154">Chapter 3.1: NVIDIA Isaac Platform Integration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/chapter-3/setup"><span title="Chapter 3.2: System Setup and Configuration" class="categoryLinkLabel_W154">Chapter 3.2: System Setup and Configuration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/docs/chapter-3/perception-pipeline"><span title="Chapter 3.3: Advanced Implementation" class="categoryLinkLabel_W154">Chapter 3.3: Advanced Implementation</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/perception-pipeline"><span title="Isaac ROS Perception Pipeline Implementation" class="linkLabel_WmDU">Isaac ROS Perception Pipeline Implementation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/sensor-integration"><span title="Multimodal Sensor Integration in Isaac Sim" class="linkLabel_WmDU">Multimodal Sensor Integration in Isaac Sim</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/model-deployment"><span title="AI Model Deployment in Isaac Sim Environment" class="linkLabel_WmDU">AI Model Deployment in Isaac Sim Environment</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/exercises"><span title="Module 3 Exercise Framework: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Exercise Framework: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/assessments"><span title="Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/assessment"><span title="Module 3 Assessment: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Assessment: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/progress-tracking-guide"><span title="Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/chapter-3/educator-guide"><span title="Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/researcher-resources"><span title="Researcher Resources: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Researcher Resources: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/communication-protocols"><span title="AI-Robot Communication Protocols for Isaac Sim" class="linkLabel_WmDU">AI-Robot Communication Protocols for Isaac Sim</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/safety-framework"><span title="Safety and Reliability Framework for Isaac Sim AI-Robot Systems" class="linkLabel_WmDU">Safety and Reliability Framework for Isaac Sim AI-Robot Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/performance-monitoring"><span title="Performance Monitoring Tools for Isaac Sim AI-Robot Systems" class="linkLabel_WmDU">Performance Monitoring Tools for Isaac Sim AI-Robot Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/summary"><span title="Module 3 Summary: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Summary: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-4/intro"><span title="Module 4: Vision-Language-Action (VLA) Systems" class="categoryLinkLabel_W154">Module 4: Vision-Language-Action (VLA) Systems</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/contributing"><span title="Contributing" class="linkLabel_WmDU">Contributing</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module 3: The AI-Robot Brain (NVIDIA Isaac™)</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Chapter 3.3: Advanced Implementation</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>This guide provides educators with the necessary information to effectively teach Module 3, which covers the NVIDIA Isaac platform for creating AI-robot brains. The module focuses on perception, navigation, and decision-making systems using advanced AI techniques.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives">Learning Objectives<a href="#learning-objectives" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h2>
+<p>By the end of this module, students should be able to:</p>
+<ol>
+<li class="">Design and implement AI agents using NVIDIA Isaac platform that can process multimodal sensor data</li>
+<li class="">Integrate vision-language-action systems with robotic platforms for complex task execution</li>
+<li class="">Apply machine learning models within NVIDIA Isaac for perception and decision-making</li>
+<li class="">Create intelligent control systems that demonstrate embodied intelligence principles</li>
+<li class="">Deploy AI-robotic systems on NVIDIA Isaac simulation and target platforms</li>
+<li class="">Evaluate and optimize AI-robot performance using NVIDIA Isaac tools</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Prerequisites<a href="#prerequisites" class="hash-link" aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites" translate="no">​</a></h2>
+<p>Students should have completed:</p>
+<ul>
+<li class="">Module 1: The Robotic Nervous System (ROS 2)</li>
+<li class="">Module 2: Simulation and Control Systems</li>
+<li class="">Basic understanding of Python programming</li>
+<li class="">Familiarity with robotics concepts and simulation environments</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="module-structure">Module Structure<a href="#module-structure" class="hash-link" aria-label="Direct link to Module Structure" title="Direct link to Module Structure" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="duration">Duration<a href="#duration" class="hash-link" aria-label="Direct link to Duration" title="Direct link to Duration" translate="no">​</a></h3>
+<ul>
+<li class="">Total: 40 hours of instruction time</li>
+<li class="">Lesson 1: 12 hours (4 hours theory + 8 hours exercises)</li>
+<li class="">Lesson 2: 14 hours (4 hours theory + 10 hours exercises)</li>
+<li class="">Lesson 3: 14 hours (4 hours theory + 10 hours exercises)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="resources-required">Resources Required<a href="#resources-required" class="hash-link" aria-label="Direct link to Resources Required" title="Direct link to Resources Required" translate="no">​</a></h3>
+<ul>
+<li class="">Computers with NVIDIA GPU (recommended: RTX 30xx or higher)</li>
+<li class="">Ubuntu 20.04 or 22.04</li>
+<li class="">Docker and NVIDIA Container Toolkit</li>
+<li class="">Internet access for Docker image pulls</li>
+<li class="">NVIDIA Isaac Sim Docker image</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-by-lesson-guide">Lesson-by-Lesson Guide<a href="#lesson-by-lesson-guide" class="hash-link" aria-label="Direct link to Lesson-by-Lesson Guide" title="Direct link to Lesson-by-Lesson Guide" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-1-nvidia-isaac-simulation-environment-and-ros-integration">Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration<a href="#lesson-1-nvidia-isaac-simulation-environment-and-ros-integration" class="hash-link" aria-label="Direct link to Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration" title="Direct link to Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="duration-12-hours-4-hours-theory--8-hours-exercises">Duration: 12 hours (4 hours theory + 8 hours exercises)<a href="#duration-12-hours-4-hours-theory--8-hours-exercises" class="hash-link" aria-label="Direct link to Duration: 12 hours (4 hours theory + 8 hours exercises)" title="Direct link to Duration: 12 hours (4 hours theory + 8 hours exercises)" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives-1">Learning Objectives<a href="#learning-objectives-1" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h4>
+<ul>
+<li class="">Set up NVIDIA Isaac simulation environment</li>
+<li class="">Configure Isaac ROS bridge for communication</li>
+<li class="">Create basic perception pipelines</li>
+<li class="">Execute simple AI-robot communication exercises</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-concepts">Key Concepts<a href="#key-concepts" class="hash-link" aria-label="Direct link to Key Concepts" title="Direct link to Key Concepts" translate="no">​</a></h4>
+<ul>
+<li class="">NVIDIA Isaac platform architecture</li>
+<li class="">Isaac Sim setup and configuration</li>
+<li class="">Isaac ROS bridge functionality</li>
+<li class="">Basic perception pipeline components</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="teaching-tips">Teaching Tips<a href="#teaching-tips" class="hash-link" aria-label="Direct link to Teaching Tips" title="Direct link to Teaching Tips" translate="no">​</a></h4>
+<ul>
+<li class="">Start with a demonstration of Isaac Sim capabilities</li>
+<li class="">Emphasize the importance of proper environment setup</li>
+<li class="">Provide troubleshooting tips for common setup issues</li>
+<li class="">Encourage students to experiment with different configurations</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-student-difficulties">Common Student Difficulties<a href="#common-student-difficulties" class="hash-link" aria-label="Direct link to Common Student Difficulties" title="Direct link to Common Student Difficulties" translate="no">​</a></h4>
+<ul>
+<li class="">Docker setup and GPU access issues</li>
+<li class="">Understanding the ROS bridge concept</li>
+<li class="">Configuring proper network settings</li>
+<li class="">Debugging communication issues</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="assessment-strategies">Assessment Strategies<a href="#assessment-strategies" class="hash-link" aria-label="Direct link to Assessment Strategies" title="Direct link to Assessment Strategies" translate="no">​</a></h4>
+<ul>
+<li class="">Formative: Check understanding of platform components</li>
+<li class="">Summative: Evaluate successful setup and basic communication</li>
+<li class="">Performance: Assess ability to run simple robot commands</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-2-navigation-and-path-planning-with-nav2">Lesson 2: Navigation and Path Planning with Nav2<a href="#lesson-2-navigation-and-path-planning-with-nav2" class="hash-link" aria-label="Direct link to Lesson 2: Navigation and Path Planning with Nav2" title="Direct link to Lesson 2: Navigation and Path Planning with Nav2" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="duration-14-hours-4-hours-theory--10-hours-exercises">Duration: 14 hours (4 hours theory + 10 hours exercises)<a href="#duration-14-hours-4-hours-theory--10-hours-exercises" class="hash-link" aria-label="Direct link to Duration: 14 hours (4 hours theory + 10 hours exercises)" title="Direct link to Duration: 14 hours (4 hours theory + 10 hours exercises)" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives-2">Learning Objectives<a href="#learning-objectives-2" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h4>
+<ul>
+<li class="">Integrate Nav2 with NVIDIA Isaac simulation</li>
+<li class="">Configure path planning algorithms</li>
+<li class="">Implement navigation behaviors</li>
+<li class="">Create obstacle avoidance systems</li>
+<li class="">Evaluate navigation performance</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-concepts-1">Key Concepts<a href="#key-concepts-1" class="hash-link" aria-label="Direct link to Key Concepts" title="Direct link to Key Concepts" translate="no">​</a></h4>
+<ul>
+<li class="">Nav2 architecture and components</li>
+<li class="">Global vs. local path planning</li>
+<li class="">Costmap configuration</li>
+<li class="">Recovery behaviors</li>
+<li class="">Navigation performance metrics</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="teaching-tips-1">Teaching Tips<a href="#teaching-tips-1" class="hash-link" aria-label="Direct link to Teaching Tips" title="Direct link to Teaching Tips" translate="no">​</a></h4>
+<ul>
+<li class="">Demonstrate different path planning algorithms</li>
+<li class="">Show how to tune parameters for different scenarios</li>
+<li class="">Explain the importance of costmap configuration</li>
+<li class="">Provide examples of navigation failures and recovery</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-student-difficulties-1">Common Student Difficulties<a href="#common-student-difficulties-1" class="hash-link" aria-label="Direct link to Common Student Difficulties" title="Direct link to Common Student Difficulties" translate="no">​</a></h4>
+<ul>
+<li class="">Understanding the Nav2 parameter configuration</li>
+<li class="">Tuning parameters for optimal performance</li>
+<li class="">Implementing recovery behaviors</li>
+<li class="">Debugging navigation failures</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="assessment-strategies-1">Assessment Strategies<a href="#assessment-strategies-1" class="hash-link" aria-label="Direct link to Assessment Strategies" title="Direct link to Assessment Strategies" translate="no">​</a></h4>
+<ul>
+<li class="">Formative: Evaluate understanding of Nav2 components</li>
+<li class="">Summative: Assess successful navigation to goals</li>
+<li class="">Performance: Measure navigation efficiency and safety</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-3-perception-and-ai-decision-making">Lesson 3: Perception and AI Decision Making<a href="#lesson-3-perception-and-ai-decision-making" class="hash-link" aria-label="Direct link to Lesson 3: Perception and AI Decision Making" title="Direct link to Lesson 3: Perception and AI Decision Making" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="duration-14-hours-4-hours-theory--10-hours-exercises-1">Duration: 14 hours (4 hours theory + 10 hours exercises)<a href="#duration-14-hours-4-hours-theory--10-hours-exercises-1" class="hash-link" aria-label="Direct link to Duration: 14 hours (4 hours theory + 10 hours exercises)" title="Direct link to Duration: 14 hours (4 hours theory + 10 hours exercises)" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives-3">Learning Objectives<a href="#learning-objectives-3" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h4>
+<ul>
+<li class="">Implement perception systems using Isaac&#x27;s AI capabilities</li>
+<li class="">Deploy machine learning models for robot perception</li>
+<li class="">Create AI decision-making algorithms</li>
+<li class="">Integrate perception with action planning</li>
+<li class="">Optimize perception systems for real-time performance</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-concepts-2">Key Concepts<a href="#key-concepts-2" class="hash-link" aria-label="Direct link to Key Concepts" title="Direct link to Key Concepts" translate="no">​</a></h4>
+<ul>
+<li class="">AI perception pipeline architecture</li>
+<li class="">Object detection and semantic segmentation</li>
+<li class="">Sensor fusion techniques</li>
+<li class="">Behavior trees for decision making</li>
+<li class="">Performance optimization</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="teaching-tips-2">Teaching Tips<a href="#teaching-tips-2" class="hash-link" aria-label="Direct link to Teaching Tips" title="Direct link to Teaching Tips" translate="no">​</a></h4>
+<ul>
+<li class="">Demonstrate different AI perception techniques</li>
+<li class="">Explain the trade-offs between accuracy and performance</li>
+<li class="">Show how to integrate perception with navigation</li>
+<li class="">Emphasize the importance of real-time performance</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-student-difficulties-2">Common Student Difficulties<a href="#common-student-difficulties-2" class="hash-link" aria-label="Direct link to Common Student Difficulties" title="Direct link to Common Student Difficulties" translate="no">​</a></h4>
+<ul>
+<li class="">Understanding deep learning model integration</li>
+<li class="">Configuring AI perception pipelines</li>
+<li class="">Integrating perception with navigation</li>
+<li class="">Optimizing for real-time performance</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="assessment-strategies-2">Assessment Strategies<a href="#assessment-strategies-2" class="hash-link" aria-label="Direct link to Assessment Strategies" title="Direct link to Assessment Strategies" translate="no">​</a></h4>
+<ul>
+<li class="">Formative: Check understanding of perception concepts</li>
+<li class="">Summative: Evaluate complete perception systems</li>
+<li class="">Performance: Assess real-time performance metrics</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assessment-administration">Assessment Administration<a href="#assessment-administration" class="hash-link" aria-label="Direct link to Assessment Administration" title="Direct link to Assessment Administration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pre-assessment-setup">Pre-Assessment Setup<a href="#pre-assessment-setup" class="hash-link" aria-label="Direct link to Pre-Assessment Setup" title="Direct link to Pre-Assessment Setup" translate="no">​</a></h3>
+<ol>
+<li class="">Ensure all student computers have Isaac Sim properly installed</li>
+<li class="">Prepare test scenarios and datasets</li>
+<li class="">Set up automated grading tools</li>
+<li class="">Verify network connectivity for Docker operations</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="during-assessment">During Assessment<a href="#during-assessment" class="hash-link" aria-label="Direct link to During Assessment" title="Direct link to During Assessment" translate="no">​</a></h3>
+<ol>
+<li class="">Monitor student progress and provide support</li>
+<li class="">Record performance metrics automatically</li>
+<li class="">Note any technical issues that arise</li>
+<li class="">Ensure academic integrity</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="post-assessment">Post-Assessment<a href="#post-assessment" class="hash-link" aria-label="Direct link to Post-Assessment" title="Direct link to Post-Assessment" translate="no">​</a></h3>
+<ol>
+<li class="">Grade assessments using automated tools</li>
+<li class="">Review results for learning outcomes achievement</li>
+<li class="">Provide detailed feedback to students</li>
+<li class="">Identify areas for curriculum improvement</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="differentiation-strategies">Differentiation Strategies<a href="#differentiation-strategies" class="hash-link" aria-label="Direct link to Differentiation Strategies" title="Direct link to Differentiation Strategies" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-advanced-students">For Advanced Students<a href="#for-advanced-students" class="hash-link" aria-label="Direct link to For Advanced Students" title="Direct link to For Advanced Students" translate="no">​</a></h3>
+<ul>
+<li class="">Challenge with more complex perception tasks</li>
+<li class="">Encourage exploration of advanced Nav2 features</li>
+<li class="">Assign optimization projects for performance</li>
+<li class="">Provide research papers for deeper understanding</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-struggling-students">For Struggling Students<a href="#for-struggling-students" class="hash-link" aria-label="Direct link to For Struggling Students" title="Direct link to For Struggling Students" translate="no">​</a></h3>
+<ul>
+<li class="">Provide additional setup assistance</li>
+<li class="">Offer step-by-step guided exercises</li>
+<li class="">Use simpler scenarios initially</li>
+<li class="">Pair with stronger students for peer support</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-students-with-different-backgrounds">For Students with Different Backgrounds<a href="#for-students-with-different-backgrounds" class="hash-link" aria-label="Direct link to For Students with Different Backgrounds" title="Direct link to For Students with Different Backgrounds" translate="no">​</a></h3>
+<ul>
+<li class="">Provide ROS/Python refresher materials</li>
+<li class="">Offer hardware-focused vs. software-focused tracks</li>
+<li class="">Adjust pace based on prior experience</li>
+<li class="">Use varied examples to appeal to different interests</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-support">Technical Support<a href="#technical-support" class="hash-link" aria-label="Direct link to Technical Support" title="Direct link to Technical Support" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-technical-issues">Common Technical Issues<a href="#common-technical-issues" class="hash-link" aria-label="Direct link to Common Technical Issues" title="Direct link to Common Technical Issues" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="isaac-sim-setup-issues">Isaac Sim Setup Issues<a href="#isaac-sim-setup-issues" class="hash-link" aria-label="Direct link to Isaac Sim Setup Issues" title="Direct link to Isaac Sim Setup Issues" translate="no">​</a></h4>
+<ul>
+<li class="">
+<p><strong>Problem</strong>: GPU not accessible in Docker container</p>
+</li>
+<li class="">
+<p><strong>Solution</strong>: Verify NVIDIA Container Toolkit installation and proper Docker run command</p>
+</li>
+<li class="">
+<p><strong>Problem</strong>: Isaac Sim fails to launch</p>
+</li>
+<li class="">
+<p><strong>Solution</strong>: Check GPU driver version compatibility and Docker permissions</p>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="ros-communication-issues">ROS Communication Issues<a href="#ros-communication-issues" class="hash-link" aria-label="Direct link to ROS Communication Issues" title="Direct link to ROS Communication Issues" translate="no">​</a></h4>
+<ul>
+<li class="">
+<p><strong>Problem</strong>: Nodes cannot communicate between Isaac Sim and ROS</p>
+</li>
+<li class="">
+<p><strong>Solution</strong>: Verify network configuration and topic names</p>
+</li>
+<li class="">
+<p><strong>Problem</strong>: High latency in communication</p>
+</li>
+<li class="">
+<p><strong>Solution</strong>: Optimize Docker networking and reduce message frequency</p>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-issues">Performance Issues<a href="#performance-issues" class="hash-link" aria-label="Direct link to Performance Issues" title="Direct link to Performance Issues" translate="no">​</a></h4>
+<ul>
+<li class="">
+<p><strong>Problem</strong>: Slow perception or navigation</p>
+</li>
+<li class="">
+<p><strong>Solution</strong>: Optimize AI models and adjust simulation settings</p>
+</li>
+<li class="">
+<p><strong>Problem</strong>: Memory exhaustion</p>
+</li>
+<li class="">
+<p><strong>Solution</strong>: Reduce simulation complexity or increase system resources</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting-resources">Troubleshooting Resources<a href="#troubleshooting-resources" class="hash-link" aria-label="Direct link to Troubleshooting Resources" title="Direct link to Troubleshooting Resources" translate="no">​</a></h3>
+<ul>
+<li class="">NVIDIA Isaac documentation</li>
+<li class="">ROS 2 troubleshooting guides</li>
+<li class="">Docker troubleshooting resources</li>
+<li class="">Student support forum</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="adaptive-teaching-strategies">Adaptive Teaching Strategies<a href="#adaptive-teaching-strategies" class="hash-link" aria-label="Direct link to Adaptive Teaching Strategies" title="Direct link to Adaptive Teaching Strategies" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="real-time-adjustments">Real-Time Adjustments<a href="#real-time-adjustments" class="hash-link" aria-label="Direct link to Real-Time Adjustments" title="Direct link to Real-Time Adjustments" translate="no">​</a></h3>
+<ul>
+<li class="">Monitor student engagement and understanding</li>
+<li class="">Adjust pace based on class comprehension</li>
+<li class="">Provide additional examples when needed</li>
+<li class="">Skip ahead if students demonstrate mastery</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="flexible-delivery-options">Flexible Delivery Options<a href="#flexible-delivery-options" class="hash-link" aria-label="Direct link to Flexible Delivery Options" title="Direct link to Flexible Delivery Options" translate="no">​</a></h3>
+<ul>
+<li class="">In-person with hands-on lab access</li>
+<li class="">Hybrid with remote access to machines</li>
+<li class="">Fully online with cloud-based resources</li>
+<li class="">Self-paced with guided tutorials</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="student-support-resources">Student Support Resources<a href="#student-support-resources" class="hash-link" aria-label="Direct link to Student Support Resources" title="Direct link to Student Support Resources" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="additional-learning-materials">Additional Learning Materials<a href="#additional-learning-materials" class="hash-link" aria-label="Direct link to Additional Learning Materials" title="Direct link to Additional Learning Materials" translate="no">​</a></h3>
+<ul>
+<li class="">NVIDIA Isaac tutorials and documentation</li>
+<li class="">ROS 2 educational resources</li>
+<li class="">Python programming references</li>
+<li class="">Linear algebra and robotics fundamentals</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="office-hours-and-support">Office Hours and Support<a href="#office-hours-and-support" class="hash-link" aria-label="Direct link to Office Hours and Support" title="Direct link to Office Hours and Support" translate="no">​</a></h3>
+<ul>
+<li class="">Scheduled help sessions</li>
+<li class="">Peer mentoring program</li>
+<li class="">Online discussion forums</li>
+<li class="">Technical support team</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="curriculum-integration">Curriculum Integration<a href="#curriculum-integration" class="hash-link" aria-label="Direct link to Curriculum Integration" title="Direct link to Curriculum Integration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="connection-to-previous-modules">Connection to Previous Modules<a href="#connection-to-previous-modules" class="hash-link" aria-label="Direct link to Connection to Previous Modules" title="Direct link to Connection to Previous Modules" translate="no">​</a></h3>
+<ul>
+<li class="">Leverages ROS 2 knowledge from Module 1</li>
+<li class="">Builds on simulation experience from Module 2</li>
+<li class="">Integrates perception with navigation concepts</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="connection-to-future-modules">Connection to Future Modules<a href="#connection-to-future-modules" class="hash-link" aria-label="Direct link to Connection to Future Modules" title="Direct link to Connection to Future Modules" translate="no">​</a></h3>
+<ul>
+<li class="">Prepares students for advanced AI-robotics applications</li>
+<li class="">Provides foundation for humanoid robotics</li>
+<li class="">Enables capstone project work</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="evaluation-and-feedback">Evaluation and Feedback<a href="#evaluation-and-feedback" class="hash-link" aria-label="Direct link to Evaluation and Feedback" title="Direct link to Evaluation and Feedback" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="formative-feedback-strategies">Formative Feedback Strategies<a href="#formative-feedback-strategies" class="hash-link" aria-label="Direct link to Formative Feedback Strategies" title="Direct link to Formative Feedback Strategies" translate="no">​</a></h3>
+<ul>
+<li class="">Real-time code reviews during exercises</li>
+<li class="">Peer code review sessions</li>
+<li class="">Weekly progress check-ins</li>
+<li class="">Self-assessment reflection prompts</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="summative-feedback-strategies">Summative Feedback Strategies<a href="#summative-feedback-strategies" class="hash-link" aria-label="Direct link to Summative Feedback Strategies" title="Direct link to Summative Feedback Strategies" translate="no">​</a></h3>
+<ul>
+<li class="">Detailed rubric-based grading</li>
+<li class="">Individual feedback conferences</li>
+<li class="">Portfolio review of completed projects</li>
+<li class="">Peer evaluation of team projects</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="accessibility-considerations">Accessibility Considerations<a href="#accessibility-considerations" class="hash-link" aria-label="Direct link to Accessibility Considerations" title="Direct link to Accessibility Considerations" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-students-with-disabilities">For Students with Disabilities<a href="#for-students-with-disabilities" class="hash-link" aria-label="Direct link to For Students with Disabilities" title="Direct link to For Students with Disabilities" translate="no">​</a></h3>
+<ul>
+<li class="">Provide alternative text descriptions for visual content</li>
+<li class="">Offer keyboard navigation options where possible</li>
+<li class="">Ensure screen reader compatibility</li>
+<li class="">Provide extended time for practical assessments</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="universal-design-principles">Universal Design Principles<a href="#universal-design-principles" class="hash-link" aria-label="Direct link to Universal Design Principles" title="Direct link to Universal Design Principles" translate="no">​</a></h3>
+<ul>
+<li class="">Multiple means of representation</li>
+<li class="">Multiple means of engagement</li>
+<li class="">Multiple means of expression</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="technology-integration">Technology Integration<a href="#technology-integration" class="hash-link" aria-label="Direct link to Technology Integration" title="Direct link to Technology Integration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="required-software">Required Software<a href="#required-software" class="hash-link" aria-label="Direct link to Required Software" title="Direct link to Required Software" translate="no">​</a></h3>
+<ul>
+<li class="">NVIDIA Isaac Sim Docker image</li>
+<li class="">ROS 2 Humble Hawksbill</li>
+<li class="">Python 3.8+ with required libraries</li>
+<li class="">Docker and NVIDIA Container Toolkit</li>
+<li class="">Compatible IDE (VS Code recommended)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="hardware-requirements">Hardware Requirements<a href="#hardware-requirements" class="hash-link" aria-label="Direct link to Hardware Requirements" title="Direct link to Hardware Requirements" translate="no">​</a></h3>
+<ul>
+<li class="">NVIDIA GPU (RTX 30xx or higher recommended)</li>
+<li class="">16GB+ RAM</li>
+<li class="">Multi-core processor</li>
+<li class="">Sufficient storage for Docker images</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="professional-development">Professional Development<a href="#professional-development" class="hash-link" aria-label="Direct link to Professional Development" title="Direct link to Professional Development" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructor-preparation">Instructor Preparation<a href="#instructor-preparation" class="hash-link" aria-label="Direct link to Instructor Preparation" title="Direct link to Instructor Preparation" translate="no">​</a></h3>
+<ul>
+<li class="">Complete Module 3 as a student would</li>
+<li class="">Practice all exercises and assessments</li>
+<li class="">Review NVIDIA Isaac documentation</li>
+<li class="">Participate in instructor training sessions</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ongoing-development">Ongoing Development<a href="#ongoing-development" class="hash-link" aria-label="Direct link to Ongoing Development" title="Direct link to Ongoing Development" translate="no">​</a></h3>
+<ul>
+<li class="">Stay updated with NVIDIA Isaac releases</li>
+<li class="">Participate in educator communities</li>
+<li class="">Attend robotics education conferences</li>
+<li class="">Engage with industry professionals</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quality-assurance">Quality Assurance<a href="#quality-assurance" class="hash-link" aria-label="Direct link to Quality Assurance" title="Direct link to Quality Assurance" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="content-review-process">Content Review Process<a href="#content-review-process" class="hash-link" aria-label="Direct link to Content Review Process" title="Direct link to Content Review Process" translate="no">​</a></h3>
+<ul>
+<li class="">Technical accuracy verification</li>
+<li class="">Pedagogical effectiveness assessment</li>
+<li class="">Industry relevance validation</li>
+<li class="">Student feedback incorporation</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="continuous-improvement">Continuous Improvement<a href="#continuous-improvement" class="hash-link" aria-label="Direct link to Continuous Improvement" title="Direct link to Continuous Improvement" translate="no">​</a></h3>
+<ul>
+<li class="">Regular curriculum updates</li>
+<li class="">Technology refresh cycles</li>
+<li class="">Assessment refinement</li>
+<li class="">Resource enhancement</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="contact-and-support">Contact and Support<a href="#contact-and-support" class="hash-link" aria-label="Direct link to Contact and Support" title="Direct link to Contact and Support" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-support-1">Technical Support<a href="#technical-support-1" class="hash-link" aria-label="Direct link to Technical Support" title="Direct link to Technical Support" translate="no">​</a></h3>
+<ul>
+<li class="">IT Help Desk: [Contact Information]</li>
+<li class="">Isaac Platform Support: [Contact Information]</li>
+<li class="">ROS Community: [Contact Information]</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="educational-support">Educational Support<a href="#educational-support" class="hash-link" aria-label="Direct link to Educational Support" title="Direct link to Educational Support" translate="no">​</a></h3>
+<ul>
+<li class="">Curriculum Team: [Contact Information]</li>
+<li class="">Instructional Designers: [Contact Information]</li>
+<li class="">Assessment Specialists: [Contact Information]</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/educator-guide.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/chapter-3/progress-tracking-guide"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/chapter-3/researcher-resources"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Researcher Resources: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#learning-objectives" class="table-of-contents__link toc-highlight">Learning Objectives</a></li><li><a href="#prerequisites" class="table-of-contents__link toc-highlight">Prerequisites</a></li><li><a href="#module-structure" class="table-of-contents__link toc-highlight">Module Structure</a><ul><li><a href="#duration" class="table-of-contents__link toc-highlight">Duration</a></li><li><a href="#resources-required" class="table-of-contents__link toc-highlight">Resources Required</a></li></ul></li><li><a href="#lesson-by-lesson-guide" class="table-of-contents__link toc-highlight">Lesson-by-Lesson Guide</a><ul><li><a href="#lesson-1-nvidia-isaac-simulation-environment-and-ros-integration" class="table-of-contents__link toc-highlight">Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration</a></li><li><a href="#lesson-2-navigation-and-path-planning-with-nav2" class="table-of-contents__link toc-highlight">Lesson 2: Navigation and Path Planning with Nav2</a></li><li><a href="#lesson-3-perception-and-ai-decision-making" class="table-of-contents__link toc-highlight">Lesson 3: Perception and AI Decision Making</a></li></ul></li><li><a href="#assessment-administration" class="table-of-contents__link toc-highlight">Assessment Administration</a><ul><li><a href="#pre-assessment-setup" class="table-of-contents__link toc-highlight">Pre-Assessment Setup</a></li><li><a href="#during-assessment" class="table-of-contents__link toc-highlight">During Assessment</a></li><li><a href="#post-assessment" class="table-of-contents__link toc-highlight">Post-Assessment</a></li></ul></li><li><a href="#differentiation-strategies" class="table-of-contents__link toc-highlight">Differentiation Strategies</a><ul><li><a href="#for-advanced-students" class="table-of-contents__link toc-highlight">For Advanced Students</a></li><li><a href="#for-struggling-students" class="table-of-contents__link toc-highlight">For Struggling Students</a></li><li><a href="#for-students-with-different-backgrounds" class="table-of-contents__link toc-highlight">For Students with Different Backgrounds</a></li></ul></li><li><a href="#technical-support" class="table-of-contents__link toc-highlight">Technical Support</a><ul><li><a href="#common-technical-issues" class="table-of-contents__link toc-highlight">Common Technical Issues</a></li><li><a href="#troubleshooting-resources" class="table-of-contents__link toc-highlight">Troubleshooting Resources</a></li></ul></li><li><a href="#adaptive-teaching-strategies" class="table-of-contents__link toc-highlight">Adaptive Teaching Strategies</a><ul><li><a href="#real-time-adjustments" class="table-of-contents__link toc-highlight">Real-Time Adjustments</a></li><li><a href="#flexible-delivery-options" class="table-of-contents__link toc-highlight">Flexible Delivery Options</a></li></ul></li><li><a href="#student-support-resources" class="table-of-contents__link toc-highlight">Student Support Resources</a><ul><li><a href="#additional-learning-materials" class="table-of-contents__link toc-highlight">Additional Learning Materials</a></li><li><a href="#office-hours-and-support" class="table-of-contents__link toc-highlight">Office Hours and Support</a></li></ul></li><li><a href="#curriculum-integration" class="table-of-contents__link toc-highlight">Curriculum Integration</a><ul><li><a href="#connection-to-previous-modules" class="table-of-contents__link toc-highlight">Connection to Previous Modules</a></li><li><a href="#connection-to-future-modules" class="table-of-contents__link toc-highlight">Connection to Future Modules</a></li></ul></li><li><a href="#evaluation-and-feedback" class="table-of-contents__link toc-highlight">Evaluation and Feedback</a><ul><li><a href="#formative-feedback-strategies" class="table-of-contents__link toc-highlight">Formative Feedback Strategies</a></li><li><a href="#summative-feedback-strategies" class="table-of-contents__link toc-highlight">Summative Feedback Strategies</a></li></ul></li><li><a href="#accessibility-considerations" class="table-of-contents__link toc-highlight">Accessibility Considerations</a><ul><li><a href="#for-students-with-disabilities" class="table-of-contents__link toc-highlight">For Students with Disabilities</a></li><li><a href="#universal-design-principles" class="table-of-contents__link toc-highlight">Universal Design Principles</a></li></ul></li><li><a href="#technology-integration" class="table-of-contents__link toc-highlight">Technology Integration</a><ul><li><a href="#required-software" class="table-of-contents__link toc-highlight">Required Software</a></li><li><a href="#hardware-requirements" class="table-of-contents__link toc-highlight">Hardware Requirements</a></li></ul></li><li><a href="#professional-development" class="table-of-contents__link toc-highlight">Professional Development</a><ul><li><a href="#instructor-preparation" class="table-of-contents__link toc-highlight">Instructor Preparation</a></li><li><a href="#ongoing-development" class="table-of-contents__link toc-highlight">Ongoing Development</a></li></ul></li><li><a href="#quality-assurance" class="table-of-contents__link toc-highlight">Quality Assurance</a><ul><li><a href="#content-review-process" class="table-of-contents__link toc-highlight">Content Review Process</a></li><li><a href="#continuous-improvement" class="table-of-contents__link toc-highlight">Continuous Improvement</a></li></ul></li><li><a href="#contact-and-support" class="table-of-contents__link toc-highlight">Contact and Support</a><ul><li><a href="#technical-support-1" class="table-of-contents__link toc-highlight">Technical Support</a></li><li><a href="#educational-support" class="table-of-contents__link toc-highlight">Educational Support</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Chapters</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Discussions<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/docs/contributing">Contributing</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

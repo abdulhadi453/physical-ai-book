@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/exercises",
+  "title": "Module 3 Exercise Framework: The AI-Robot Brain (NVIDIA Isaac™)",
+  "description": "Overview",
+  "source": "@site/docs/chapter-3/exercises.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/exercises",
+  "permalink": "/hackathon-book/docs/chapter-3/exercises",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/exercises.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AI Model Deployment in Isaac Sim Environment",
+    "permalink": "/hackathon-book/docs/chapter-3/model-deployment"
+  },
+  "next": {
+    "title": "Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/hackathon-book/docs/chapter-3/assessments"
+  }
+}

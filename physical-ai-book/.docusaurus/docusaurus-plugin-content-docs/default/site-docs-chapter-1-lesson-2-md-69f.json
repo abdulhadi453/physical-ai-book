@@ -1,0 +1,62 @@
+{
+  "id": "chapter-1/lesson-2",
+  "title": "Module 1: rclpy for AI Agent Integration",
+  "description": "Using rclpy to bridge AI agents with robot controllers",
+  "source": "@site/docs/chapter-1/lesson-2.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/lesson-2",
+  "permalink": "/hackathon-book/docs/chapter-1/lesson-2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/lesson-2.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/hackathon-book/docs/tags/ros-2"
+    },
+    {
+      "inline": true,
+      "label": "rclpy",
+      "permalink": "/hackathon-book/docs/tags/rclpy"
+    },
+    {
+      "inline": true,
+      "label": "python",
+      "permalink": "/hackathon-book/docs/tags/python"
+    },
+    {
+      "inline": true,
+      "label": "ai-integration",
+      "permalink": "/hackathon-book/docs/tags/ai-integration"
+    },
+    {
+      "inline": true,
+      "label": "nodes",
+      "permalink": "/hackathon-book/docs/tags/nodes"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Module 1: rclpy for AI Agent Integration",
+    "description": "Using rclpy to bridge AI agents with robot controllers",
+    "tags": [
+      "ros2",
+      "rclpy",
+      "python",
+      "ai-integration",
+      "nodes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 1: Communication Primitives (Topics, Services, Actions)",
+    "permalink": "/hackathon-book/docs/chapter-1/lesson-1"
+  },
+  "next": {
+    "title": "Module 1: URDF Fundamentals for Humanoid Robots",
+    "permalink": "/hackathon-book/docs/chapter-1/lesson-3"
+  }
+}

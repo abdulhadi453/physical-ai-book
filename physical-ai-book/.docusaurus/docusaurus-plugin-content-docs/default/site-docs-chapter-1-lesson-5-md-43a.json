@@ -1,0 +1,62 @@
+{
+  "id": "chapter-1/lesson-5",
+  "title": "Module 1: Humanoid Context Applications",
+  "description": "Applying ROS 2 concepts to humanoid robot scenarios",
+  "source": "@site/docs/chapter-1/lesson-5.md",
+  "sourceDirName": "chapter-1",
+  "slug": "/chapter-1/lesson-5",
+  "permalink": "/hackathon-book/docs/chapter-1/lesson-5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-1/lesson-5.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/hackathon-book/docs/tags/ros-2"
+    },
+    {
+      "inline": true,
+      "label": "humanoid",
+      "permalink": "/hackathon-book/docs/tags/humanoid"
+    },
+    {
+      "inline": true,
+      "label": "applications",
+      "permalink": "/hackathon-book/docs/tags/applications"
+    },
+    {
+      "inline": true,
+      "label": "integration",
+      "permalink": "/hackathon-book/docs/tags/integration"
+    },
+    {
+      "inline": true,
+      "label": "ai",
+      "permalink": "/hackathon-book/docs/tags/ai"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6,
+    "title": "Module 1: Humanoid Context Applications",
+    "description": "Applying ROS 2 concepts to humanoid robot scenarios",
+    "tags": [
+      "ros2",
+      "humanoid",
+      "applications",
+      "integration",
+      "ai"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 1: Data Flow Tracing (AI → ROS 2 → Actuator)",
+    "permalink": "/hackathon-book/docs/chapter-1/lesson-4"
+  },
+  "next": {
+    "title": "Module 1: Advanced ROS 2 Concepts for Humanoid Integration",
+    "permalink": "/hackathon-book/docs/chapter-1/lesson-6"
+  }
+}

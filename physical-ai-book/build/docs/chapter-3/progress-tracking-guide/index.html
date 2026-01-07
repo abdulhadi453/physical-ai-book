@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-chapter-3/progress-tracking-guide" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™) | AI-Native Textbook for Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://physical-ai-book.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://physical-ai-book.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://physical-ai-book.github.io/docs/chapter-3/progress-tracking-guide"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="ur"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™) | AI-Native Textbook for Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://physical-ai-book.github.io/docs/chapter-3/progress-tracking-guide"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-3/progress-tracking-guide" hreflang="en"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/ur/docs/chapter-3/progress-tracking-guide" hreflang="ur"><link data-rh="true" rel="alternate" href="https://physical-ai-book.github.io/docs/chapter-3/progress-tracking-guide" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)","item":"https://physical-ai-book.github.io/docs/chapter-3/progress-tracking-guide"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="AI-Native Textbook for Physical AI &amp; Humanoid Robotics Atom Feed"><link rel="stylesheet" href="/assets/css/styles.cf33f44d.css">
+<script src="/assets/js/runtime~main.92299d71.js" defer="defer"></script>
+<script src="/assets/js/main.da092ae6.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="Physical AI Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/intro">Chapters</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro"><span title="Introduction to Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Introduction to Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-1/intro"><span title="Module 1: The Robotic Nervous System (ROS 2)" class="categoryLinkLabel_W154">Module 1: The Robotic Nervous System (ROS 2)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-2/intro"><span title="Module 2: The Digital Twin (Gazebo &amp; Unity)" class="categoryLinkLabel_W154">Module 2: The Digital Twin (Gazebo &amp; Unity)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/chapter-3/intro"><span title="Module 3: The AI-Robot Brain (NVIDIA Isaac™)" class="categoryLinkLabel_W154">Module 3: The AI-Robot Brain (NVIDIA Isaac™)</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/chapter-3/intro"><span title="Chapter 3.1: NVIDIA Isaac Platform Integration" class="categoryLinkLabel_W154">Chapter 3.1: NVIDIA Isaac Platform Integration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/chapter-3/setup"><span title="Chapter 3.2: System Setup and Configuration" class="categoryLinkLabel_W154">Chapter 3.2: System Setup and Configuration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/docs/chapter-3/perception-pipeline"><span title="Chapter 3.3: Advanced Implementation" class="categoryLinkLabel_W154">Chapter 3.3: Advanced Implementation</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/perception-pipeline"><span title="Isaac ROS Perception Pipeline Implementation" class="linkLabel_WmDU">Isaac ROS Perception Pipeline Implementation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/sensor-integration"><span title="Multimodal Sensor Integration in Isaac Sim" class="linkLabel_WmDU">Multimodal Sensor Integration in Isaac Sim</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/model-deployment"><span title="AI Model Deployment in Isaac Sim Environment" class="linkLabel_WmDU">AI Model Deployment in Isaac Sim Environment</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/exercises"><span title="Module 3 Exercise Framework: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Exercise Framework: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/assessments"><span title="Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Assessments: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/assessment"><span title="Module 3 Assessment: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Assessment: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/chapter-3/progress-tracking-guide"><span title="Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/educator-guide"><span title="Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/researcher-resources"><span title="Researcher Resources: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Researcher Resources: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/communication-protocols"><span title="AI-Robot Communication Protocols for Isaac Sim" class="linkLabel_WmDU">AI-Robot Communication Protocols for Isaac Sim</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/safety-framework"><span title="Safety and Reliability Framework for Isaac Sim AI-Robot Systems" class="linkLabel_WmDU">Safety and Reliability Framework for Isaac Sim AI-Robot Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/performance-monitoring"><span title="Performance Monitoring Tools for Isaac Sim AI-Robot Systems" class="linkLabel_WmDU">Performance Monitoring Tools for Isaac Sim AI-Robot Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/chapter-3/summary"><span title="Module 3 Summary: The AI-Robot Brain (NVIDIA Isaac™)" class="linkLabel_WmDU">Module 3 Summary: The AI-Robot Brain (NVIDIA Isaac™)</span></a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/chapter-4/intro"><span title="Module 4: Vision-Language-Action (VLA) Systems" class="categoryLinkLabel_W154">Module 4: Vision-Language-Action (VLA) Systems</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/contributing"><span title="Contributing" class="linkLabel_WmDU">Contributing</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module 3: The AI-Robot Brain (NVIDIA Isaac™)</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Chapter 3.3: Advanced Implementation</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>This guide provides students and educators with tools and methods to track progress through Module 3, which covers the NVIDIA Isaac platform for creating AI-robot brains. It includes self-assessment tools, milestone tracking, and performance metrics.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives-tracking">Learning Objectives Tracking<a href="#learning-objectives-tracking" class="hash-link" aria-label="Direct link to Learning Objectives Tracking" title="Direct link to Learning Objectives Tracking" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="module-3-learning-objectives">Module 3 Learning Objectives<a href="#module-3-learning-objectives" class="hash-link" aria-label="Direct link to Module 3 Learning Objectives" title="Direct link to Module 3 Learning Objectives" translate="no">​</a></h3>
+<table><thead><tr><th>Learning Objective</th><th>Status</th><th>Completion Date</th><th>Evidence</th><th>Notes</th></tr></thead><tbody><tr><td>Design and implement AI agents using NVIDIA Isaac platform that can process multimodal sensor data</td><td>[ ]</td><td></td><td></td><td></td></tr><tr><td>Integrate vision-language-action systems with robotic platforms for complex task execution</td><td>[ ]</td><td></td><td></td><td></td></tr><tr><td>Apply machine learning models within NVIDIA Isaac for perception and decision-making</td><td>[ ]</td><td></td><td></td><td></td></tr><tr><td>Create intelligent control systems that demonstrate embodied intelligence principles</td><td>[ ]</td><td></td><td></td><td></td></tr><tr><td>Deploy AI-robotic systems on NVIDIA Isaac simulation and target platforms</td><td>[ ]</td><td></td><td></td><td></td></tr><tr><td>Evaluate and optimize AI-robot performance using NVIDIA Isaac tools</td><td>[ ]</td><td></td><td></td><td></td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-by-lesson-progress-tracking">Lesson-by-Lesson Progress Tracking<a href="#lesson-by-lesson-progress-tracking" class="hash-link" aria-label="Direct link to Lesson-by-Lesson Progress Tracking" title="Direct link to Lesson-by-Lesson Progress Tracking" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-1-nvidia-isaac-simulation-environment-and-ros-integration">Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration<a href="#lesson-1-nvidia-isaac-simulation-environment-and-ros-integration" class="hash-link" aria-label="Direct link to Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration" title="Direct link to Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives">Learning Objectives<a href="#learning-objectives" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Set up NVIDIA Isaac simulation environment</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Configure Isaac ROS bridge for communication</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Create basic perception pipelines</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Execute simple AI-robot communication exercises</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="self-assessment-checklist">Self-Assessment Checklist<a href="#self-assessment-checklist" class="hash-link" aria-label="Direct link to Self-Assessment Checklist" title="Direct link to Self-Assessment Checklist" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can successfully launch Isaac Sim with Docker</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I understand the main components of the NVIDIA Isaac platform</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can configure the Isaac ROS bridge for communication</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can create a basic perception pipeline using sensor data</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can implement a ROS node that communicates with Isaac Sim</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can process images and send appropriate commands to the robot</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can troubleshoot basic communication issues</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="milestone-evidence">Milestone Evidence<a href="#milestone-evidence" class="hash-link" aria-label="Direct link to Milestone Evidence" title="Direct link to Milestone Evidence" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Completed Exercise 1: Basic Isaac Sim Setup</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Completed Exercise 2: ROS Bridge Communication</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Successfully ran Isaac Sim with robot control</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Demonstrated ROS communication in simulation</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="reflection-questions">Reflection Questions<a href="#reflection-questions" class="hash-link" aria-label="Direct link to Reflection Questions" title="Direct link to Reflection Questions" translate="no">​</a></h4>
+<ol>
+<li class="">What was the most challenging aspect of setting up Isaac Sim?</li>
+<li class="">How does the Isaac ROS bridge facilitate communication between Isaac Sim and ROS 2?</li>
+<li class="">What are the key components of a perception pipeline?</li>
+<li class="">How would you explain the setup process to a peer?</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-2-navigation-and-path-planning-with-nav2">Lesson 2: Navigation and Path Planning with Nav2<a href="#lesson-2-navigation-and-path-planning-with-nav2" class="hash-link" aria-label="Direct link to Lesson 2: Navigation and Path Planning with Nav2" title="Direct link to Lesson 2: Navigation and Path Planning with Nav2" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives-1">Learning Objectives<a href="#learning-objectives-1" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Integrate Nav2 with NVIDIA Isaac simulation</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Configure path planning algorithms</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Implement navigation behaviors</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Create obstacle avoidance systems</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Evaluate navigation performance</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="self-assessment-checklist-1">Self-Assessment Checklist<a href="#self-assessment-checklist-1" class="hash-link" aria-label="Direct link to Self-Assessment Checklist" title="Direct link to Self-Assessment Checklist" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can install and configure Nav2 with Isaac Sim</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I understand the difference between global and local planners</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can configure Nav2 parameters for different scenarios</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can implement obstacle avoidance systems</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can evaluate navigation performance using metrics</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can implement recovery behaviors for navigation failures</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can tune navigation parameters for optimal performance</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="milestone-evidence-1">Milestone Evidence<a href="#milestone-evidence-1" class="hash-link" aria-label="Direct link to Milestone Evidence" title="Direct link to Milestone Evidence" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Completed Exercise 3: Basic Navigation Setup</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Completed Exercise 4: Advanced Navigation with Recovery</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Successfully configured Nav2 with Isaac Sim</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Demonstrated successful navigation with obstacle avoidance</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="reflection-questions-1">Reflection Questions<a href="#reflection-questions-1" class="hash-link" aria-label="Direct link to Reflection Questions" title="Direct link to Reflection Questions" translate="no">​</a></h4>
+<ol>
+<li class="">What are the key differences between global and local path planning?</li>
+<li class="">How do costmaps help with obstacle avoidance in navigation?</li>
+<li class="">What metrics would you use to evaluate navigation performance?</li>
+<li class="">How did you approach tuning navigation parameters?</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-3-perception-and-ai-decision-making">Lesson 3: Perception and AI Decision Making<a href="#lesson-3-perception-and-ai-decision-making" class="hash-link" aria-label="Direct link to Lesson 3: Perception and AI Decision Making" title="Direct link to Lesson 3: Perception and AI Decision Making" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives-2">Learning Objectives<a href="#learning-objectives-2" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Implement perception systems using Isaac&#x27;s AI capabilities</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Deploy machine learning models for robot perception</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Create AI decision-making algorithms</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Integrate perception with action planning</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Optimize perception systems for real-time performance</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="self-assessment-checklist-2">Self-Assessment Checklist<a href="#self-assessment-checklist-2" class="hash-link" aria-label="Direct link to Self-Assessment Checklist" title="Direct link to Self-Assessment Checklist" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can implement object detection using Isaac AI capabilities</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I understand the difference between object detection and semantic segmentation</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can create AI decision-making algorithms using behavior trees</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can integrate perception with navigation and action planning</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can optimize perception systems for real-time performance</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can implement sensor fusion for improved perception</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->I can evaluate perception system performance</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="milestone-evidence-2">Milestone Evidence<a href="#milestone-evidence-2" class="hash-link" aria-label="Direct link to Milestone Evidence" title="Direct link to Milestone Evidence" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Completed Exercise 5: Basic Object Detection</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Completed Exercise 6: AI Decision Making Integration</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Successfully implemented perception system</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Demonstrated AI decision making in simulation</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="reflection-questions-2">Reflection Questions<a href="#reflection-questions-2" class="hash-link" aria-label="Direct link to Reflection Questions" title="Direct link to Reflection Questions" translate="no">​</a></h4>
+<ol>
+<li class="">What are the main components of an AI perception pipeline?</li>
+<li class="">How does semantic segmentation differ from object detection?</li>
+<li class="">What is sensor fusion and why is it important in robotics?</li>
+<li class="">How can behavior trees be used for AI decision making?</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assessment-progress-tracking">Assessment Progress Tracking<a href="#assessment-progress-tracking" class="hash-link" aria-label="Direct link to Assessment Progress Tracking" title="Direct link to Assessment Progress Tracking" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="formative-assessments-knowledge-checks">Formative Assessments (Knowledge Checks)<a href="#formative-assessments-knowledge-checks" class="hash-link" aria-label="Direct link to Formative Assessments (Knowledge Checks)" title="Direct link to Formative Assessments (Knowledge Checks)" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-1-knowledge-checks">Lesson 1 Knowledge Checks<a href="#lesson-1-knowledge-checks" class="hash-link" aria-label="Direct link to Lesson 1 Knowledge Checks" title="Direct link to Lesson 1 Knowledge Checks" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Knowledge Check 1.1: NVIDIA Isaac Components - Score: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Knowledge Check 1.2: Isaac ROS Bridge - Score: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Knowledge Check 1.3: Perception Pipeline - Score: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Average Score: ___%</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-2-knowledge-checks">Lesson 2 Knowledge Checks<a href="#lesson-2-knowledge-checks" class="hash-link" aria-label="Direct link to Lesson 2 Knowledge Checks" title="Direct link to Lesson 2 Knowledge Checks" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Knowledge Check 2.1: Nav2 Planners - Score: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Knowledge Check 2.2: Recovery Behaviors - Score: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Knowledge Check 2.3: Costmaps - Score: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Average Score: ___%</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="lesson-3-knowledge-checks">Lesson 3 Knowledge Checks<a href="#lesson-3-knowledge-checks" class="hash-link" aria-label="Direct link to Lesson 3 Knowledge Checks" title="Direct link to Lesson 3 Knowledge Checks" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Knowledge Check 3.1: Object Detection vs Segmentation - Score: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Knowledge Check 3.2: Sensor Fusion - Score: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Knowledge Check 3.3: Behavior Trees - Score: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Average Score: ___%</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="summative-assessment-progress">Summative Assessment Progress<a href="#summative-assessment-progress" class="hash-link" aria-label="Direct link to Summative Assessment Progress" title="Direct link to Summative Assessment Progress" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Section A: Theoretical Knowledge - Target Score: 85% - Achieved: ___%</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Section B: Practical Application - Target Score: 90% - Achieved: ___%</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Overall Module Assessment - Target Score: 90% - Achieved: ___%</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-assessment-progress">Performance Assessment Progress<a href="#performance-assessment-progress" class="hash-link" aria-label="Direct link to Performance Assessment Progress" title="Direct link to Performance Assessment Progress" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Task 1: Perception Performance - Target: 10+ FPS, 85%+ accuracy - Achieved: ___</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Task 2: Navigation Efficiency - Target: 95% success, 0.8+ efficiency - Achieved: ___</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Task 3: Decision Making - Target: Adaptive behavior - Achieved: ___</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="time-on-task-tracking">Time-on-Task Tracking<a href="#time-on-task-tracking" class="hash-link" aria-label="Direct link to Time-on-Task Tracking" title="Direct link to Time-on-Task Tracking" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="estimated-vs-actual-time-spent">Estimated vs Actual Time Spent<a href="#estimated-vs-actual-time-spent" class="hash-link" aria-label="Direct link to Estimated vs Actual Time Spent" title="Direct link to Estimated vs Actual Time Spent" translate="no">​</a></h3>
+<table><thead><tr><th>Activity</th><th>Estimated Time</th><th>Actual Time</th><th>Variance</th><th>Notes</th></tr></thead><tbody><tr><td>Lesson 1 Theory</td><td>4 hours</td><td></td><td></td><td></td></tr><tr><td>Lesson 1 Exercises</td><td>8 hours</td><td></td><td></td><td></td></tr><tr><td>Lesson 2 Theory</td><td>4 hours</td><td></td><td></td><td></td></tr><tr><td>Lesson 2 Exercises</td><td>10 hours</td><td></td><td></td><td></td></tr><tr><td>Lesson 3 Theory</td><td>4 hours</td><td></td><td></td><td></td></tr><tr><td>Lesson 3 Exercises</td><td>10 hours</td><td></td><td></td><td></td></tr><tr><td>Assessments</td><td>8 hours</td><td></td><td></td><td></td></tr><tr><td>Review and Preparation</td><td>4 hours</td><td></td><td></td><td></td></tr><tr><td><strong>Total</strong></td><td><strong>42 hours</strong></td><td></td><td></td><td></td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="daily-progress-log">Daily Progress Log<a href="#daily-progress-log" class="hash-link" aria-label="Direct link to Daily Progress Log" title="Direct link to Daily Progress Log" translate="no">​</a></h3>
+<table><thead><tr><th>Date</th><th>Time Spent</th><th>Activity</th><th>Progress Made</th><th>Challenges</th><th>Next Steps</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="skill-development-tracking">Skill Development Tracking<a href="#skill-development-tracking" class="hash-link" aria-label="Direct link to Skill Development Tracking" title="Direct link to Skill Development Tracking" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-skills-matrix">Technical Skills Matrix<a href="#technical-skills-matrix" class="hash-link" aria-label="Direct link to Technical Skills Matrix" title="Direct link to Technical Skills Matrix" translate="no">​</a></h3>
+<table><thead><tr><th>Skill Area</th><th>Beginner</th><th>Developing</th><th>Proficient</th><th>Advanced</th><th>Mastery</th></tr></thead><tbody><tr><td>Isaac Sim Setup</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr><tr><td>ROS Communication</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr><tr><td>AI Perception</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr><tr><td>Navigation Systems</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr><tr><td>Decision Making</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr><tr><td>Performance Optimization</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="practical-competencies">Practical Competencies<a href="#practical-competencies" class="hash-link" aria-label="Direct link to Practical Competencies" title="Direct link to Practical Competencies" translate="no">​</a></h3>
+<table><thead><tr><th>Competency</th><th>Not Started</th><th>Basic</th><th>Developing</th><th>Proficient</th><th>Mastered</th></tr></thead><tbody><tr><td>Configure Isaac Sim environment</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr><tr><td>Implement perception pipelines</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr><tr><td>Set up Nav2 navigation system</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr><tr><td>Create AI decision-making systems</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr><tr><td>Optimize system performance</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr><tr><td>Integrate multiple systems</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="milestone-achievement-tracking">Milestone Achievement Tracking<a href="#milestone-achievement-tracking" class="hash-link" aria-label="Direct link to Milestone Achievement Tracking" title="Direct link to Milestone Achievement Tracking" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="module-3-milestones">Module 3 Milestones<a href="#module-3-milestones" class="hash-link" aria-label="Direct link to Module 3 Milestones" title="Direct link to Module 3 Milestones" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="milestone-1-isaac-environment-setup-week-1">Milestone 1: Isaac Environment Setup (Week 1)<a href="#milestone-1-isaac-environment-setup-week-1" class="hash-link" aria-label="Direct link to Milestone 1: Isaac Environment Setup (Week 1)" title="Direct link to Milestone 1: Isaac Environment Setup (Week 1)" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Isaac Sim successfully launched</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Docker environment configured</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Basic robot simulation working</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->ROS communication established</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Milestone Complete Date: ___________</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="milestone-2-basic-perception-system-week-2">Milestone 2: Basic Perception System (Week 2)<a href="#milestone-2-basic-perception-system-week-2" class="hash-link" aria-label="Direct link to Milestone 2: Basic Perception System (Week 2)" title="Direct link to Milestone 2: Basic Perception System (Week 2)" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Object detection pipeline implemented</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Camera image processing working</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Detection results published correctly</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Basic perception assessment passed</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Milestone Complete Date: ___________</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="milestone-3-navigation-system-week-3">Milestone 3: Navigation System (Week 3)<a href="#milestone-3-navigation-system-week-3" class="hash-link" aria-label="Direct link to Milestone 3: Navigation System (Week 3)" title="Direct link to Milestone 3: Navigation System (Week 3)" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Nav2 integrated with Isaac Sim</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Robot successfully navigates to goals</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Obstacle avoidance working</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Navigation assessment passed</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Milestone Complete Date: ___________</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="milestone-4-ai-decision-making-week-4">Milestone 4: AI Decision Making (Week 4)<a href="#milestone-4-ai-decision-making-week-4" class="hash-link" aria-label="Direct link to Milestone 4: AI Decision Making (Week 4)" title="Direct link to Milestone 4: AI Decision Making (Week 4)" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Perception integrated with decision making</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Behavior tree implemented</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Intelligent behavior demonstrated</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Decision making assessment passed</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Milestone Complete Date: ___________</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="milestone-5-system-integration-week-5">Milestone 5: System Integration (Week 5)<a href="#milestone-5-system-integration-week-5" class="hash-link" aria-label="Direct link to Milestone 5: System Integration (Week 5)" title="Direct link to Milestone 5: System Integration (Week 5)" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Complete AI-robot system integrated</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->All components working together</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Performance optimized</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Module completion assessment passed</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Milestone Complete Date: ___________</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-metrics-dashboard">Performance Metrics Dashboard<a href="#performance-metrics-dashboard" class="hash-link" aria-label="Direct link to Performance Metrics Dashboard" title="Direct link to Performance Metrics Dashboard" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="real-time-performance-tracking">Real-Time Performance Tracking<a href="#real-time-performance-tracking" class="hash-link" aria-label="Direct link to Real-Time Performance Tracking" title="Direct link to Real-Time Performance Tracking" translate="no">​</a></h3>
+<table><thead><tr><th>Metric</th><th>Target</th><th>Current</th><th>Status</th><th>Date Measured</th></tr></thead><tbody><tr><td>Object Detection FPS</td><td>10+</td><td></td><td></td><td></td></tr><tr><td>Navigation Success Rate</td><td>95%+</td><td></td><td></td><td></td></tr><tr><td>Path Efficiency</td><td>0.8+</td><td></td><td></td><td></td></tr><tr><td>System Response Time</td><td>&lt;100ms</td><td></td><td></td><td></td></tr><tr><td>Memory Usage</td><td>&lt;80%</td><td></td><td></td><td></td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="weekly-performance-review">Weekly Performance Review<a href="#weekly-performance-review" class="hash-link" aria-label="Direct link to Weekly Performance Review" title="Direct link to Weekly Performance Review" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="week-1-review">Week 1 Review<a href="#week-1-review" class="hash-link" aria-label="Direct link to Week 1 Review" title="Direct link to Week 1 Review" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Goals Set</strong>:</li>
+<li class=""><strong>Goals Achieved</strong>:</li>
+<li class=""><strong>Challenges Faced</strong>:</li>
+<li class=""><strong>Skills Developed</strong>:</li>
+<li class=""><strong>Next Week&#x27;s Focus</strong>:</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="week-2-review">Week 2 Review<a href="#week-2-review" class="hash-link" aria-label="Direct link to Week 2 Review" title="Direct link to Week 2 Review" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Goals Set</strong>:</li>
+<li class=""><strong>Goals Achieved</strong>:</li>
+<li class=""><strong>Challenges Faced</strong>:</li>
+<li class=""><strong>Skills Developed</strong>:</li>
+<li class=""><strong>Next Week&#x27;s Focus</strong>:</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="week-3-review">Week 3 Review<a href="#week-3-review" class="hash-link" aria-label="Direct link to Week 3 Review" title="Direct link to Week 3 Review" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Goals Set</strong>:</li>
+<li class=""><strong>Goals Achieved</strong>:</li>
+<li class=""><strong>Challenges Faced</strong>:</li>
+<li class=""><strong>Skills Developed</strong>:</li>
+<li class=""><strong>Next Week&#x27;s Focus</strong>:</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="week-4-review">Week 4 Review<a href="#week-4-review" class="hash-link" aria-label="Direct link to Week 4 Review" title="Direct link to Week 4 Review" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Goals Set</strong>:</li>
+<li class=""><strong>Goals Achieved</strong>:</li>
+<li class=""><strong>Challenges Faced</strong>:</li>
+<li class=""><strong>Skills Developed</strong>:</li>
+<li class=""><strong>Next Week&#x27;s Focus</strong>:</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="week-5-review">Week 5 Review<a href="#week-5-review" class="hash-link" aria-label="Direct link to Week 5 Review" title="Direct link to Week 5 Review" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Goals Set</strong>:</li>
+<li class=""><strong>Goals Achieved</strong>:</li>
+<li class=""><strong>Challenges Faced</strong>:</li>
+<li class=""><strong>Skills Developed</strong>:</li>
+<li class=""><strong>Next Steps</strong>:</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="self-assessment-rubrics">Self-Assessment Rubrics<a href="#self-assessment-rubrics" class="hash-link" aria-label="Direct link to Self-Assessment Rubrics" title="Direct link to Self-Assessment Rubrics" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-implementation-rubric">Technical Implementation Rubric<a href="#technical-implementation-rubric" class="hash-link" aria-label="Direct link to Technical Implementation Rubric" title="Direct link to Technical Implementation Rubric" translate="no">​</a></h3>
+<table><thead><tr><th>Criteria</th><th>Excellent (4)</th><th>Proficient (3)</th><th>Developing (2)</th><th>Beginning (1)</th></tr></thead><tbody><tr><td>Code Quality</td><td>Clean, well-documented, efficient code with proper error handling</td><td>Good code with adequate documentation and error handling</td><td>Basic code with minimal documentation</td><td>Poor code with little documentation or error handling</td></tr><tr><td>System Design</td><td>Sophisticated design with optimal component integration</td><td>Good design with effective component integration</td><td>Basic design with functional component integration</td><td>Poor design with minimal integration</td></tr><tr><td>Problem Solving</td><td>Creative solutions with deep understanding of concepts</td><td>Effective solutions with good understanding</td><td>Adequate solutions with basic understanding</td><td>Ineffective solutions with limited understanding</td></tr><tr><td>Performance</td><td>Optimized for speed and efficiency</td><td>Good performance with minor optimizations needed</td><td>Adequate performance</td><td>Poor performance</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="conceptual-understanding-rubric">Conceptual Understanding Rubric<a href="#conceptual-understanding-rubric" class="hash-link" aria-label="Direct link to Conceptual Understanding Rubric" title="Direct link to Conceptual Understanding Rubric" translate="no">​</a></h3>
+<table><thead><tr><th>Criteria</th><th>Excellent (4)</th><th>Proficient (3)</th><th>Developing (2)</th><th>Beginning (1)</th></tr></thead><tbody><tr><td>Theoretical Knowledge</td><td>Deep understanding of all concepts with ability to explain to others</td><td>Good understanding of concepts with some ability to explain</td><td>Basic understanding of concepts</td><td>Limited understanding of concepts</td></tr><tr><td>Application</td><td>Can apply concepts to novel situations</td><td>Can apply concepts to familiar situations</td><td>Can apply concepts with guidance</td><td>Struggles to apply concepts</td></tr><tr><td>Integration</td><td>Can integrate multiple concepts seamlessly</td><td>Can integrate concepts effectively</td><td>Can integrate concepts with some difficulty</td><td>Struggles to integrate concepts</td></tr><tr><td>Analysis</td><td>Can analyze and critique system designs</td><td>Can analyze system designs</td><td>Can understand basic analysis</td><td>Limited ability to analyze</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reflection-and-goal-setting">Reflection and Goal Setting<a href="#reflection-and-goal-setting" class="hash-link" aria-label="Direct link to Reflection and Goal Setting" title="Direct link to Reflection and Goal Setting" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="weekly-reflection-prompts">Weekly Reflection Prompts<a href="#weekly-reflection-prompts" class="hash-link" aria-label="Direct link to Weekly Reflection Prompts" title="Direct link to Weekly Reflection Prompts" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="week-1-reflection">Week 1 Reflection<a href="#week-1-reflection" class="hash-link" aria-label="Direct link to Week 1 Reflection" title="Direct link to Week 1 Reflection" translate="no">​</a></h4>
+<ol>
+<li class="">What was the most interesting aspect of Isaac Sim that you discovered this week?</li>
+<li class="">What technical challenge did you overcome, and how did you solve it?</li>
+<li class="">What skill do you want to focus on improving next week?</li>
+<li class="">How does this week&#x27;s learning connect to your overall goals?</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="week-2-reflection">Week 2 Reflection<a href="#week-2-reflection" class="hash-link" aria-label="Direct link to Week 2 Reflection" title="Direct link to Week 2 Reflection" translate="no">​</a></h4>
+<ol>
+<li class="">How has your understanding of perception systems evolved this week?</li>
+<li class="">What was the most challenging concept to grasp, and how did you work through it?</li>
+<li class="">How do you see perception connecting to navigation in robotics?</li>
+<li class="">What would you like to explore further in perception systems?</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="week-3-reflection">Week 3 Reflection<a href="#week-3-reflection" class="hash-link" aria-label="Direct link to Week 3 Reflection" title="Direct link to Week 3 Reflection" translate="no">​</a></h4>
+<ol>
+<li class="">What did you learn about the importance of navigation in robotics?</li>
+<li class="">How did you approach tuning navigation parameters for optimal performance?</li>
+<li class="">What connections did you make between navigation and perception?</li>
+<li class="">What navigation technique do you want to explore further?</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="week-4-reflection">Week 4 Reflection<a href="#week-4-reflection" class="hash-link" aria-label="Direct link to Week 4 Reflection" title="Direct link to Week 4 Reflection" translate="no">​</a></h4>
+<ol>
+<li class="">How did you approach creating AI decision-making systems?</li>
+<li class="">What was the most complex aspect of integrating perception and decision making?</li>
+<li class="">How do you think decision making could be improved in your system?</li>
+<li class="">What ethical considerations did you think about regarding AI decision making?</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="week-5-reflection">Week 5 Reflection<a href="#week-5-reflection" class="hash-link" aria-label="Direct link to Week 5 Reflection" title="Direct link to Week 5 Reflection" translate="no">​</a></h4>
+<ol>
+<li class="">How well did you integrate all the components you learned about?</li>
+<li class="">What was your proudest achievement in this module?</li>
+<li class="">What would you do differently if you were to start over?</li>
+<li class="">How has this module changed your understanding of AI-robotics?</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="goal-setting-template">Goal Setting Template<a href="#goal-setting-template" class="hash-link" aria-label="Direct link to Goal Setting Template" title="Direct link to Goal Setting Template" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="short-term-goals-this-week">Short-term Goals (This Week)<a href="#short-term-goals-this-week" class="hash-link" aria-label="Direct link to Short-term Goals (This Week)" title="Direct link to Short-term Goals (This Week)" translate="no">​</a></h4>
+<ol>
+<li class="">
+<p>Goal:</p>
+<ul>
+<li class="">Action Steps:</li>
+<li class="">Success Criteria:</li>
+<li class="">Timeline:</li>
+</ul>
+</li>
+<li class="">
+<p>Goal:</p>
+<ul>
+<li class="">Action Steps:</li>
+<li class="">Success Criteria:</li>
+<li class="">Timeline:</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="medium-term-goals-this-month">Medium-term Goals (This Month)<a href="#medium-term-goals-this-month" class="hash-link" aria-label="Direct link to Medium-term Goals (This Month)" title="Direct link to Medium-term Goals (This Month)" translate="no">​</a></h4>
+<ol>
+<li class="">
+<p>Goal:</p>
+<ul>
+<li class="">Action Steps:</li>
+<li class="">Success Criteria:</li>
+<li class="">Timeline:</li>
+</ul>
+</li>
+<li class="">
+<p>Goal:</p>
+<ul>
+<li class="">Action Steps:</li>
+<li class="">Success Criteria:</li>
+<li class="">Timeline:</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="long-term-goals-this-module">Long-term Goals (This Module)<a href="#long-term-goals-this-module" class="hash-link" aria-label="Direct link to Long-term Goals (This Module)" title="Direct link to Long-term Goals (This Module)" translate="no">​</a></h4>
+<ol>
+<li class="">
+<p>Goal:</p>
+<ul>
+<li class="">Action Steps:</li>
+<li class="">Success Criteria:</li>
+<li class="">Timeline:</li>
+</ul>
+</li>
+<li class="">
+<p>Goal:</p>
+<ul>
+<li class="">Action Steps:</li>
+<li class="">Success Criteria:</li>
+<li class="">Timeline:</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="peer-collaboration-tracking">Peer Collaboration Tracking<a href="#peer-collaboration-tracking" class="hash-link" aria-label="Direct link to Peer Collaboration Tracking" title="Direct link to Peer Collaboration Tracking" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="group-project-progress-if-applicable">Group Project Progress (if applicable)<a href="#group-project-progress-if-applicable" class="hash-link" aria-label="Direct link to Group Project Progress (if applicable)" title="Direct link to Group Project Progress (if applicable)" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Team formation and roles defined</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Project plan created and agreed upon</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Regular check-ins scheduled</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Progress tracking system established</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Collaboration tools selected and configured</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="peer-learning-activities">Peer Learning Activities<a href="#peer-learning-activities" class="hash-link" aria-label="Direct link to Peer Learning Activities" title="Direct link to Peer Learning Activities" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Peer code reviews completed: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Study group sessions attended: ___/10</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Knowledge sharing presentations given: ___/3</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Collaborative problem solving sessions: ___/5</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="resource-utilization-tracking">Resource Utilization Tracking<a href="#resource-utilization-tracking" class="hash-link" aria-label="Direct link to Resource Utilization Tracking" title="Direct link to Resource Utilization Tracking" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-resources-used">Learning Resources Used<a href="#learning-resources-used" class="hash-link" aria-label="Direct link to Learning Resources Used" title="Direct link to Learning Resources Used" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Textbook chapters read: ___/3</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Video tutorials completed: ___/10</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Online documentation consulted: ___/15</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Research papers read: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Code examples implemented: ___/20</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="support-resources-utilized">Support Resources Utilized<a href="#support-resources-utilized" class="hash-link" aria-label="Direct link to Support Resources Utilized" title="Direct link to Support Resources Utilized" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Office hours attended: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Technical support tickets submitted: ___/3</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Peer assistance sought: ___/10</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Online forums participated in: ___/5</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Additional training modules completed: ___/3</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="continuous-improvement-tracking">Continuous Improvement Tracking<a href="#continuous-improvement-tracking" class="hash-link" aria-label="Direct link to Continuous Improvement Tracking" title="Direct link to Continuous Improvement Tracking" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="process-improvements">Process Improvements<a href="#process-improvements" class="hash-link" aria-label="Direct link to Process Improvements" title="Direct link to Process Improvements" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Learning strategies refined</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Time management improved</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Problem-solving approaches enhanced</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Collaboration skills developed</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Technical troubleshooting abilities strengthened</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="knowledge-gaps-identified">Knowledge Gaps Identified<a href="#knowledge-gaps-identified" class="hash-link" aria-label="Direct link to Knowledge Gaps Identified" title="Direct link to Knowledge Gaps Identified" translate="no">​</a></h3>
+<ul>
+<li class="">[ ]</li>
+<li class="">[ ]</li>
+<li class="">[ ]</li>
+<li class="">[ ]</li>
+<li class="">[ ]</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="action-plan-for-improvement">Action Plan for Improvement<a href="#action-plan-for-improvement" class="hash-link" aria-label="Direct link to Action Plan for Improvement" title="Direct link to Action Plan for Improvement" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>Gap:</p>
+<ul>
+<li class="">Action:</li>
+<li class="">Timeline:</li>
+<li class="">Resources Needed:</li>
+</ul>
+</li>
+<li class="">
+<p>Gap:</p>
+<ul>
+<li class="">Action:</li>
+<li class="">Timeline:</li>
+<li class="">Resources Needed:</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="final-module-assessment-preparation">Final Module Assessment Preparation<a href="#final-module-assessment-preparation" class="hash-link" aria-label="Direct link to Final Module Assessment Preparation" title="Direct link to Final Module Assessment Preparation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="readiness-checklist">Readiness Checklist<a href="#readiness-checklist" class="hash-link" aria-label="Direct link to Readiness Checklist" title="Direct link to Readiness Checklist" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->All lessons completed and understood</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->All exercises completed and working</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Formative assessments completed with passing scores</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Practical skills demonstrated</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Theoretical knowledge validated</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Performance metrics achieved</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Self-assessment rubrics completed</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Progress tracking updated</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="final-module-goals">Final Module Goals<a href="#final-module-goals" class="hash-link" aria-label="Direct link to Final Module Goals" title="Direct link to Final Module Goals" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Achieve 90%+ on module completion assessment</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Demonstrate all learning objectives</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Complete integrated AI-robot system</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Optimize system performance to targets</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Document learning journey and achievements</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Plan next steps in robotics education</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="post-module-planning">Post-Module Planning<a href="#post-module-planning" class="hash-link" aria-label="Direct link to Post-Module Planning" title="Direct link to Post-Module Planning" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Module 4: Humanoid Robotics and Advanced AI Integration</li>
+<li class="">Capstone Project: Design and implement complete AI-robot system</li>
+<li class="">Research Project: Explore specific area of interest in AI-robotics</li>
+<li class="">Industry Application: Apply skills to real-world robotics problem</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="skill-application-plan">Skill Application Plan<a href="#skill-application-plan" class="hash-link" aria-label="Direct link to Skill Application Plan" title="Direct link to Skill Application Plan" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Identify specific robotics applications of interest</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Plan continued learning in specialized areas</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Seek opportunities for practical application</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Join robotics communities and networks</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Consider research or industry opportunities</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="portfolio-development">Portfolio Development<a href="#portfolio-development" class="hash-link" aria-label="Direct link to Portfolio Development" title="Direct link to Portfolio Development" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Document completed projects and achievements</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Create showcase of AI-robot systems developed</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Prepare demonstration of technical skills</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Gather feedback from instructors and peers</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Plan presentation of learning outcomes</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/progress-tracking-guide.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/chapter-3/assessment"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Module 3 Assessment: The AI-Robot Brain (NVIDIA Isaac™)</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/chapter-3/educator-guide"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#learning-objectives-tracking" class="table-of-contents__link toc-highlight">Learning Objectives Tracking</a><ul><li><a href="#module-3-learning-objectives" class="table-of-contents__link toc-highlight">Module 3 Learning Objectives</a></li></ul></li><li><a href="#lesson-by-lesson-progress-tracking" class="table-of-contents__link toc-highlight">Lesson-by-Lesson Progress Tracking</a><ul><li><a href="#lesson-1-nvidia-isaac-simulation-environment-and-ros-integration" class="table-of-contents__link toc-highlight">Lesson 1: NVIDIA Isaac Simulation Environment and ROS Integration</a></li><li><a href="#lesson-2-navigation-and-path-planning-with-nav2" class="table-of-contents__link toc-highlight">Lesson 2: Navigation and Path Planning with Nav2</a></li><li><a href="#lesson-3-perception-and-ai-decision-making" class="table-of-contents__link toc-highlight">Lesson 3: Perception and AI Decision Making</a></li></ul></li><li><a href="#assessment-progress-tracking" class="table-of-contents__link toc-highlight">Assessment Progress Tracking</a><ul><li><a href="#formative-assessments-knowledge-checks" class="table-of-contents__link toc-highlight">Formative Assessments (Knowledge Checks)</a></li><li><a href="#summative-assessment-progress" class="table-of-contents__link toc-highlight">Summative Assessment Progress</a></li><li><a href="#performance-assessment-progress" class="table-of-contents__link toc-highlight">Performance Assessment Progress</a></li></ul></li><li><a href="#time-on-task-tracking" class="table-of-contents__link toc-highlight">Time-on-Task Tracking</a><ul><li><a href="#estimated-vs-actual-time-spent" class="table-of-contents__link toc-highlight">Estimated vs Actual Time Spent</a></li><li><a href="#daily-progress-log" class="table-of-contents__link toc-highlight">Daily Progress Log</a></li></ul></li><li><a href="#skill-development-tracking" class="table-of-contents__link toc-highlight">Skill Development Tracking</a><ul><li><a href="#technical-skills-matrix" class="table-of-contents__link toc-highlight">Technical Skills Matrix</a></li><li><a href="#practical-competencies" class="table-of-contents__link toc-highlight">Practical Competencies</a></li></ul></li><li><a href="#milestone-achievement-tracking" class="table-of-contents__link toc-highlight">Milestone Achievement Tracking</a><ul><li><a href="#module-3-milestones" class="table-of-contents__link toc-highlight">Module 3 Milestones</a></li></ul></li><li><a href="#performance-metrics-dashboard" class="table-of-contents__link toc-highlight">Performance Metrics Dashboard</a><ul><li><a href="#real-time-performance-tracking" class="table-of-contents__link toc-highlight">Real-Time Performance Tracking</a></li><li><a href="#weekly-performance-review" class="table-of-contents__link toc-highlight">Weekly Performance Review</a></li></ul></li><li><a href="#self-assessment-rubrics" class="table-of-contents__link toc-highlight">Self-Assessment Rubrics</a><ul><li><a href="#technical-implementation-rubric" class="table-of-contents__link toc-highlight">Technical Implementation Rubric</a></li><li><a href="#conceptual-understanding-rubric" class="table-of-contents__link toc-highlight">Conceptual Understanding Rubric</a></li></ul></li><li><a href="#reflection-and-goal-setting" class="table-of-contents__link toc-highlight">Reflection and Goal Setting</a><ul><li><a href="#weekly-reflection-prompts" class="table-of-contents__link toc-highlight">Weekly Reflection Prompts</a></li><li><a href="#goal-setting-template" class="table-of-contents__link toc-highlight">Goal Setting Template</a></li></ul></li><li><a href="#peer-collaboration-tracking" class="table-of-contents__link toc-highlight">Peer Collaboration Tracking</a><ul><li><a href="#group-project-progress-if-applicable" class="table-of-contents__link toc-highlight">Group Project Progress (if applicable)</a></li><li><a href="#peer-learning-activities" class="table-of-contents__link toc-highlight">Peer Learning Activities</a></li></ul></li><li><a href="#resource-utilization-tracking" class="table-of-contents__link toc-highlight">Resource Utilization Tracking</a><ul><li><a href="#learning-resources-used" class="table-of-contents__link toc-highlight">Learning Resources Used</a></li><li><a href="#support-resources-utilized" class="table-of-contents__link toc-highlight">Support Resources Utilized</a></li></ul></li><li><a href="#continuous-improvement-tracking" class="table-of-contents__link toc-highlight">Continuous Improvement Tracking</a><ul><li><a href="#process-improvements" class="table-of-contents__link toc-highlight">Process Improvements</a></li><li><a href="#knowledge-gaps-identified" class="table-of-contents__link toc-highlight">Knowledge Gaps Identified</a></li><li><a href="#action-plan-for-improvement" class="table-of-contents__link toc-highlight">Action Plan for Improvement</a></li></ul></li><li><a href="#final-module-assessment-preparation" class="table-of-contents__link toc-highlight">Final Module Assessment Preparation</a><ul><li><a href="#readiness-checklist" class="table-of-contents__link toc-highlight">Readiness Checklist</a></li><li><a href="#final-module-goals" class="table-of-contents__link toc-highlight">Final Module Goals</a></li></ul></li><li><a href="#post-module-planning" class="table-of-contents__link toc-highlight">Post-Module Planning</a><ul><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li><li><a href="#skill-application-plan" class="table-of-contents__link toc-highlight">Skill Application Plan</a></li><li><a href="#portfolio-development" class="table-of-contents__link toc-highlight">Portfolio Development</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Chapters</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Discussions<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/docs/contributing">Contributing</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/physical-ai-book/hackathon-book" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

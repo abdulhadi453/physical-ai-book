@@ -1,0 +1,27 @@
+{
+  "id": "chapter-2/exercise-4",
+  "title": "Exercise 4: Cross-Platform Comparative Analysis",
+  "description": "Overview",
+  "source": "@site/docs/chapter-2/exercise-4.md",
+  "sourceDirName": "chapter-2",
+  "slug": "/chapter-2/exercise-4",
+  "permalink": "/hackathon-book/docs/chapter-2/exercise-4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2/exercise-4.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 22,
+  "frontMatter": {
+    "sidebar_position": 22
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Exercise 3: Advanced Navigation",
+    "permalink": "/hackathon-book/docs/chapter-2/exercise-3"
+  },
+  "next": {
+    "title": "Physics Simulation Validation Tests",
+    "permalink": "/hackathon-book/docs/chapter-2/tests"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "chapter-3/educator-guide",
+  "title": "Educator Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)",
+  "description": "Overview",
+  "source": "@site/docs/chapter-3/educator-guide.md",
+  "sourceDirName": "chapter-3",
+  "slug": "/chapter-3/educator-guide",
+  "permalink": "/hackathon-book/docs/chapter-3/educator-guide",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3/educator-guide.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Progress Tracking Guide: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/hackathon-book/docs/chapter-3/progress-tracking-guide"
+  },
+  "next": {
+    "title": "Researcher Resources: Module 3 - The AI-Robot Brain (NVIDIA Isaac™)",
+    "permalink": "/hackathon-book/docs/chapter-3/researcher-resources"
+  }
+}

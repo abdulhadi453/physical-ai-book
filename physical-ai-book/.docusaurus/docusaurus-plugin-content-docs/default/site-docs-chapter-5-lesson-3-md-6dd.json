@@ -1,0 +1,28 @@
+{
+  "id": "chapter-5/lesson-3",
+  "title": "Lesson 3: Simulation-to-Reality Transfer and Validation",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapter-5/lesson-3.md",
+  "sourceDirName": "chapter-5",
+  "slug": "/chapter-5/lesson-3",
+  "permalink": "/hackathon-book/docs/chapter-5/lesson-3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-5/lesson-3.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Lesson 3: Simulation-to-Reality Transfer and Validation"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Lesson 2: Safety, Ethics, and Reliability in Physical AI Systems",
+    "permalink": "/hackathon-book/docs/chapter-5/lesson-2"
+  },
+  "next": {
+    "title": "Welcome to Physical AI Tutorials",
+    "permalink": "/hackathon-book/docs/tutorial-basics/welcome"
+  }
+}

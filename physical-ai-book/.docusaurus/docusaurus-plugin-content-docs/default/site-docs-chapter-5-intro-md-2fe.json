@@ -1,0 +1,28 @@
+{
+  "id": "chapter-5/intro",
+  "title": "Chapter 5: Advanced Applications and Deployment",
+  "description": "This chapter addresses the practical considerations for deploying Physical AI and Humanoid Robotics systems in real-world environments. You'll learn about safety, ethics, reliability, and the challenges of transitioning from simulation to reality.",
+  "source": "@site/docs/chapter-5/intro.md",
+  "sourceDirName": "chapter-5",
+  "slug": "/chapter-5/intro",
+  "permalink": "/hackathon-book/docs/chapter-5/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-5/intro.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Chapter 5: Advanced Applications and Deployment"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Lesson 3: Human-Robot Interaction and Social Robotics",
+    "permalink": "/hackathon-book/docs/chapter-4/lesson-3"
+  },
+  "next": {
+    "title": "Lesson 1: Real-World Deployment Considerations",
+    "permalink": "/hackathon-book/docs/chapter-5/lesson-1"
+  }
+}
